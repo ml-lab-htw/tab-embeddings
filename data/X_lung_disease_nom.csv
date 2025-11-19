@@ -1,0 +1,4901 @@
+Gender,Smoking Status,Disease Type,Treatment Type
+Female,No,COPD,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,COPD,
+Female,Yes,Bronchitis,Medication
+Male,Yes,COPD,Surgery
+Female,No,Bronchitis,Medication
+Male,Yes,Asthma,Medication
+Male,,Lung Cancer,Surgery
+Female,No,Lung Cancer,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,Bronchitis,Therapy
+Male,No,Pneumonia,Surgery
+Male,No,Pneumonia,Therapy
+Male,Yes,Bronchitis,Medication
+Female,No,Lung Cancer,Medication
+Female,No,Bronchitis,Therapy
+Male,Yes,Asthma,Therapy
+Female,,Pneumonia,Therapy
+,Yes,Pneumonia,Medication
+Female,Yes,,
+Female,Yes,Pneumonia,Medication
+Male,Yes,,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Medication
+Male,,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,No,Bronchitis,Medication
+Male,No,Pneumonia,Therapy
+Male,No,Asthma,Therapy
+Male,Yes,Asthma,
+Female,No,Lung Cancer,Medication
+Male,No,Pneumonia,Therapy
+Male,Yes,Asthma,Surgery
+Female,No,COPD,Therapy
+Female,Yes,Asthma,Therapy
+Female,No,Pneumonia,Surgery
+Female,No,Pneumonia,Surgery
+Female,Yes,Pneumonia,
+Male,Yes,,Surgery
+Male,No,Lung Cancer,
+Male,Yes,Pneumonia,Surgery
+Female,No,Bronchitis,Medication
+Male,No,Lung Cancer,Medication
+Female,No,Lung Cancer,Therapy
+Female,No,Bronchitis,Surgery
+Male,No,COPD,Surgery
+Female,Yes,,Medication
+Male,Yes,Asthma,Therapy
+Male,No,Bronchitis,Surgery
+Male,Yes,COPD,Therapy
+Female,No,COPD,Therapy
+Female,Yes,COPD,Medication
+Female,Yes,Bronchitis,Surgery
+Male,Yes,,Therapy
+,No,Pneumonia,Surgery
+Female,Yes,COPD,Surgery
+Female,No,COPD,Surgery
+Female,No,Asthma,Therapy
+Female,No,COPD,
+Male,Yes,COPD,Medication
+Male,Yes,Bronchitis,Therapy
+,Yes,Lung Cancer,Surgery
+Male,No,Asthma,Surgery
+Male,Yes,Asthma,Therapy
+Female,No,Bronchitis,Therapy
+Male,Yes,Bronchitis,Medication
+Male,Yes,,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Asthma,Medication
+Female,No,Pneumonia,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,COPD,Therapy
+Male,Yes,COPD,Medication
+Male,Yes,Pneumonia,Medication
+,Yes,Lung Cancer,Surgery
+Female,Yes,COPD,Therapy
+Male,Yes,Pneumonia,Therapy
+Male,No,Bronchitis,Medication
+,No,Asthma,Medication
+,No,Lung Cancer,Surgery
+Male,No,,
+Female,Yes,Asthma,Medication
+Male,No,Pneumonia,Therapy
+Female,No,COPD,Surgery
+,No,Asthma,Medication
+Male,Yes,Bronchitis,Medication
+Female,No,Lung Cancer,Medication
+Female,No,Pneumonia,Therapy
+Male,Yes,COPD,Medication
+Female,No,Bronchitis,Medication
+Male,Yes,Lung Cancer,
+Male,No,Lung Cancer,Medication
+Female,No,COPD,Surgery
+Male,No,Lung Cancer,Medication
+Female,No,Pneumonia,Therapy
+Male,Yes,Asthma,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Asthma,Therapy
+Male,No,Asthma,Surgery
+Male,,Asthma,Therapy
+Male,,Lung Cancer,Therapy
+Male,Yes,COPD,Medication
+Male,Yes,COPD,Therapy
+Female,Yes,Bronchitis,Medication
+Female,Yes,Bronchitis,Therapy
+Male,No,Bronchitis,Therapy
+Female,No,,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,No,Pneumonia,Medication
+Female,No,Lung Cancer,Medication
+Female,Yes,COPD,Surgery
+Male,Yes,Bronchitis,Therapy
+Female,No,Pneumonia,Medication
+Male,Yes,Pneumonia,
+,Yes,Pneumonia,Medication
+Female,No,Lung Cancer,Surgery
+Female,No,Bronchitis,Therapy
+Female,Yes,,
+Male,No,,Surgery
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,No,Pneumonia,Therapy
+Male,Yes,COPD,Medication
+Male,Yes,Asthma,Therapy
+Male,No,Asthma,Therapy
+Female,No,,Therapy
+,No,Pneumonia,Therapy
+Male,Yes,Asthma,Medication
+Male,Yes,Asthma,Therapy
+Male,No,Bronchitis,Therapy
+,No,Pneumonia,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Therapy
+Female,,COPD,Medication
+Female,No,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Medication
+Male,,Asthma,Surgery
+Male,No,Pneumonia,Medication
+Female,Yes,COPD,Medication
+Male,No,,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,COPD,Surgery
+Male,No,Pneumonia,Surgery
+Female,,Pneumonia,Surgery
+Female,No,COPD,Therapy
+Male,No,Pneumonia,Medication
+Female,No,Pneumonia,Surgery
+Male,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Medication
+Male,No,Lung Cancer,Therapy
+Female,Yes,Bronchitis,Medication
+Female,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Therapy
+Male,Yes,COPD,Surgery
+Male,No,Asthma,Surgery
+,Yes,Asthma,Therapy
+Male,No,Lung Cancer,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,No,Pneumonia,
+Male,No,COPD,Surgery
+Female,No,COPD,Therapy
+Female,Yes,,Surgery
+Female,No,Asthma,Surgery
+Female,No,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,No,COPD,Medication
+Male,No,COPD,Surgery
+Male,No,COPD,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Bronchitis,Medication
+Male,Yes,,Surgery
+Male,No,Pneumonia,Therapy
+Female,Yes,Asthma,Surgery
+Male,No,COPD,Surgery
+Male,No,COPD,Surgery
+Female,No,Pneumonia,Medication
+Female,Yes,COPD,Surgery
+Male,Yes,COPD,Therapy
+Female,No,,Surgery
+Male,No,Bronchitis,Surgery
+Male,Yes,Asthma,Surgery
+Male,Yes,COPD,Medication
+Female,,Lung Cancer,Therapy
+Male,No,COPD,Surgery
+Female,Yes,COPD,Therapy
+Female,Yes,Asthma,Therapy
+Male,Yes,Lung Cancer,Medication
+Female,No,COPD,Therapy
+,Yes,Lung Cancer,Surgery
+Female,No,Bronchitis,Medication
+Female,No,Bronchitis,Medication
+Male,Yes,COPD,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Lung Cancer,Therapy
+Male,No,Bronchitis,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,,Pneumonia,Therapy
+Male,Yes,Pneumonia,Medication
+,Yes,Bronchitis,Medication
+Female,Yes,COPD,Therapy
+Female,Yes,COPD,Therapy
+Female,No,Bronchitis,Therapy
+Male,No,COPD,Therapy
+Female,No,Asthma,Surgery
+Female,No,Pneumonia,Surgery
+,Yes,Asthma,Surgery
+Male,No,Asthma,Surgery
+Female,No,Asthma,Medication
+Female,Yes,Asthma,Medication
+Male,No,Lung Cancer,Medication
+Male,No,COPD,Surgery
+Male,Yes,Bronchitis,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,No,Lung Cancer,Therapy
+Male,No,Pneumonia,Surgery
+Female,Yes,Pneumonia,Therapy
+Male,No,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Medication
+Female,No,COPD,Medication
+Female,No,Pneumonia,Therapy
+Male,No,,Therapy
+Male,No,Lung Cancer,Surgery
+Female,Yes,COPD,Medication
+Male,Yes,,Therapy
+Female,No,Pneumonia,Surgery
+Male,No,COPD,Therapy
+Female,No,COPD,Medication
+Female,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,Surgery
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Asthma,
+Female,Yes,COPD,Medication
+Male,Yes,COPD,Medication
+Female,Yes,Lung Cancer,Medication
+Male,No,COPD,Surgery
+Female,Yes,Pneumonia,
+Female,Yes,COPD,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Pneumonia,Therapy
+Male,No,Asthma,Surgery
+Male,Yes,COPD,Medication
+Male,No,Asthma,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,COPD,Medication
+Male,Yes,COPD,Medication
+Male,Yes,Asthma,Therapy
+Female,Yes,Asthma,Medication
+Female,No,Pneumonia,Therapy
+,No,Pneumonia,Therapy
+Female,No,COPD,Therapy
+Male,Yes,Bronchitis,
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Medication
+,,Pneumonia,Surgery
+Female,No,Lung Cancer,Surgery
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Male,No,Asthma,Therapy
+Male,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Therapy
+Male,No,Pneumonia,Surgery
+Female,No,COPD,Medication
+Male,No,Pneumonia,Surgery
+,Yes,Pneumonia,Surgery
+Male,Yes,Asthma,Surgery
+Female,No,Asthma,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,No,Bronchitis,Medication
+Female,No,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,Pneumonia,Medication
+Female,Yes,COPD,Surgery
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Asthma,Medication
+Female,Yes,Asthma,Therapy
+Male,No,Bronchitis,Surgery
+Female,Yes,COPD,Surgery
+,Yes,Asthma,Therapy
+Female,No,Lung Cancer,
+Male,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Medication
+Male,No,COPD,Medication
+Male,No,Lung Cancer,Medication
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Asthma,Surgery
+Male,,Asthma,Medication
+Male,No,Lung Cancer,Therapy
+Female,Yes,COPD,Medication
+Female,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Pneumonia,Therapy
+Female,No,COPD,Medication
+Female,Yes,Asthma,Surgery
+Female,No,Pneumonia,Therapy
+Female,Yes,Asthma,Surgery
+Male,No,Asthma,Surgery
+Female,No,Pneumonia,Medication
+Male,No,Bronchitis,Medication
+Male,No,Bronchitis,Therapy
+Female,No,Lung Cancer,Medication
+Female,No,Bronchitis,Medication
+Male,Yes,Pneumonia,Surgery
+,Yes,Lung Cancer,Surgery
+Male,No,Asthma,Medication
+Male,No,COPD,Therapy
+,Yes,Asthma,Surgery
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Surgery
+Female,No,Lung Cancer,Medication
+Female,No,Bronchitis,Surgery
+,Yes,COPD,Surgery
+Female,Yes,Pneumonia,
+Male,Yes,Asthma,Surgery
+Female,,COPD,Surgery
+Female,No,Pneumonia,Therapy
+Female,Yes,Pneumonia,Medication
+Female,Yes,Bronchitis,Medication
+Male,Yes,,Surgery
+Male,No,Lung Cancer,Surgery
+,No,COPD,Therapy
+Female,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication
+Male,Yes,Bronchitis,Medication
+Female,Yes,Bronchitis,Therapy
+Female,No,COPD,Therapy
+Male,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Medication
+Male,No,Pneumonia,Surgery
+Male,Yes,Asthma,Medication
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,Yes,COPD,Surgery
+Female,No,Asthma,Medication
+Female,No,Pneumonia,Surgery
+Male,Yes,Asthma,Surgery
+Female,,Asthma,Therapy
+Female,Yes,COPD,Therapy
+Male,No,COPD,Medication
+Male,Yes,Pneumonia,Therapy
+Female,No,Bronchitis,
+,No,Pneumonia,Surgery
+,No,Bronchitis,Medication
+Female,Yes,Lung Cancer,Medication
+,Yes,COPD,Medication
+Female,,Lung Cancer,Surgery
+Male,,Lung Cancer,Surgery
+Male,Yes,COPD,Therapy
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Asthma,
+Male,Yes,,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,COPD,Medication
+Female,No,Asthma,Surgery
+Female,No,Pneumonia,Medication
+Female,Yes,Pneumonia,Medication
+Male,No,Pneumonia,Therapy
+Male,No,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Surgery
+Female,No,Lung Cancer,Surgery
+Female,No,COPD,Medication
+Male,Yes,,Surgery
+Female,No,Lung Cancer,Medication
+Female,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Asthma,Medication
+Male,No,Asthma,
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Pneumonia,Medication
+Female,Yes,Pneumonia,Therapy
+Male,Yes,COPD,Medication
+Male,No,COPD,Medication
+Male,Yes,Lung Cancer,
+Female,Yes,Bronchitis,Therapy
+Male,,COPD,Therapy
+Male,Yes,Asthma,Surgery
+Male,No,Bronchitis,Therapy
+Female,No,Asthma,Medication
+Male,No,Pneumonia,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,Asthma,Surgery
+Female,No,Bronchitis,Therapy
+Female,No,Lung Cancer,Medication
+Female,Yes,Asthma,Medication
+Female,No,Pneumonia,Surgery
+Male,No,Bronchitis,Surgery
+Male,Yes,Bronchitis,Medication
+Female,,COPD,Surgery
+Male,Yes,Bronchitis,
+Female,Yes,Asthma,Medication
+Male,Yes,Asthma,Surgery
+Male,No,,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,,Bronchitis,Therapy
+Male,Yes,Asthma,Surgery
+Male,No,COPD,Surgery
+Female,No,COPD,Therapy
+Female,,Bronchitis,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,No,Lung Cancer,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,No,Asthma,Therapy
+Male,No,Pneumonia,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,No,Asthma,Medication
+Female,No,Lung Cancer,Surgery
+Female,No,Bronchitis,Surgery
+Male,No,,Medication
+Male,No,COPD,Medication
+Female,Yes,COPD,Therapy
+Female,No,Pneumonia,Surgery
+Female,No,Pneumonia,Therapy
+Female,No,Bronchitis,Surgery
+,Yes,Bronchitis,Medication
+Female,Yes,Bronchitis,Therapy
+Male,No,Pneumonia,Surgery
+Female,No,Bronchitis,Surgery
+Female,Yes,Asthma,Medication
+Female,Yes,Lung Cancer,Medication
+Female,Yes,COPD,Surgery
+Male,Yes,COPD,Medication
+Male,No,Asthma,Medication
+Female,Yes,Bronchitis,
+Female,No,Pneumonia,
+Female,No,Bronchitis,Therapy
+Male,Yes,,Medication
+Male,Yes,COPD,Medication
+Male,Yes,Pneumonia,Medication
+Male,No,COPD,Surgery
+Male,No,Bronchitis,Medication
+Male,Yes,Pneumonia,Surgery
+Male,No,Asthma,Medication
+Female,Yes,Bronchitis,Medication
+Male,No,Pneumonia,Medication
+Female,Yes,Asthma,Surgery
+,No,Pneumonia,Therapy
+Female,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication
+Female,,Bronchitis,
+Female,No,Pneumonia,Surgery
+Female,Yes,,Medication
+Male,Yes,,Medication
+Male,Yes,Bronchitis,Medication
+Female,Yes,,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,No,Asthma,Surgery
+Male,,COPD,Therapy
+Female,No,COPD,Therapy
+Female,,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Pneumonia,Therapy
+Female,No,Pneumonia,Medication
+Male,Yes,Lung Cancer,
+Female,Yes,Bronchitis,Surgery
+Female,Yes,Bronchitis,Medication
+Male,No,Lung Cancer,Therapy
+Male,No,Asthma,Medication
+Male,,Bronchitis,Medication
+,No,Asthma,Medication
+Female,Yes,Asthma,Therapy
+Male,No,Pneumonia,Therapy
+Male,Yes,Pneumonia,Therapy
+Male,No,COPD,Medication
+Female,No,Pneumonia,Surgery
+Female,No,Bronchitis,Therapy
+Male,No,Bronchitis,Medication
+Female,,Asthma,Therapy
+Male,Yes,Bronchitis,Surgery
+,No,Pneumonia,Medication
+Female,No,Pneumonia,Therapy
+Female,No,Pneumonia,Therapy
+Female,No,Lung Cancer,Surgery
+,Yes,Bronchitis,Therapy
+Female,No,COPD,Medication
+Female,Yes,Bronchitis,
+Male,No,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,,Surgery
+Male,Yes,Asthma,Medication
+,Yes,Pneumonia,Surgery
+Female,Yes,Pneumonia,Therapy
+Male,No,Lung Cancer,Therapy
+Male,Yes,Pneumonia,
+Female,Yes,,Surgery
+Male,Yes,,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,,Therapy
+,Yes,Asthma,Medication
+Male,Yes,Asthma,Surgery
+,Yes,Pneumonia,Therapy
+Female,No,COPD,Medication
+Male,Yes,Bronchitis,Therapy
+Female,,COPD,Medication
+Male,No,COPD,Therapy
+Female,No,Pneumonia,Surgery
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Pneumonia,Surgery
+Male,No,Pneumonia,Surgery
+Male,Yes,Asthma,Surgery
+,No,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,No,Bronchitis,Therapy
+Male,No,Asthma,Therapy
+Female,,Bronchitis,Surgery
+Female,Yes,Asthma,Medication
+Female,Yes,Asthma,Surgery
+Male,No,Asthma,Surgery
+Female,No,Lung Cancer,Medication
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Asthma,Medication
+Female,No,Asthma,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,No,Lung Cancer,Surgery
+Female,No,COPD,Surgery
+Male,Yes,Bronchitis,
+Male,No,COPD,Surgery
+Male,Yes,COPD,Medication
+,No,Bronchitis,Surgery
+Female,No,Pneumonia,Therapy
+,No,Pneumonia,Medication
+Female,Yes,Bronchitis,Medication
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,,Lung Cancer,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,Lung Cancer,Therapy
+Female,No,Asthma,Surgery
+Male,Yes,,Therapy
+Male,Yes,Pneumonia,Surgery
+,Yes,Asthma,Therapy
+Male,No,Asthma,
+Male,No,Lung Cancer,Surgery
+Male,Yes,Lung Cancer,Therapy
+Male,No,Bronchitis,Medication
+Female,Yes,Lung Cancer,Medication
+Female,No,Bronchitis,
+Male,No,Bronchitis,
+Male,Yes,Asthma,Surgery
+Female,No,Asthma,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,Asthma,Therapy
+Female,No,Asthma,Therapy
+Male,No,Asthma,Surgery
+Female,No,Pneumonia,Surgery
+Female,Yes,Asthma,Medication
+Female,No,COPD,Therapy
+Male,No,COPD,Surgery
+Male,No,COPD,Surgery
+Male,No,Bronchitis,Surgery
+Male,No,Asthma,Medication
+Male,Yes,COPD,Surgery
+Male,No,Bronchitis,Therapy
+,No,COPD,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,No,Pneumonia,Medication
+Female,No,Asthma,
+Male,Yes,Pneumonia,Surgery
+Female,No,Pneumonia,Therapy
+Female,Yes,Lung Cancer,
+Male,No,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Bronchitis,Therapy
+Female,No,COPD,Surgery
+Female,Yes,Asthma,Therapy
+Male,,Lung Cancer,
+Female,No,Asthma,Therapy
+Male,No,Asthma,Surgery
+Female,Yes,Asthma,Therapy
+Female,Yes,Lung Cancer,Medication
+,Yes,COPD,Surgery
+,No,Lung Cancer,Therapy
+Female,Yes,Asthma,
+Female,No,COPD,Therapy
+Female,No,Pneumonia,Therapy
+Female,Yes,Lung Cancer,
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Pneumonia,
+Male,Yes,,Surgery
+Male,Yes,Asthma,Therapy
+,No,Bronchitis,Medication
+Female,Yes,Lung Cancer,
+Female,No,Bronchitis,Medication
+Male,No,Lung Cancer,Therapy
+Female,Yes,Bronchitis,
+Female,No,Pneumonia,Surgery
+Male,Yes,Lung Cancer,
+Male,No,Lung Cancer,Medication
+Male,Yes,Bronchitis,Therapy
+Male,Yes,COPD,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Surgery
+,No,Lung Cancer,Surgery
+,No,Asthma,Therapy
+Male,No,COPD,Surgery
+Female,No,Asthma,Therapy
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,Yes,,Medication
+Male,Yes,Bronchitis,Surgery
+Male,Yes,COPD,Medication
+Female,No,COPD,Surgery
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Asthma,Medication
+Male,No,Asthma,Therapy
+Female,Yes,Asthma,Surgery
+Male,Yes,Asthma,Surgery
+Female,No,Asthma,Therapy
+Male,Yes,,Surgery
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,No,Bronchitis,Therapy
+Male,Yes,COPD,Medication
+Female,Yes,Bronchitis,Medication
+Female,No,COPD,Therapy
+Female,No,Asthma,Surgery
+Male,Yes,Pneumonia,Medication
+Male,No,Asthma,Therapy
+Male,Yes,Asthma,Therapy
+Male,No,,Surgery
+Male,Yes,,Surgery
+Female,No,COPD,Surgery
+Male,,Bronchitis,Therapy
+Male,,Bronchitis,Medication
+Male,No,Lung Cancer,Therapy
+Male,No,COPD,Therapy
+Male,Yes,COPD,Therapy
+,No,Lung Cancer,Medication
+Female,Yes,COPD,Surgery
+Female,No,Pneumonia,
+Male,No,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Therapy
+,No,Bronchitis,Medication
+Male,No,,Medication
+Male,Yes,,Surgery
+Male,Yes,Pneumonia,Therapy
+Male,,,Medication
+Female,Yes,Lung Cancer,Medication
+Female,No,COPD,Therapy
+Female,No,Pneumonia,Therapy
+Female,Yes,COPD,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Therapy
+,Yes,COPD,Therapy
+Female,Yes,Bronchitis,Medication
+Female,Yes,Bronchitis,Therapy
+Female,No,Lung Cancer,Therapy
+Male,Yes,COPD,Surgery
+Female,No,Asthma,Surgery
+Female,No,Lung Cancer,Surgery
+Male,No,Bronchitis,Therapy
+,No,COPD,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,No,Bronchitis,Therapy
+Male,Yes,Pneumonia,
+Female,Yes,COPD,Medication
+Male,Yes,COPD,Medication
+Female,Yes,Pneumonia,Therapy
+Female,No,Asthma,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,No,Pneumonia,Medication
+Male,No,COPD,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Medication
+Female,Yes,COPD,Surgery
+Male,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Therapy
+Male,Yes,COPD,Medication
+Female,No,COPD,
+Female,,Lung Cancer,Medication
+Male,No,Asthma,Medication
+Female,No,Asthma,
+Female,Yes,COPD,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,No,COPD,Therapy
+Female,No,Pneumonia,Medication
+Female,No,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,COPD,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,No,COPD,Surgery
+Male,No,COPD,Therapy
+Female,Yes,Pneumonia,Medication
+Female,Yes,Bronchitis,Medication
+Male,No,Asthma,Therapy
+Female,Yes,Lung Cancer,Surgery
+Male,No,Asthma,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,Bronchitis,Therapy
+,No,COPD,Therapy
+Male,No,COPD,
+Female,No,Pneumonia,Medication
+,Yes,Asthma,
+Male,No,COPD,Surgery
+Female,No,Asthma,Therapy
+Male,Yes,Pneumonia,Surgery
+,Yes,COPD,Medication
+Female,No,Lung Cancer,Surgery
+Female,Yes,Bronchitis,Surgery
+Female,Yes,Asthma,Surgery
+Female,Yes,Asthma,Therapy
+Male,No,Asthma,Medication
+Male,No,Asthma,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Medication
+Female,Yes,COPD,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,No,COPD,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,No,Pneumonia,Medication
+Male,No,Lung Cancer,Therapy
+Female,No,Pneumonia,Medication
+Male,,,Surgery
+Male,No,,Therapy
+Female,Yes,COPD,Therapy
+Female,No,Asthma,Therapy
+Female,Yes,Lung Cancer,Surgery
+Female,No,Asthma,Therapy
+Female,No,Bronchitis,Medication
+Male,Yes,Bronchitis,
+Male,Yes,COPD,Medication
+Male,Yes,COPD,
+Female,Yes,Lung Cancer,Medication
+Male,No,Pneumonia,Medication
+Male,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication
+Male,No,Bronchitis,Medication
+Male,Yes,,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,Yes,COPD,Therapy
+Female,Yes,Asthma,Medication
+Female,No,Asthma,Medication
+Male,No,COPD,Surgery
+Male,Yes,Pneumonia,Medication
+Female,No,COPD,Medication
+Male,Yes,Asthma,Surgery
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Pneumonia,Surgery
+Male,No,Bronchitis,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,Pneumonia,Medication
+Female,No,,Therapy
+Female,No,Asthma,Medication
+Female,Yes,Pneumonia,Surgery
+Female,No,Bronchitis,Surgery
+Female,No,Bronchitis,Surgery
+Male,No,COPD,Surgery
+,Yes,Lung Cancer,Medication
+Female,No,Pneumonia,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Medication
+Male,No,Pneumonia,Medication
+Male,Yes,Asthma,Therapy
+,,Asthma,Surgery
+,No,Pneumonia,Therapy
+Male,Yes,,Therapy
+Male,No,Lung Cancer,
+Male,Yes,,Therapy
+Female,No,Asthma,
+Female,No,Bronchitis,Therapy
+Female,Yes,Pneumonia,Medication
+Male,No,Lung Cancer,Surgery
+Female,Yes,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Therapy
+,No,Asthma,Medication
+Female,Yes,Pneumonia,Surgery
+Male,No,COPD,Surgery
+Female,Yes,,Therapy
+Female,Yes,COPD,Therapy
+Male,No,Bronchitis,
+Male,Yes,COPD,Surgery
+Female,Yes,COPD,Therapy
+Male,,Bronchitis,Therapy
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Bronchitis,Medication
+Male,Yes,Asthma,Therapy
+Female,Yes,Asthma,Surgery
+Male,Yes,COPD,
+Female,No,Bronchitis,Surgery
+Female,Yes,Bronchitis,Medication
+Male,No,,Therapy
+Male,No,Lung Cancer,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,Lung Cancer,Therapy
+Male,No,Pneumonia,Surgery
+Female,No,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,Bronchitis,Surgery
+,No,COPD,Surgery
+Female,No,Lung Cancer,Medication
+Male,Yes,COPD,Medication
+Female,Yes,Pneumonia,Medication
+Male,Yes,Asthma,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,Yes,,Surgery
+Female,No,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,Yes,COPD,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Asthma,Therapy
+Female,Yes,Pneumonia,Medication
+Male,No,Bronchitis,Surgery
+Male,Yes,Asthma,Medication
+Male,No,COPD,Surgery
+,Yes,Asthma,Medication
+Female,No,Lung Cancer,Medication
+Female,No,Bronchitis,Therapy
+,Yes,Lung Cancer,Therapy
+Female,Yes,,Surgery
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Asthma,Medication
+Male,Yes,Pneumonia,Therapy
+Female,No,Pneumonia,Surgery
+Female,Yes,COPD,Surgery
+Female,Yes,COPD,Surgery
+Female,No,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Surgery
+Male,No,COPD,Surgery
+Male,Yes,Asthma,
+Female,,COPD,
+Male,Yes,Lung Cancer,Therapy
+Female,No,Bronchitis,Medication
+Female,No,Pneumonia,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Pneumonia,Therapy
+Female,No,COPD,Surgery
+Male,No,Asthma,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,No,COPD,Medication
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,No,Lung Cancer,Therapy
+Female,Yes,COPD,Surgery
+Female,Yes,Asthma,Surgery
+Female,Yes,Asthma,Surgery
+Female,Yes,Bronchitis,Medication
+Male,Yes,COPD,Medication
+Female,No,Bronchitis,Surgery
+Female,Yes,,Surgery
+Female,No,COPD,
+Male,Yes,Pneumonia,Medication
+,Yes,COPD,
+Female,No,COPD,Medication
+,No,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Therapy
+Female,,Asthma,Surgery
+,No,Pneumonia,Therapy
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Asthma,Medication
+Female,Yes,Asthma,Therapy
+Female,Yes,Asthma,Medication
+Male,No,Pneumonia,Therapy
+Male,,Bronchitis,Therapy
+Male,No,Asthma,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,No,COPD,Medication
+Female,Yes,Bronchitis,Surgery
+Female,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication
+Female,,Lung Cancer,Therapy
+Male,Yes,Asthma,Surgery
+Female,No,Bronchitis,Surgery
+Male,Yes,Asthma,Therapy
+Male,No,Asthma,Medication
+Female,Yes,Asthma,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,No,Asthma,Therapy
+Female,Yes,Bronchitis,Medication
+Female,No,Pneumonia,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,No,Pneumonia,Medication
+Male,Yes,COPD,Surgery
+Female,Yes,COPD,Surgery
+Female,Yes,COPD,Surgery
+Male,No,COPD,Therapy
+Female,No,Pneumonia,Therapy
+Female,No,Asthma,Medication
+Male,No,Lung Cancer,Therapy
+Female,No,Lung Cancer,Therapy
+Female,,COPD,Surgery
+,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,
+Male,No,Lung Cancer,Therapy
+,Yes,Asthma,Medication
+,No,Asthma,Surgery
+Male,Yes,Lung Cancer,Therapy
+Male,No,Asthma,
+,No,Bronchitis,
+Male,No,Asthma,Therapy
+Female,Yes,Bronchitis,Medication
+Female,Yes,COPD,Medication
+Male,Yes,Asthma,Surgery
+Female,Yes,Bronchitis,Therapy
+,No,Lung Cancer,Therapy
+Male,No,COPD,Therapy
+Male,No,Asthma,Medication
+Male,No,,Therapy
+Male,Yes,Asthma,Medication
+Female,No,Bronchitis,Medication
+Male,Yes,Asthma,Surgery
+Male,No,,Medication
+Male,No,COPD,Surgery
+Male,No,Asthma,Surgery
+Male,Yes,Asthma,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,No,Asthma,Therapy
+Female,No,Asthma,Surgery
+Male,,Asthma,Therapy
+Male,,Lung Cancer,
+Male,Yes,Asthma,
+Male,No,Pneumonia,Medication
+Male,Yes,Bronchitis,Surgery
+Male,No,COPD,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,No,Bronchitis,Therapy
+Male,No,Lung Cancer,Surgery
+Female,Yes,COPD,Medication
+Male,No,Pneumonia,Surgery
+Female,No,COPD,Surgery
+Male,No,Lung Cancer,
+Male,Yes,Lung Cancer,Medication
+Male,No,COPD,Surgery
+Female,,Asthma,
+Female,Yes,COPD,Surgery
+Female,No,Pneumonia,Medication
+Female,Yes,COPD,Therapy
+Male,No,Bronchitis,
+Male,Yes,Asthma,Surgery
+Male,No,Bronchitis,Medication
+Female,Yes,COPD,Therapy
+Male,No,Asthma,Medication
+Female,No,Bronchitis,Therapy
+Female,No,Bronchitis,Therapy
+Female,,Asthma,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,No,Asthma,Medication
+Female,Yes,COPD,Therapy
+Female,No,Pneumonia,Surgery
+Male,No,Lung Cancer,Medication
+,Yes,Asthma,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,Pneumonia,Therapy
+Female,Yes,Asthma,Medication
+Male,,Asthma,Surgery
+Male,Yes,COPD,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Therapy
+Male,No,COPD,Therapy
+,Yes,Lung Cancer,Medication
+Female,Yes,Bronchitis,Surgery
+Male,No,Bronchitis,Therapy
+Female,No,Lung Cancer,Surgery
+Female,No,Asthma,Therapy
+Male,Yes,Asthma,Surgery
+Female,Yes,Bronchitis,
+Male,No,Asthma,Medication
+Female,,Asthma,Therapy
+Female,,Lung Cancer,
+Male,No,Lung Cancer,
+Male,Yes,Asthma,
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Bronchitis,
+Female,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Therapy
+Female,Yes,Asthma,Surgery
+Female,No,Asthma,Surgery
+Male,No,Pneumonia,Therapy
+Male,No,,Therapy
+Male,Yes,COPD,Medication
+Male,No,COPD,Medication
+Male,Yes,Bronchitis,Surgery
+Male,No,Pneumonia,
+Female,Yes,Lung Cancer,Surgery
+Male,No,COPD,Medication
+Female,Yes,Asthma,Therapy
+Female,No,Pneumonia,Medication
+Female,No,Lung Cancer,Surgery
+Male,No,Lung Cancer,
+Female,No,Lung Cancer,Surgery
+Male,Yes,Asthma,Surgery
+Female,Yes,COPD,Medication
+Female,Yes,Lung Cancer,Medication
+Male,No,COPD,Surgery
+Female,No,Bronchitis,Therapy
+Female,,COPD,Surgery
+Female,No,COPD,Therapy
+Male,No,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Asthma,Surgery
+,Yes,COPD,Surgery
+Female,Yes,Pneumonia,
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,Bronchitis,
+Male,Yes,,Therapy
+Female,No,COPD,Therapy
+Male,No,COPD,Medication
+Female,No,COPD,Surgery
+,No,Lung Cancer,Therapy
+Female,,Asthma,Therapy
+Male,No,,Medication
+Female,No,Pneumonia,Surgery
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,No,COPD,Therapy
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,,Medication
+Female,Yes,Bronchitis,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Asthma,Medication
+Female,No,Asthma,Medication
+Female,No,Lung Cancer,Therapy
+Female,No,Pneumonia,Medication
+Female,Yes,,Medication
+Male,No,Pneumonia,Therapy
+Female,No,Asthma,Medication
+Female,No,Lung Cancer,Surgery
+Male,Yes,,Medication
+Male,No,Lung Cancer,Surgery
+Female,No,Asthma,Surgery
+Female,No,Bronchitis,Therapy
+Female,No,Bronchitis,Therapy
+Male,,Bronchitis,Medication
+Female,No,Pneumonia,Medication
+Female,No,Asthma,Therapy
+Female,No,COPD,Medication
+Male,No,Lung Cancer,Medication
+Female,No,Pneumonia,Therapy
+Female,No,Lung Cancer,Surgery
+Male,Yes,COPD,Medication
+Male,,Bronchitis,Therapy
+Female,,COPD,Medication
+Male,,,Medication
+Female,No,COPD,Therapy
+Male,Yes,Asthma,Therapy
+Male,No,COPD,Medication
+Female,Yes,Asthma,Medication
+Female,No,,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Asthma,
+Female,No,COPD,
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,Yes,,Surgery
+Male,Yes,Asthma,
+Female,No,Bronchitis,Therapy
+Female,Yes,Asthma,Medication
+Male,Yes,Pneumonia,Surgery
+Female,No,COPD,Surgery
+Female,No,COPD,Medication
+Female,No,Asthma,Therapy
+Female,Yes,Asthma,Medication
+Female,Yes,Pneumonia,Medication
+Male,Yes,Bronchitis,Surgery
+Male,,Pneumonia,Therapy
+Male,No,COPD,Therapy
+,,COPD,Surgery
+Male,Yes,Bronchitis,
+Female,Yes,COPD,Therapy
+Female,Yes,COPD,Medication
+Male,No,Lung Cancer,Medication
+Male,No,,Therapy
+,No,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,No,Asthma,Surgery
+Male,Yes,Bronchitis,Therapy
+Female,No,COPD,Medication
+Female,Yes,Asthma,Medication
+Male,No,COPD,Surgery
+Male,Yes,Asthma,Surgery
+Male,No,Asthma,Therapy
+Female,Yes,COPD,Therapy
+Female,Yes,COPD,Therapy
+Male,No,Asthma,Therapy
+Male,Yes,Bronchitis,Therapy
+,No,COPD,Medication
+Male,No,,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,,Asthma,Medication
+,Yes,Pneumonia,Therapy
+Female,Yes,Asthma,Therapy
+Female,,Asthma,Surgery
+Female,Yes,,Medication
+Male,Yes,,Medication
+Female,Yes,Pneumonia,Surgery
+Female,No,Pneumonia,Medication
+Male,Yes,Pneumonia,Surgery
+,Yes,Pneumonia,Therapy
+Female,No,Asthma,Surgery
+Male,Yes,Asthma,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,No,Lung Cancer,Medication
+,Yes,COPD,Surgery
+,Yes,Asthma,Therapy
+Male,No,COPD,Surgery
+Male,Yes,Bronchitis,Medication
+Male,No,Asthma,Therapy
+Female,No,Lung Cancer,
+Male,No,Asthma,Surgery
+Female,Yes,Asthma,Medication
+Female,,Asthma,Surgery
+,No,Asthma,Medication
+Female,Yes,Bronchitis,Medication
+Male,No,Lung Cancer,
+,No,Asthma,
+Male,Yes,Bronchitis,Therapy
+Female,Yes,COPD,
+Male,No,Asthma,Surgery
+Male,Yes,Bronchitis,
+Female,Yes,Pneumonia,
+Female,Yes,COPD,Surgery
+Male,No,Lung Cancer,Surgery
+Female,,Asthma,Surgery
+Female,Yes,Asthma,Therapy
+Female,No,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,,,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Asthma,Therapy
+Female,No,Bronchitis,Medication
+Male,No,Pneumonia,Surgery
+Female,No,Bronchitis,Therapy
+Female,No,COPD,Medication
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Bronchitis,Surgery
+Male,No,Bronchitis,Medication
+Male,No,Asthma,Therapy
+Male,Yes,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication
+Female,Yes,Lung Cancer,
+Male,No,COPD,Medication
+Female,Yes,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Surgery
+Female,No,Bronchitis,Surgery
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,No,Asthma,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Asthma,Medication
+Male,Yes,Asthma,Medication
+Female,No,COPD,Surgery
+Female,No,COPD,Medication
+Female,Yes,Pneumonia,Medication
+Male,Yes,,Surgery
+Male,Yes,,Therapy
+,Yes,Asthma,Therapy
+,No,COPD,Medication
+Female,No,Asthma,Surgery
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,No,Lung Cancer,Medication
+Male,Yes,Pneumonia,Therapy
+Female,No,Asthma,Surgery
+Female,Yes,Bronchitis,Therapy
+Female,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Pneumonia,Medication
+,No,Pneumonia,Therapy
+Male,No,Bronchitis,Medication
+Male,Yes,COPD,Therapy
+Male,Yes,Pneumonia,Medication
+Male,No,Asthma,Medication
+Female,No,Bronchitis,Medication
+Female,Yes,COPD,Therapy
+Male,Yes,Bronchitis,Medication
+Male,No,Lung Cancer,
+Male,No,,Therapy
+Female,No,Lung Cancer,Surgery
+Female,No,Pneumonia,Medication
+Male,No,Pneumonia,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,No,Pneumonia,
+Male,Yes,COPD,Surgery
+Female,Yes,Asthma,Therapy
+Female,No,Bronchitis,Therapy
+Male,Yes,Asthma,Medication
+Male,No,Bronchitis,Surgery
+Female,No,Lung Cancer,Surgery
+Female,Yes,COPD,Therapy
+Male,Yes,COPD,Medication
+Female,Yes,Asthma,Medication
+Male,Yes,Asthma,Medication
+Female,Yes,Pneumonia,Surgery
+Male,Yes,COPD,Medication
+Female,No,Asthma,Therapy
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,,Pneumonia,Therapy
+Male,Yes,COPD,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Asthma,Surgery
+Male,No,COPD,Medication
+Male,Yes,Bronchitis,Medication
+Male,No,Lung Cancer,Medication
+Male,Yes,COPD,Medication
+Male,Yes,Lung Cancer,Medication
+Male,Yes,Pneumonia,Surgery
+Male,No,Asthma,Surgery
+Male,,COPD,
+Female,No,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Asthma,Medication
+Female,Yes,Asthma,Surgery
+Female,No,COPD,Medication
+Female,Yes,Lung Cancer,
+Male,Yes,COPD,Medication
+Male,No,COPD,Surgery
+Female,,Lung Cancer,Medication
+Male,Yes,COPD,Therapy
+Female,No,Lung Cancer,
+Female,No,COPD,Medication
+Female,No,Pneumonia,Medication
+Male,No,COPD,Therapy
+Female,,COPD,Surgery
+Female,Yes,Pneumonia,Medication
+Male,Yes,Asthma,Surgery
+Female,,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Pneumonia,Medication
+Male,Yes,Asthma,Surgery
+Female,Yes,COPD,Therapy
+Female,No,Asthma,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,Yes,COPD,Medication
+Female,Yes,Asthma,Surgery
+Male,No,Bronchitis,
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Medication
+Female,No,Pneumonia,Medication
+Female,Yes,COPD,Medication
+Male,Yes,COPD,Therapy
+Female,Yes,Asthma,Therapy
+Male,No,COPD,Medication
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Bronchitis,
+Female,Yes,COPD,Surgery
+,No,COPD,Surgery
+Female,No,Lung Cancer,Surgery
+Female,No,Pneumonia,Medication
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Pneumonia,Surgery
+Male,No,Bronchitis,Therapy
+Male,No,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,,COPD,Therapy
+Female,Yes,Pneumonia,Medication
+Male,Yes,Lung Cancer,Surgery
+Female,No,Bronchitis,Surgery
+Male,Yes,Pneumonia,
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Bronchitis,Medication
+,Yes,Asthma,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Pneumonia,Medication
+Male,No,Pneumonia,
+Male,No,Bronchitis,Therapy
+,No,Bronchitis,Medication
+Female,Yes,Bronchitis,Medication
+Male,No,Bronchitis,
+Female,Yes,Lung Cancer,Surgery
+,,COPD,Therapy
+Female,Yes,Bronchitis,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Surgery
+Female,No,COPD,Surgery
+,No,Pneumonia,Therapy
+Male,No,Asthma,Medication
+Male,Yes,Lung Cancer,Medication
+,,Asthma,Medication
+Female,Yes,COPD,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,Bronchitis,Therapy
+Male,No,Asthma,
+,Yes,,Surgery
+Male,Yes,Asthma,Medication
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Asthma,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,COPD,Medication
+Male,No,Lung Cancer,
+Male,No,,Medication
+,No,Bronchitis,Therapy
+Male,No,Bronchitis,Medication
+,No,Pneumonia,Surgery
+Female,No,Asthma,Surgery
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Asthma,Therapy
+Male,Yes,Lung Cancer,Therapy
+Male,No,Bronchitis,Therapy
+Female,No,Bronchitis,Surgery
+Female,Yes,COPD,Medication
+Female,Yes,Asthma,Surgery
+Female,Yes,COPD,Therapy
+Female,Yes,Lung Cancer,Surgery
+Male,No,COPD,Medication
+,No,Lung Cancer,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,No,Asthma,
+Female,No,Asthma,Therapy
+,No,Asthma,Therapy
+Male,No,,Medication
+Female,Yes,Pneumonia,Medication
+Male,No,Lung Cancer,Medication
+Male,No,Asthma,Medication
+Female,No,COPD,
+Male,No,COPD,Therapy
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Therapy
+Male,,Lung Cancer,
+Female,No,Lung Cancer,Surgery
+Female,No,Asthma,Medication
+Male,No,Lung Cancer,
+Female,No,Asthma,Medication
+,Yes,Asthma,Medication
+Male,No,Lung Cancer,Medication
+Male,Yes,COPD,Therapy
+Male,No,Bronchitis,Surgery
+Female,No,COPD,Medication
+Male,,Lung Cancer,Medication
+Female,No,COPD,Therapy
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Asthma,Surgery
+Female,No,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,No,COPD,Medication
+Male,No,Asthma,Medication
+,No,COPD,Medication
+Male,No,COPD,Medication
+Female,No,Lung Cancer,Surgery
+Female,No,Asthma,Therapy
+Male,Yes,Lung Cancer,Medication
+Male,No,Lung Cancer,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,No,Pneumonia,Therapy
+Male,Yes,Bronchitis,Medication
+,No,Asthma,Therapy
+Female,No,Pneumonia,Medication
+Female,Yes,Bronchitis,Surgery
+Male,No,Bronchitis,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,Pneumonia,Medication
+Male,No,Asthma,Medication
+Male,Yes,COPD,Medication
+Female,No,Bronchitis,Therapy
+Female,No,COPD,Therapy
+,Yes,COPD,
+Female,Yes,COPD,Surgery
+Female,No,Lung Cancer,Medication
+Female,Yes,Asthma,Medication
+Male,,Asthma,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Asthma,Surgery
+Female,No,Bronchitis,Therapy
+Female,No,Asthma,Surgery
+Male,Yes,Lung Cancer,Surgery
+Female,No,Bronchitis,Medication
+Female,No,COPD,Therapy
+Male,No,COPD,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,COPD,Therapy
+Male,No,Asthma,Surgery
+Female,No,,Therapy
+Female,No,Pneumonia,Surgery
+Female,No,COPD,Medication
+Male,Yes,COPD,Surgery
+Female,No,Pneumonia,Surgery
+Male,No,COPD,Medication
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Pneumonia,Therapy
+Female,,Lung Cancer,Surgery
+,No,Pneumonia,Medication
+Male,Yes,Asthma,Surgery
+Female,Yes,Bronchitis,Surgery
+Female,Yes,Lung Cancer,
+Male,Yes,COPD,Medication
+Male,No,Asthma,Surgery
+Male,No,Asthma,Therapy
+Male,No,Bronchitis,Surgery
+Female,,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,,Medication
+Female,Yes,Asthma,Therapy
+,Yes,Lung Cancer,Medication
+Female,No,Bronchitis,Medication
+Female,No,Asthma,Medication
+Female,No,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,No,Asthma,Therapy
+Male,,COPD,Therapy
+,,Asthma,Therapy
+Female,Yes,Bronchitis,
+Male,,Lung Cancer,Medication
+Male,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Therapy
+Male,Yes,,Therapy
+Female,Yes,Bronchitis,Medication
+Male,No,COPD,
+Female,Yes,COPD,Therapy
+Female,Yes,Asthma,Therapy
+Male,Yes,Asthma,Surgery
+Male,No,Asthma,Surgery
+Female,No,Lung Cancer,Medication
+Female,No,COPD,Therapy
+Female,No,Bronchitis,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,COPD,Therapy
+Male,No,COPD,Medication
+Male,No,COPD,Surgery
+Female,Yes,Asthma,Therapy
+Female,No,Lung Cancer,Therapy
+Female,Yes,Bronchitis,Medication
+Female,No,Asthma,Therapy
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,COPD,Surgery
+Female,No,Lung Cancer,Therapy
+Male,Yes,COPD,Therapy
+Female,Yes,Asthma,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,Yes,COPD,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,,Asthma,Therapy
+Female,Yes,Pneumonia,Therapy
+Male,No,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,No,COPD,Therapy
+Male,No,Lung Cancer,Surgery
+Male,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,Surgery
+Male,No,Bronchitis,Therapy
+Female,,Pneumonia,Surgery
+Male,Yes,,Therapy
+Female,No,COPD,
+Male,No,Asthma,Medication
+Female,No,Lung Cancer,Surgery
+Male,Yes,COPD,Medication
+Female,Yes,Bronchitis,Therapy
+Female,No,Bronchitis,Surgery
+Male,Yes,Asthma,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,No,,Therapy
+Female,Yes,COPD,Surgery
+Male,No,Pneumonia,Therapy
+Male,Yes,Bronchitis,Medication
+Female,Yes,Bronchitis,Surgery
+Female,No,Asthma,Therapy
+Male,Yes,Asthma,Surgery
+Female,Yes,COPD,Medication
+Male,No,Asthma,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,No,Asthma,Surgery
+Male,No,Pneumonia,Surgery
+Female,No,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,Yes,Bronchitis,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Pneumonia,Medication
+Male,Yes,Pneumonia,Medication
+Male,Yes,Bronchitis,Surgery
+Female,Yes,,Surgery
+Male,No,Bronchitis,Surgery
+Female,No,COPD,Therapy
+Female,Yes,Asthma,Surgery
+Male,No,Pneumonia,Surgery
+Female,Yes,,Medication
+,Yes,,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,No,,Therapy
+Male,No,Pneumonia,Surgery
+Female,Yes,Pneumonia,
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Pneumonia,Therapy
+Female,No,Bronchitis,Surgery
+Male,No,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,No,,Therapy
+Male,No,Asthma,Surgery
+Male,Yes,Asthma,Medication
+Female,Yes,Bronchitis,Therapy
+Male,No,COPD,Therapy
+Male,No,Pneumonia,Medication
+Male,,Asthma,Medication
+Female,Yes,COPD,Therapy
+Male,,COPD,Medication
+Male,No,Asthma,Surgery
+Male,Yes,Bronchitis,Medication
+Male,No,COPD,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,No,COPD,Therapy
+Male,No,Pneumonia,Therapy
+Female,No,Asthma,Therapy
+Female,No,Pneumonia,Therapy
+Female,Yes,Bronchitis,Medication
+Male,No,Lung Cancer,Medication
+Female,No,Asthma,Therapy
+Male,No,COPD,Medication
+Female,Yes,Lung Cancer,Medication
+Male,Yes,COPD,Therapy
+Female,Yes,Bronchitis,Medication
+Male,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,No,Bronchitis,Therapy
+Male,No,Bronchitis,Medication
+Male,No,COPD,Medication
+Male,Yes,Pneumonia,Surgery
+Male,Yes,,Surgery
+Female,No,Lung Cancer,Medication
+Male,Yes,COPD,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,COPD,Surgery
+Female,Yes,COPD,Surgery
+Male,No,Asthma,Medication
+Female,No,Pneumonia,Medication
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Bronchitis,Surgery
+Female,No,,Therapy
+Male,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Therapy
+Male,No,Bronchitis,Therapy
+Female,No,Lung Cancer,Medication
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Pneumonia,Medication
+Male,Yes,Pneumonia,Therapy
+Male,No,Pneumonia,Surgery
+Male,No,COPD,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,,Asthma,Therapy
+Male,Yes,Pneumonia,Therapy
+Male,,Lung Cancer,Medication
+,Yes,Pneumonia,Medication
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Pneumonia,Medication
+,No,Pneumonia,Therapy
+Female,No,COPD,Surgery
+Male,No,,Surgery
+Female,Yes,Bronchitis,
+Female,Yes,Asthma,Medication
+Male,No,,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,Yes,COPD,Surgery
+Female,Yes,COPD,Medication
+Female,No,Bronchitis,Surgery
+Male,Yes,COPD,Therapy
+Male,No,Bronchitis,Therapy
+Female,No,COPD,Therapy
+Female,No,Pneumonia,Medication
+Female,No,Asthma,Therapy
+Male,,COPD,Surgery
+Female,No,Asthma,Surgery
+Female,No,Bronchitis,Medication
+Male,No,Asthma,Therapy
+Male,No,COPD,Surgery
+Female,,Bronchitis,Therapy
+Female,No,Bronchitis,Therapy
+Male,No,,Therapy
+Female,No,Bronchitis,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,Lung Cancer,Surgery
+Male,No,Pneumonia,Therapy
+Male,No,Pneumonia,Therapy
+,Yes,Bronchitis,Therapy
+Female,Yes,Asthma,Surgery
+Female,Yes,,Medication
+Male,No,Pneumonia,Medication
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Pneumonia,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,No,Pneumonia,Medication
+Male,Yes,Pneumonia,Surgery
+Female,No,Asthma,Medication
+Male,No,COPD,Surgery
+Male,No,Lung Cancer,Medication
+Male,No,Asthma,Surgery
+Female,No,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Surgery
+,No,Lung Cancer,Surgery
+,No,Bronchitis,Surgery
+Male,No,Bronchitis,Therapy
+Male,No,COPD,Surgery
+Male,Yes,COPD,
+Female,No,Lung Cancer,Surgery
+Male,,Asthma,Medication
+Male,No,Asthma,Surgery
+Male,No,Pneumonia,Therapy
+Female,Yes,Asthma,
+Female,Yes,COPD,
+Male,Yes,Asthma,Medication
+Female,,Pneumonia,Surgery
+,Yes,Bronchitis,Surgery
+Female,No,Asthma,Surgery
+Female,Yes,Asthma,Surgery
+Female,Yes,COPD,Medication
+Female,No,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Medication
+Female,Yes,Lung Cancer,Medication
+Female,No,Pneumonia,
+Male,No,,Medication
+Male,No,Lung Cancer,Surgery
+,Yes,COPD,Surgery
+Male,Yes,COPD,Surgery
+Female,Yes,COPD,Surgery
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,No,Pneumonia,Therapy
+Male,Yes,Pneumonia,Therapy
+Female,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Therapy
+Male,No,Lung Cancer,Medication
+Female,Yes,Asthma,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Asthma,Medication
+Female,Yes,Lung Cancer,Therapy
+,No,COPD,Surgery
+Male,Yes,COPD,Surgery
+Male,Yes,COPD,Therapy
+Male,No,Bronchitis,Medication
+Male,Yes,COPD,Therapy
+Female,No,Bronchitis,Medication
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Asthma,Therapy
+Male,Yes,COPD,Surgery
+Male,Yes,Pneumonia,
+Female,Yes,COPD,Surgery
+Male,Yes,COPD,Therapy
+Female,Yes,COPD,Surgery
+Female,No,Pneumonia,Surgery
+Female,Yes,,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Pneumonia,Medication
+Female,No,Bronchitis,Surgery
+Female,No,Asthma,Medication
+Male,Yes,Bronchitis,
+Female,Yes,COPD,Therapy
+Female,Yes,Lung Cancer,Therapy
+Female,No,Lung Cancer,Surgery
+Male,Yes,COPD,Medication
+Female,No,Bronchitis,Surgery
+Female,,COPD,Therapy
+Male,No,Pneumonia,Surgery
+Male,No,Bronchitis,Therapy
+Female,Yes,COPD,Medication
+Female,Yes,Pneumonia,Medication
+Male,Yes,Pneumonia,Therapy
+Female,Yes,Bronchitis,Medication
+Male,,Asthma,Therapy
+Female,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,Therapy
+Female,No,Asthma,Surgery
+Male,Yes,Pneumonia,Medication
+Male,,Asthma,Surgery
+Male,No,Pneumonia,Surgery
+,,Pneumonia,Medication
+,Yes,Pneumonia,Surgery
+Female,Yes,Pneumonia,
+Female,Yes,Lung Cancer,Surgery
+Male,No,Asthma,Therapy
+Female,,Pneumonia,Medication
+Female,Yes,COPD,Surgery
+Female,No,COPD,Therapy
+Female,Yes,COPD,Surgery
+Female,No,Lung Cancer,Therapy
+Male,No,Asthma,Therapy
+Female,No,Lung Cancer,Therapy
+Female,Yes,Asthma,Medication
+Female,Yes,Pneumonia,Medication
+Male,Yes,Lung Cancer,Medication
+Female,No,Bronchitis,Surgery
+Female,Yes,,Therapy
+Female,Yes,Lung Cancer,Medication
+Male,No,Bronchitis,Therapy
+Female,Yes,COPD,Medication
+Male,Yes,,Therapy
+Female,Yes,Pneumonia,Medication
+Male,No,COPD,Medication
+Male,Yes,Lung Cancer,Medication
+Male,No,COPD,Medication
+Male,No,Asthma,Medication
+Male,Yes,Lung Cancer,Medication
+Male,Yes,Asthma,Medication
+Female,No,Pneumonia,Medication
+Female,Yes,Asthma,Surgery
+Female,No,Pneumonia,Therapy
+Male,Yes,Asthma,Surgery
+Female,Yes,Asthma,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,Pneumonia,Therapy
+Female,Yes,COPD,Medication
+Male,,Asthma,
+Female,No,Lung Cancer,Medication
+Female,Yes,,Surgery
+Female,No,COPD,Surgery
+Male,No,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Medication
+Female,No,Pneumonia,Surgery
+Male,No,,Medication
+,No,Bronchitis,Surgery
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Asthma,Surgery
+Female,Yes,COPD,Medication
+Male,Yes,Bronchitis,Medication
+Male,Yes,COPD,Surgery
+Male,No,COPD,Surgery
+Female,No,Bronchitis,Medication
+Male,Yes,COPD,Medication
+Female,,Lung Cancer,Medication
+Male,No,Asthma,Therapy
+,No,Pneumonia,Therapy
+Male,No,Bronchitis,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Asthma,Therapy
+Female,Yes,Lung Cancer,Therapy
+Female,No,Lung Cancer,Surgery
+Male,No,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Surgery
+Female,Yes,COPD,
+Male,Yes,,Therapy
+Male,No,Asthma,Therapy
+Female,No,COPD,Surgery
+Female,Yes,Asthma,Therapy
+Male,No,Asthma,Surgery
+Male,Yes,Asthma,Medication
+Male,No,Lung Cancer,Medication
+Male,No,Pneumonia,Therapy
+Male,Yes,Pneumonia,Surgery
+,No,Bronchitis,Surgery
+Female,Yes,Asthma,Therapy
+Female,No,Lung Cancer,Surgery
+,Yes,COPD,Therapy
+Male,No,COPD,Therapy
+Male,No,Bronchitis,Medication
+Male,Yes,,Therapy
+Female,No,Asthma,
+Male,Yes,Asthma,Therapy
+Female,No,COPD,Medication
+Female,Yes,COPD,
+Female,No,COPD,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,Asthma,Surgery
+Female,No,Asthma,Therapy
+Female,Yes,COPD,Medication
+Male,Yes,Lung Cancer,
+Female,Yes,COPD,Surgery
+Male,No,Bronchitis,Medication
+Female,No,Lung Cancer,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Medication
+Male,No,COPD,Surgery
+Female,Yes,COPD,Medication
+Male,Yes,Lung Cancer,Surgery
+Female,No,Bronchitis,
+Female,Yes,Pneumonia,Therapy
+Male,Yes,,Therapy
+Male,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Male,Yes,Lung Cancer,
+Female,No,Pneumonia,Medication
+Male,Yes,COPD,Therapy
+,Yes,Bronchitis,Therapy
+Female,Yes,Asthma,Therapy
+,Yes,Bronchitis,Medication
+Female,Yes,COPD,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Pneumonia,Medication
+Male,Yes,Asthma,Medication
+Female,No,Pneumonia,Surgery
+Female,Yes,Pneumonia,Medication
+Male,Yes,Pneumonia,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,COPD,
+Male,Yes,,
+Male,Yes,Pneumonia,Surgery
+Female,Yes,COPD,Medication
+Female,Yes,Bronchitis,Surgery
+Female,No,Lung Cancer,Medication
+Male,No,COPD,Medication
+Female,No,,Therapy
+Male,No,Lung Cancer,Medication
+Male,No,Lung Cancer,Medication
+Male,Yes,,Surgery
+Male,Yes,Pneumonia,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Lung Cancer,Medication
+Male,Yes,Bronchitis,Surgery
+,No,Lung Cancer,Therapy
+Male,No,Bronchitis,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Asthma,Therapy
+Male,No,Pneumonia,Surgery
+Female,Yes,COPD,Surgery
+Female,No,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Surgery
+Male,No,Lung Cancer,Medication
+Male,No,Bronchitis,Therapy
+Male,Yes,COPD,Medication
+Male,No,Bronchitis,Medication
+Female,Yes,Bronchitis,Surgery
+Male,No,Asthma,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Medication
+Female,Yes,Pneumonia,Surgery
+Female,No,Pneumonia,Surgery
+Female,No,Asthma,Medication
+Female,Yes,Asthma,Therapy
+Female,No,Bronchitis,Surgery
+Male,No,Asthma,Therapy
+Male,Yes,Lung Cancer,
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,No,Bronchitis,Medication
+,No,Asthma,Surgery
+Female,,Asthma,Therapy
+Female,Yes,,Therapy
+Male,No,COPD,Therapy
+Male,No,COPD,Therapy
+Female,No,COPD,Therapy
+Female,No,Lung Cancer,Therapy
+Male,,Asthma,Therapy
+Female,No,Pneumonia,Therapy
+Female,No,Pneumonia,Therapy
+,Yes,COPD,Therapy
+Female,No,,Medication
+Male,Yes,COPD,Medication
+Male,No,COPD,Medication
+Male,No,Asthma,Therapy
+Male,Yes,Lung Cancer,Medication
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Asthma,Medication
+Male,No,Pneumonia,Surgery
+Female,No,COPD,Therapy
+Female,Yes,COPD,Medication
+Female,No,Asthma,Surgery
+Female,No,,Surgery
+Female,Yes,COPD,Surgery
+Female,No,Asthma,Therapy
+Male,No,,Medication
+Male,No,Lung Cancer,Therapy
+Female,Yes,COPD,Therapy
+Male,No,Pneumonia,Therapy
+Male,,COPD,Therapy
+Female,Yes,Bronchitis,Therapy
+Male,No,Lung Cancer,Medication
+Male,,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Medication
+Female,Yes,Pneumonia,Surgery
+Male,No,COPD,Therapy
+Male,Yes,Asthma,
+Male,No,Bronchitis,Surgery
+Female,No,Bronchitis,Therapy
+Female,Yes,Bronchitis,Surgery
+Female,No,COPD,Therapy
+Male,Yes,Lung Cancer,Medication
+Female,No,Asthma,
+Male,No,COPD,Therapy
+Female,Yes,Pneumonia,Surgery
+Female,No,Lung Cancer,Surgery
+Male,No,COPD,Medication
+Female,No,COPD,Medication
+Male,Yes,Pneumonia,Therapy
+Female,No,Pneumonia,Therapy
+Female,Yes,,Surgery
+Female,Yes,Asthma,Therapy
+Male,Yes,COPD,Therapy
+Male,Yes,Pneumonia,Therapy
+Female,Yes,Asthma,Medication
+Female,No,Bronchitis,Medication
+Female,Yes,Bronchitis,Surgery
+Male,No,Bronchitis,
+Female,No,,Medication
+Female,Yes,Asthma,Therapy
+Female,No,Asthma,Surgery
+Female,No,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Surgery
+Male,No,Bronchitis,Surgery
+Female,Yes,COPD,Medication
+Male,Yes,Bronchitis,Therapy
+Male,No,Asthma,Therapy
+Female,No,Bronchitis,Therapy
+Male,No,Pneumonia,Surgery
+Male,No,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Therapy
+,Yes,COPD,Medication
+Female,No,COPD,Surgery
+Male,No,COPD,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Asthma,
+Male,Yes,Pneumonia,
+Female,Yes,Lung Cancer,Therapy
+Female,No,,Surgery
+Male,No,Bronchitis,Therapy
+Female,Yes,COPD,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Therapy
+Male,,Pneumonia,Medication
+Female,Yes,Asthma,Therapy
+,Yes,Bronchitis,Surgery
+Male,No,,Therapy
+Female,Yes,Asthma,Surgery
+Female,No,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Medication
+Female,No,COPD,Medication
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Asthma,Medication
+Male,,COPD,Surgery
+,No,Pneumonia,Medication
+Male,No,COPD,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Lung Cancer,Surgery
+Female,No,Bronchitis,Medication
+Male,No,,Therapy
+Female,Yes,Asthma,Therapy
+Male,No,,Therapy
+Female,No,Asthma,Medication
+Female,No,Lung Cancer,Therapy
+Male,No,Bronchitis,Surgery
+Female,Yes,COPD,Surgery
+,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Medication
+Female,Yes,Asthma,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,Pneumonia,Therapy
+Female,No,,Therapy
+Female,Yes,Asthma,Medication
+,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,
+Male,No,Asthma,Therapy
+Male,Yes,COPD,Therapy
+Male,No,,Medication
+Male,No,Lung Cancer,Medication
+Female,Yes,,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,No,COPD,Surgery
+Female,Yes,Bronchitis,Medication
+,No,COPD,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Asthma,Therapy
+Male,Yes,Bronchitis,Therapy
+,Yes,Asthma,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,No,,Medication
+Male,No,Bronchitis,Medication
+Female,No,COPD,Therapy
+Male,Yes,Bronchitis,Medication
+Male,No,Pneumonia,Surgery
+Male,,Lung Cancer,Medication
+Male,No,COPD,Therapy
+Female,Yes,COPD,Medication
+Female,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Asthma,Medication
+Female,No,Pneumonia,Surgery
+Female,No,Asthma,
+Female,No,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Therapy
+Female,No,Pneumonia,Surgery
+Female,No,COPD,Surgery
+Male,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Surgery
+Female,Yes,COPD,Surgery
+Female,Yes,Asthma,Surgery
+Female,No,Pneumonia,Surgery
+Male,No,COPD,Therapy
+Male,No,Asthma,Surgery
+Female,No,Bronchitis,Therapy
+Female,No,Asthma,Therapy
+Female,No,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,No,Asthma,Medication
+Male,No,Lung Cancer,Therapy
+Male,No,Lung Cancer,Medication
+Male,Yes,Asthma,Surgery
+Female,No,,Therapy
+Female,No,Asthma,Therapy
+Male,Yes,COPD,Therapy
+Male,No,Lung Cancer,Medication
+Female,Yes,Pneumonia,Medication
+Male,Yes,,Medication
+Female,No,Pneumonia,Surgery
+Female,No,COPD,Medication
+Male,Yes,COPD,Therapy
+Male,No,COPD,Medication
+Male,No,Asthma,Medication
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Pneumonia,Medication
+Male,No,COPD,Therapy
+Female,Yes,COPD,Medication
+Female,No,,Therapy
+Female,No,Lung Cancer,Medication
+Male,No,,Surgery
+Female,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,No,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Surgery
+Female,No,COPD,Medication
+Male,Yes,Pneumonia,Surgery
+Male,No,Asthma,Therapy
+Female,Yes,COPD,
+Male,Yes,,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,Bronchitis,Medication
+Female,No,Lung Cancer,Medication
+Male,Yes,COPD,Therapy
+Male,No,COPD,Surgery
+Male,No,Pneumonia,Therapy
+Female,No,Bronchitis,Therapy
+Female,No,Bronchitis,Therapy
+Male,No,Pneumonia,Medication
+Female,Yes,Asthma,Therapy
+Female,No,Bronchitis,Medication
+Female,Yes,COPD,Therapy
+Female,No,Asthma,Surgery
+Male,,Lung Cancer,Medication
+Female,No,Lung Cancer,Medication
+Female,Yes,Asthma,Medication
+Male,No,COPD,Surgery
+,Yes,Lung Cancer,Medication
+Female,Yes,COPD,Surgery
+Female,No,Pneumonia,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,No,,Surgery
+Male,No,Bronchitis,Medication
+,Yes,Pneumonia,
+Female,No,,Surgery
+Male,No,COPD,Therapy
+Female,Yes,COPD,Surgery
+Male,Yes,,Medication
+Female,Yes,Asthma,Medication
+Male,Yes,Bronchitis,Medication
+Male,Yes,Lung Cancer,Medication
+Female,Yes,,Therapy
+Female,No,Pneumonia,
+Female,Yes,Pneumonia,Therapy
+Female,Yes,COPD,Medication
+Female,No,Lung Cancer,Medication
+,No,Asthma,Medication
+Male,Yes,COPD,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,No,Bronchitis,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,Yes,COPD,Therapy
+Male,No,Asthma,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,No,Bronchitis,Surgery
+Female,Yes,Bronchitis,Surgery
+Female,No,Asthma,Surgery
+Male,,COPD,Medication
+Female,No,Pneumonia,Medication
+,Yes,Lung Cancer,
+Female,No,Bronchitis,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,No,Asthma,Medication
+Female,No,COPD,Therapy
+Male,No,Lung Cancer,Therapy
+Female,Yes,Asthma,Medication
+Male,Yes,COPD,Surgery
+Male,No,,Therapy
+Male,,Bronchitis,Therapy
+Female,Yes,Bronchitis,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,Bronchitis,Surgery
+Female,No,COPD,Therapy
+,No,Pneumonia,Surgery
+Female,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Therapy
+Female,No,Bronchitis,Medication
+Male,Yes,COPD,Therapy
+Male,Yes,Asthma,Medication
+Male,No,COPD,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,Bronchitis,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,No,COPD,Medication
+Male,No,Asthma,Therapy
+,Yes,,Medication
+Male,Yes,Asthma,Medication
+,No,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Asthma,Surgery
+Female,,Bronchitis,Medication
+Female,Yes,Bronchitis,Surgery
+Female,Yes,Bronchitis,Therapy
+,Yes,COPD,Therapy
+Male,No,COPD,Surgery
+Male,Yes,COPD,Surgery
+Female,No,,Medication
+Male,No,Asthma,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Asthma,Therapy
+Male,No,COPD,Therapy
+Male,No,,Therapy
+Female,Yes,COPD,Surgery
+,No,Pneumonia,Surgery
+Female,Yes,Asthma,Surgery
+Male,No,Lung Cancer,Medication
+Male,No,COPD,Medication
+Male,,Lung Cancer,Medication
+Male,No,Bronchitis,Therapy
+Male,Yes,,Medication
+Male,No,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,COPD,Surgery
+Male,Yes,Asthma,Surgery
+Female,No,Pneumonia,Surgery
+Male,Yes,COPD,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,Asthma,Surgery
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,Yes,COPD,Therapy
+Female,No,,Surgery
+Female,Yes,COPD,Medication
+Female,Yes,COPD,Surgery
+,Yes,Asthma,Therapy
+Female,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,COPD,Therapy
+Female,Yes,Bronchitis,Medication
+Male,No,COPD,Therapy
+Female,No,Bronchitis,Surgery
+Female,No,Bronchitis,
+Female,No,Lung Cancer,
+Male,No,Bronchitis,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Male,,COPD,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,COPD,Therapy
+Female,No,,Medication
+Male,Yes,Asthma,Medication
+Female,No,Pneumonia,Therapy
+Male,Yes,Pneumonia,Medication
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Pneumonia,Therapy
+Male,No,Bronchitis,Surgery
+Male,Yes,COPD,Surgery
+Female,Yes,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication
+Female,No,Bronchitis,Medication
+Female,Yes,,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,,Therapy
+Male,Yes,COPD,Surgery
+Male,No,Asthma,Surgery
+Female,No,Pneumonia,Therapy
+Male,Yes,COPD,Medication
+Female,No,COPD,Therapy
+Female,Yes,,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Asthma,Medication
+Female,No,COPD,Medication
+Male,No,Pneumonia,Therapy
+,Yes,Lung Cancer,Surgery
+Male,No,Asthma,Medication
+Female,Yes,Asthma,Medication
+Male,No,Asthma,Medication
+Male,Yes,Bronchitis,Therapy
+Female,No,,Therapy
+Male,No,Bronchitis,Surgery
+Male,No,Asthma,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,No,Asthma,Surgery
+Male,No,,Surgery
+Female,No,Pneumonia,Medication
+Male,No,Lung Cancer,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,Asthma,Therapy
+Female,No,Asthma,Therapy
+Male,No,Pneumonia,Surgery
+Female,Yes,COPD,Surgery
+Female,No,Asthma,Surgery
+Male,No,Pneumonia,Surgery
+,Yes,Bronchitis,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Pneumonia,Therapy
+,No,Lung Cancer,Surgery
+Male,Yes,COPD,Medication
+Male,Yes,COPD,Therapy
+Male,No,Bronchitis,Medication
+Male,Yes,Pneumonia,Medication
+Female,No,,Medication
+Male,No,Bronchitis,Surgery
+Male,Yes,COPD,Surgery
+Female,No,COPD,Therapy
+Male,,COPD,Therapy
+Male,Yes,Asthma,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Pneumonia,Surgery
+Male,No,Bronchitis,Surgery
+Male,No,Bronchitis,Surgery
+Male,No,Bronchitis,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Lung Cancer,Therapy
+Female,No,Lung Cancer,Medication
+Female,Yes,,Surgery
+Female,No,Bronchitis,Therapy
+Female,No,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,No,COPD,Medication
+Male,No,Asthma,Therapy
+Female,No,COPD,Surgery
+Female,No,Bronchitis,Surgery
+Male,Yes,COPD,Surgery
+Female,No,Bronchitis,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,No,Lung Cancer,Therapy
+Female,Yes,Bronchitis,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,Pneumonia,Medication
+Female,Yes,Bronchitis,Therapy
+Female,No,Bronchitis,Surgery
+Male,No,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Medication
+Male,Yes,Bronchitis,Therapy
+Female,,Lung Cancer,Medication
+Male,Yes,Bronchitis,Therapy
+Female,Yes,COPD,Medication
+Female,No,COPD,Therapy
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Medication
+Male,Yes,Asthma,
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,No,COPD,Therapy
+Female,Yes,COPD,Medication
+Female,No,Bronchitis,Surgery
+Female,No,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Surgery
+Female,No,Bronchitis,Surgery
+Female,Yes,Pneumonia,
+Female,Yes,Bronchitis,Medication
+Male,,COPD,Medication
+Female,Yes,,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,No,COPD,Medication
+Male,No,Bronchitis,Therapy
+Female,No,,Therapy
+Female,No,Bronchitis,Therapy
+Female,Yes,Bronchitis,Medication
+Male,Yes,Lung Cancer,Medication
+Male,No,Pneumonia,Medication
+Male,Yes,COPD,Surgery
+Female,No,Asthma,Therapy
+Female,No,Asthma,Surgery
+Male,No,COPD,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,Yes,,Therapy
+Female,No,Lung Cancer,Therapy
+Male,No,Pneumonia,Surgery
+Male,No,Asthma,Medication
+Male,No,COPD,Therapy
+Female,Yes,Lung Cancer,Medication
+Male,No,Bronchitis,Medication
+Male,No,Pneumonia,Therapy
+Female,Yes,,Medication
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Bronchitis,
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,COPD,Therapy
+Male,Yes,Asthma,Surgery
+,Yes,Bronchitis,Medication
+Male,No,COPD,
+Female,Yes,Bronchitis,Surgery
+Male,No,Asthma,
+Male,No,Bronchitis,Surgery
+Female,No,COPD,Surgery
+Female,No,Lung Cancer,Surgery
+Male,No,Asthma,Therapy
+Male,No,COPD,Therapy
+Male,No,,Medication
+Male,No,Pneumonia,Therapy
+Male,Yes,Pneumonia,Medication
+Female,No,,Medication
+Female,No,Bronchitis,Medication
+Female,No,Bronchitis,Therapy
+Female,No,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Medication
+,No,Pneumonia,Surgery
+Female,Yes,Bronchitis,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,No,,Medication
+Male,No,COPD,Therapy
+Male,Yes,Bronchitis,Surgery
+,No,Pneumonia,Therapy
+Female,No,Asthma,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,COPD,Medication
+Female,No,Asthma,Medication
+Male,No,Lung Cancer,Therapy
+Male,No,COPD,Surgery
+Male,No,COPD,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,No,Pneumonia,Therapy
+,Yes,COPD,Therapy
+Female,No,,Surgery
+,No,Bronchitis,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,,Pneumonia,Therapy
+Female,Yes,COPD,Surgery
+Male,Yes,Asthma,Surgery
+Male,No,COPD,Therapy
+Female,No,Asthma,Medication
+Female,No,Asthma,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Asthma,Therapy
+Female,Yes,COPD,Medication
+Female,No,,Surgery
+Female,Yes,Pneumonia,Medication
+Male,Yes,Lung Cancer,Medication
+Male,No,COPD,Medication
+Male,No,Asthma,Medication
+Female,No,Lung Cancer,Medication
+Female,,Bronchitis,Therapy
+Female,No,COPD,Therapy
+Male,Yes,Lung Cancer,
+Male,Yes,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Medication
+Female,Yes,COPD,Therapy
+Male,No,Lung Cancer,Therapy
+Female,Yes,Asthma,Surgery
+Male,No,COPD,Surgery
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Surgery
+Female,No,COPD,Medication
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Asthma,Therapy
+Female,No,,Surgery
+Male,No,Asthma,Therapy
+Female,Yes,COPD,
+Female,Yes,Lung Cancer,Surgery
+Male,No,Pneumonia,
+Female,Yes,Asthma,
+Female,No,Asthma,Therapy
+Female,No,Lung Cancer,Medication
+Male,Yes,COPD,Medication
+Male,No,Pneumonia,Therapy
+Male,Yes,Asthma,Therapy
+Female,No,COPD,Therapy
+Male,No,Lung Cancer,Therapy
+Female,No,Bronchitis,Therapy
+Male,No,Lung Cancer,Medication
+Female,,Asthma,Therapy
+Male,Yes,Pneumonia,Therapy
+Female,,Lung Cancer,Therapy
+Female,Yes,Bronchitis,Surgery
+Female,No,Pneumonia,Therapy
+Female,No,,Therapy
+Male,No,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Asthma,Surgery
+Male,No,Bronchitis,Surgery
+Male,No,Lung Cancer,Therapy
+,No,Bronchitis,Medication
+Female,No,Lung Cancer,Medication
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Surgery
+Male,No,Asthma,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,No,COPD,Medication
+Female,No,Asthma,Surgery
+Male,No,Lung Cancer,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,COPD,Medication
+,No,Lung Cancer,Medication
+Male,Yes,Asthma,Therapy
+Male,No,Pneumonia,Therapy
+Female,No,Bronchitis,Surgery
+Female,Yes,,Therapy
+Female,Yes,,Surgery
+Male,No,Asthma,Therapy
+Female,Yes,Asthma,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,Lung Cancer,
+Male,Yes,COPD,Therapy
+Female,No,Bronchitis,Medication
+Male,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Surgery
+Male,No,Asthma,Surgery
+Male,No,COPD,Therapy
+Female,,Lung Cancer,Surgery
+Male,No,Bronchitis,Medication
+Female,No,Asthma,Medication
+Male,Yes,Pneumonia,Therapy
+Female,Yes,Pneumonia,Medication
+Female,,,
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,No,Lung Cancer,Medication
+Female,,Asthma,Medication
+,Yes,Asthma,Medication
+Female,Yes,Asthma,Surgery
+Male,No,Bronchitis,Therapy
+Female,Yes,Bronchitis,Medication
+Male,Yes,Lung Cancer,Medication
+Female,No,Bronchitis,Medication
+Female,No,Asthma,Medication
+Female,Yes,,Therapy
+Female,No,COPD,Medication
+Female,Yes,Lung Cancer,Medication
+Male,No,Pneumonia,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,Yes,,Surgery
+Male,No,Asthma,Surgery
+Male,No,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Therapy
+,No,Asthma,Therapy
+Male,Yes,Pneumonia,Surgery
+Male,Yes,COPD,Therapy
+Male,No,Asthma,Medication
+Male,No,Asthma,Surgery
+Female,No,Lung Cancer,Medication
+Male,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Medication
+Male,Yes,Bronchitis,Surgery
+Female,No,Pneumonia,Therapy
+Male,No,Pneumonia,Therapy
+Female,Yes,Asthma,Therapy
+Female,Yes,Pneumonia,Medication
+Male,No,Pneumonia,Surgery
+Female,No,Lung Cancer,Surgery
+Female,,Pneumonia,
+Male,Yes,COPD,Therapy
+Female,Yes,COPD,Medication
+,No,COPD,Therapy
+Male,Yes,Asthma,Therapy
+Male,Yes,Bronchitis,Medication
+Female,No,Lung Cancer,Therapy
+Female,Yes,Asthma,Therapy
+Female,No,Bronchitis,Surgery
+Male,No,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,No,COPD,Medication
+Female,Yes,COPD,Surgery
+Female,,COPD,Therapy
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Medication
+Male,,COPD,Therapy
+Female,No,Lung Cancer,Therapy
+Female,Yes,COPD,Medication
+Male,No,,Medication
+Male,No,COPD,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,No,Asthma,Medication
+Female,No,COPD,Therapy
+Female,,Asthma,Therapy
+Male,No,Bronchitis,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,COPD,Medication
+Male,No,COPD,Medication
+Female,Yes,COPD,Surgery
+Female,No,Asthma,Therapy
+Male,No,Bronchitis,Therapy
+Male,Yes,,
+Male,No,Bronchitis,Surgery
+Male,No,COPD,Therapy
+Female,Yes,Asthma,Therapy
+Female,Yes,Pneumonia,Medication
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Surgery
+Female,No,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Asthma,Therapy
+Male,Yes,COPD,Therapy
+Female,No,COPD,Surgery
+Male,No,Bronchitis,Therapy
+Female,Yes,COPD,Medication
+Female,No,,Surgery
+Female,No,Lung Cancer,Surgery
+Male,No,Lung Cancer,Medication
+Male,No,,Therapy
+,Yes,COPD,Therapy
+Male,Yes,Asthma,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,Asthma,Therapy
+Male,No,Bronchitis,Surgery
+Male,No,Bronchitis,Surgery
+Male,Yes,Asthma,Medication
+Female,,Pneumonia,Therapy
+Male,Yes,,Medication
+Female,Yes,COPD,Surgery
+,Yes,Bronchitis,Therapy
+Female,Yes,COPD,Medication
+Male,,COPD,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,No,Bronchitis,Medication
+Female,Yes,,Therapy
+Male,No,Asthma,Medication
+Female,No,COPD,Surgery
+Male,No,Lung Cancer,Surgery
+Male,No,Bronchitis,Medication
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Asthma,
+,No,Lung Cancer,Therapy
+Male,,,Therapy
+Male,Yes,COPD,Therapy
+Male,No,COPD,Therapy
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Pneumonia,Medication
+Female,Yes,Pneumonia,Therapy
+Female,No,Asthma,Surgery
+,Yes,Bronchitis,
+Male,Yes,COPD,Medication
+Male,No,Bronchitis,Medication
+Male,Yes,Asthma,Therapy
+Female,No,Bronchitis,Therapy
+Female,Yes,Bronchitis,Therapy
+Male,No,Pneumonia,Medication
+Male,No,Bronchitis,Medication
+Female,No,Pneumonia,Surgery
+Male,No,Lung Cancer,Surgery
+Female,Yes,Asthma,Surgery
+,No,Bronchitis,Therapy
+Female,No,Pneumonia,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,Yes,COPD,Surgery
+,No,COPD,Medication
+Male,No,COPD,Therapy
+Female,Yes,COPD,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,No,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,No,Asthma,Surgery
+Male,Yes,Lung Cancer,Surgery
+Female,No,COPD,Medication
+Female,No,COPD,Surgery
+Female,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Asthma,Medication
+Female,No,Lung Cancer,Surgery
+Female,,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,No,Lung Cancer,Therapy
+Female,No,Lung Cancer,Surgery
+Male,Yes,COPD,Surgery
+Male,Yes,Pneumonia,Medication
+Male,No,COPD,Therapy
+Female,No,Pneumonia,Medication
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,Asthma,Medication
+Male,No,Pneumonia,Therapy
+Male,No,Asthma,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,Pneumonia,Surgery
+Male,Yes,,Surgery
+Male,No,COPD,Surgery
+Male,No,Asthma,Surgery
+Female,Yes,,Therapy
+Female,Yes,COPD,Therapy
+Male,No,Lung Cancer,Surgery
+Male,Yes,COPD,Therapy
+Female,No,Lung Cancer,Medication
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Asthma,Surgery
+Female,No,COPD,Therapy
+Male,No,Bronchitis,Medication
+Male,No,COPD,Therapy
+Female,Yes,Lung Cancer,Surgery
+,No,Lung Cancer,Medication
+Male,No,COPD,Surgery
+Female,No,Bronchitis,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,No,Asthma,Medication
+Male,Yes,COPD,Therapy
+Female,No,Lung Cancer,Surgery
+Female,No,Pneumonia,Therapy
+Female,No,Asthma,Therapy
+Male,Yes,Lung Cancer,Medication
+Male,No,Asthma,Therapy
+Male,Yes,Bronchitis,Medication
+Male,No,Bronchitis,Therapy
+Female,,Bronchitis,Therapy
+Female,No,Bronchitis,Surgery
+Male,Yes,COPD,
+Female,Yes,Pneumonia,Therapy
+Male,No,COPD,Medication
+Male,No,Bronchitis,Medication
+Female,Yes,COPD,
+Female,Yes,Asthma,Surgery
+Male,Yes,COPD,Surgery
+Male,No,Asthma,Medication
+Female,Yes,Lung Cancer,Therapy
+,Yes,Asthma,Surgery
+Male,,Asthma,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Surgery
+Female,No,Bronchitis,Medication
+Male,No,Asthma,Surgery
+Female,No,Pneumonia,Therapy
+Female,No,Bronchitis,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Asthma,Medication
+Female,No,Lung Cancer,Surgery
+Female,No,Lung Cancer,Medication
+Male,Yes,COPD,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,No,Bronchitis,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,Yes,COPD,Surgery
+Female,No,Pneumonia,Surgery
+Male,Yes,Pneumonia,Therapy
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Asthma,Medication
+Female,No,Asthma,
+Female,Yes,Lung Cancer,Therapy
+Male,,Asthma,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Lung Cancer,Surgery
+Female,No,Asthma,Therapy
+,Yes,Pneumonia,
+Female,No,Bronchitis,Therapy
+Female,No,Bronchitis,Medication
+Male,No,COPD,Medication
+Female,No,Bronchitis,Surgery
+Female,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,No,COPD,Medication
+Female,No,Bronchitis,Medication
+Female,Yes,Bronchitis,Medication
+Male,Yes,COPD,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,,Therapy
+Female,Yes,,Medication
+Male,Yes,Asthma,
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Medication
+Male,No,Pneumonia,Surgery
+Male,No,Bronchitis,Therapy
+Female,Yes,Asthma,Therapy
+Female,Yes,COPD,Medication
+Male,Yes,COPD,Surgery
+Female,No,Pneumonia,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,Pneumonia,Medication
+Male,No,COPD,Medication
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Asthma,Therapy
+Female,Yes,Asthma,Surgery
+Male,No,Lung Cancer,Medication
+Female,Yes,Asthma,Surgery
+,No,Asthma,Therapy
+Female,Yes,COPD,Therapy
+Female,No,Asthma,Surgery
+Female,Yes,Asthma,Therapy
+Male,No,Asthma,Medication
+Male,Yes,Asthma,Surgery
+,Yes,Lung Cancer,Medication
+Male,Yes,Asthma,Medication
+Female,Yes,Asthma,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,No,COPD,Surgery
+Male,Yes,Asthma,Surgery
+Female,No,Pneumonia,
+Male,Yes,COPD,Medication
+Female,Yes,COPD,Surgery
+Female,No,Asthma,
+Female,No,Lung Cancer,
+Female,No,,Medication
+Female,No,Lung Cancer,Medication
+Male,No,Pneumonia,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,No,Bronchitis,Medication
+Male,No,Lung Cancer,Medication
+Male,Yes,COPD,Surgery
+Male,,Lung Cancer,Surgery
+Male,No,Lung Cancer,Medication
+Male,No,Bronchitis,Medication
+Male,No,Bronchitis,Medication
+Male,,Asthma,
+Female,No,COPD,Surgery
+Female,Yes,Asthma,Medication
+Male,Yes,,Surgery
+Male,Yes,,Surgery
+Male,Yes,Bronchitis,Medication
+Female,No,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Asthma,Therapy
+Male,No,Lung Cancer,Therapy
+Female,No,Bronchitis,Surgery
+Male,Yes,COPD,Therapy
+,No,COPD,Surgery
+Male,Yes,COPD,Medication
+Male,Yes,Bronchitis,Therapy
+Female,No,COPD,Surgery
+,Yes,Pneumonia,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,COPD,Surgery
+Male,Yes,Asthma,Medication
+Female,Yes,,Surgery
+Male,,Bronchitis,
+Male,No,Lung Cancer,Therapy
+Male,No,COPD,Medication
+Female,No,Asthma,Surgery
+Male,No,Pneumonia,Therapy
+,Yes,Bronchitis,Medication
+Male,No,Pneumonia,Surgery
+Male,Yes,Pneumonia,Therapy
+Male,No,Pneumonia,Medication
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Pneumonia,
+Male,No,COPD,Medication
+Female,Yes,COPD,Surgery
+Female,Yes,Asthma,Surgery
+Female,No,Asthma,Medication
+,No,Pneumonia,Medication
+Female,No,Pneumonia,Surgery
+Male,No,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Medication
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Bronchitis,Therapy
+,Yes,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,,COPD,Medication
+Male,No,Pneumonia,Medication
+Male,No,Lung Cancer,Surgery
+Female,No,Lung Cancer,Medication
+Female,No,Lung Cancer,Surgery
+Male,Yes,COPD,Surgery
+Male,,COPD,Surgery
+Male,Yes,Asthma,Medication
+Female,,COPD,Therapy
+Female,,Bronchitis,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,No,COPD,Therapy
+Male,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,COPD,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,No,Asthma,Therapy
+Female,Yes,Asthma,Therapy
+Male,No,Bronchitis,Surgery
+Female,Yes,COPD,Therapy
+Male,No,Bronchitis,Therapy
+Male,Yes,Asthma,Therapy
+Female,Yes,COPD,Medication
+Female,No,Lung Cancer,Surgery
+Female,No,COPD,Surgery
+Male,,Pneumonia,Surgery
+Female,,COPD,Medication
+Female,Yes,,
+Female,No,Pneumonia,Medication
+Female,Yes,Bronchitis,Surgery
+Female,No,COPD,Surgery
+Female,Yes,Bronchitis,Surgery
+Female,Yes,COPD,Medication
+Female,Yes,Asthma,Surgery
+Female,Yes,Asthma,
+Male,No,Lung Cancer,Medication
+Male,No,Asthma,Therapy
+Female,,Pneumonia,Surgery
+Male,Yes,Pneumonia,Surgery
+Male,Yes,COPD,Medication
+Female,No,Bronchitis,Therapy
+,No,COPD,Therapy
+Female,No,Bronchitis,Surgery
+Female,No,Asthma,Medication
+Female,No,COPD,Medication
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Lung Cancer,
+Male,No,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,No,Pneumonia,Therapy
+Female,Yes,COPD,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Bronchitis,Medication
+Female,,Bronchitis,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,No,COPD,Medication
+Female,Yes,Pneumonia,Therapy
+Female,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Medication
+Female,No,Lung Cancer,Surgery
+Female,No,Asthma,Surgery
+Female,Yes,Pneumonia,Medication
+,No,Lung Cancer,Therapy
+,No,Lung Cancer,Surgery
+Male,No,COPD,Therapy
+Female,Yes,Bronchitis,Surgery
+Female,No,Bronchitis,Therapy
+Male,No,COPD,Surgery
+Female,Yes,COPD,Therapy
+,No,Asthma,Therapy
+,No,Pneumonia,Therapy
+Male,No,Bronchitis,Medication
+Female,Yes,COPD,
+Female,Yes,Pneumonia,Medication
+Male,No,COPD,Therapy
+Male,No,Asthma,Medication
+Male,No,Pneumonia,Medication
+Female,No,Asthma,Medication
+Male,No,Bronchitis,Therapy
+Male,Yes,COPD,Medication
+Male,No,,Therapy
+Male,,Asthma,Medication
+Male,No,Bronchitis,Therapy
+Male,No,Bronchitis,Medication
+Male,Yes,COPD,Surgery
+Male,Yes,Bronchitis,Surgery
+,Yes,COPD,
+Female,Yes,Lung Cancer,Medication
+Female,No,COPD,Therapy
+Male,Yes,Asthma,Medication
+Female,Yes,Bronchitis,Surgery
+Female,Yes,Bronchitis,Medication
+Male,No,Bronchitis,Therapy
+Male,No,COPD,Surgery
+Male,No,Pneumonia,Medication
+Female,No,COPD,Therapy
+Male,,Asthma,Surgery
+Female,No,COPD,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,No,Lung Cancer,Surgery
+Female,Yes,Asthma,Medication
+Male,Yes,Lung Cancer,Medication
+Male,Yes,,Medication
+Female,Yes,Asthma,Medication
+Female,Yes,Bronchitis,Therapy
+Male,,,Medication
+Female,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Surgery
+Male,No,Pneumonia,Surgery
+Male,,COPD,Surgery
+Female,Yes,Bronchitis,Medication
+,Yes,Asthma,Medication
+Female,Yes,COPD,Medication
+Male,No,Pneumonia,Therapy
+Female,No,Pneumonia,
+Female,,Bronchitis,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,Pneumonia,Therapy
+Female,Yes,COPD,Surgery
+Female,Yes,COPD,Surgery
+Female,No,Bronchitis,Medication
+Male,No,Asthma,Medication
+Male,Yes,Bronchitis,Medication
+Male,No,Lung Cancer,Surgery
+Female,No,Pneumonia,Medication
+Female,No,Asthma,Surgery
+Male,Yes,COPD,Therapy
+Male,No,Lung Cancer,
+Female,No,Lung Cancer,Therapy
+Male,Yes,Pneumonia,Medication
+Male,No,COPD,Therapy
+Female,Yes,Asthma,Surgery
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Medication
+Female,No,Pneumonia,Medication
+Female,No,Bronchitis,
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,No,Asthma,Surgery
+Male,No,Asthma,Therapy
+Male,No,Asthma,Surgery
+Male,No,Bronchitis,Medication
+Female,,COPD,Medication
+Male,Yes,Asthma,Medication
+,Yes,Bronchitis,Medication
+Female,No,Asthma,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,COPD,Therapy
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Pneumonia,Surgery
+Female,Yes,Asthma,Therapy
+Male,No,COPD,Surgery
+Female,Yes,Pneumonia,Medication
+Male,Yes,Bronchitis,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Asthma,Medication
+Male,Yes,Bronchitis,Medication
+Female,Yes,COPD,
+Male,Yes,Lung Cancer,Therapy
+Female,No,Asthma,Therapy
+Female,Yes,Bronchitis,Therapy
+Male,No,Lung Cancer,Medication
+Male,No,Asthma,Therapy
+Male,No,Pneumonia,Medication
+Male,Yes,,Medication
+Male,Yes,Pneumonia,
+Female,Yes,,Therapy
+Male,Yes,Lung Cancer,
+Female,Yes,Bronchitis,Medication
+,Yes,Asthma,Therapy
+Male,Yes,Asthma,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Medication
+Male,Yes,,Medication
+Female,No,Bronchitis,Medication
+Female,Yes,Bronchitis,Surgery
+Female,Yes,Pneumonia,Medication
+Male,Yes,Bronchitis,Medication
+Female,No,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,No,Pneumonia,Medication
+Female,Yes,Bronchitis,Medication
+Male,No,Asthma,Surgery
+Male,,Asthma,Medication
+Male,,COPD,
+Female,Yes,COPD,Surgery
+Male,No,Pneumonia,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Therapy
+,No,Asthma,
+Female,Yes,Bronchitis,Therapy
+Female,No,Pneumonia,Surgery
+Male,No,Pneumonia,Surgery
+Male,Yes,Asthma,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Pneumonia,Medication
+Male,Yes,Lung Cancer,Medication
+Male,,,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,No,Asthma,Therapy
+Female,No,COPD,Surgery
+Female,Yes,COPD,Medication
+Female,No,Asthma,Surgery
+Female,No,Asthma,Therapy
+Male,No,Pneumonia,Surgery
+,No,Lung Cancer,Medication
+Male,No,COPD,Medication
+Female,Yes,Pneumonia,Therapy
+Female,Yes,COPD,Therapy
+Female,Yes,Bronchitis,Medication
+Female,No,Asthma,Medication
+Female,Yes,Asthma,Surgery
+Male,Yes,Bronchitis,Medication
+Female,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,No,Bronchitis,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Medication
+Male,No,COPD,
+Male,No,COPD,Surgery
+Male,No,Bronchitis,Medication
+Female,No,COPD,Surgery
+Male,,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,COPD,Medication
+Male,No,Lung Cancer,
+Male,No,Asthma,Therapy
+Female,Yes,,Therapy
+Male,No,Bronchitis,
+Male,Yes,Pneumonia,
+Male,,COPD,Medication
+Male,,COPD,Medication
+Male,,Lung Cancer,Therapy
+Male,No,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Medication
+Female,Yes,Pneumonia,Therapy
+Male,No,Bronchitis,Medication
+Female,No,Asthma,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,COPD,Surgery
+Female,Yes,,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,No,Lung Cancer,Medication
+Female,,Lung Cancer,Therapy
+Female,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Surgery
+Male,,Asthma,Medication
+Male,Yes,Pneumonia,
+Female,Yes,Asthma,Medication
+,No,Bronchitis,Surgery
+Male,Yes,Asthma,Therapy
+Female,No,COPD,Medication
+Female,,Pneumonia,Surgery
+Female,,,Medication
+,Yes,,Surgery
+Female,No,Lung Cancer,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,Yes,Bronchitis,Medication
+Male,Yes,Bronchitis,
+Female,Yes,Lung Cancer,Therapy
+Male,No,Pneumonia,Therapy
+Female,No,Lung Cancer,
+Female,Yes,Asthma,Therapy
+Female,,Pneumonia,
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Bronchitis,Surgery
+Male,No,Lung Cancer,Surgery
+Male,No,COPD,Surgery
+Male,No,Lung Cancer,
+Male,Yes,Lung Cancer,Therapy
+Female,,Bronchitis,Therapy
+Female,Yes,Asthma,Therapy
+Male,No,,Therapy
+,No,Pneumonia,
+,,Bronchitis,Medication
+Female,No,COPD,Therapy
+Female,No,Lung Cancer,Surgery
+Female,No,COPD,Medication
+Male,Yes,Asthma,Medication
+Male,Yes,COPD,
+Male,No,COPD,Surgery
+Female,No,Lung Cancer,
+Male,Yes,Pneumonia,Surgery
+Male,No,Lung Cancer,Medication
+Male,No,,Surgery
+Female,No,Asthma,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,No,Pneumonia,Medication
+Female,Yes,Pneumonia,Therapy
+Female,Yes,COPD,Therapy
+Female,No,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,,COPD,Therapy
+Male,Yes,Asthma,Surgery
+Female,No,COPD,
+Female,No,Lung Cancer,Medication
+Female,No,COPD,Therapy
+Female,Yes,Bronchitis,Surgery
+,No,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Surgery
+,Yes,Lung Cancer,Surgery
+Male,Yes,Asthma,Medication
+Male,,COPD,Therapy
+Male,No,Asthma,Surgery
+Female,No,Lung Cancer,Therapy
+Male,No,Pneumonia,Therapy
+,No,Asthma,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,No,Pneumonia,Surgery
+Male,,,Medication
+Male,No,Pneumonia,Medication
+Male,Yes,COPD,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,No,Asthma,Surgery
+Female,Yes,COPD,Surgery
+Male,No,COPD,Surgery
+Female,Yes,Pneumonia,Medication
+Female,Yes,COPD,Medication
+Male,No,Asthma,Therapy
+Female,Yes,Bronchitis,Medication
+Male,Yes,Bronchitis,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Male,Yes,Pneumonia,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Asthma,Medication
+,No,,Therapy
+Female,Yes,COPD,Surgery
+Female,Yes,Asthma,Medication
+Female,No,Pneumonia,Medication
+Female,No,Asthma,Medication
+Male,No,Bronchitis,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,No,Lung Cancer,Medication
+Female,,COPD,Medication
+Male,No,COPD,Medication
+Female,Yes,Bronchitis,Medication
+Female,Yes,COPD,Medication
+Male,Yes,Lung Cancer,Surgery
+Female,No,Bronchitis,
+Female,Yes,Bronchitis,Surgery
+Male,No,Bronchitis,Therapy
+Female,No,,Medication
+Female,No,COPD,Therapy
+Female,Yes,Pneumonia,Medication
+Female,No,Lung Cancer,Medication
+Female,No,COPD,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,No,COPD,Surgery
+Male,No,,Therapy
+Female,No,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Surgery
+Female,No,Lung Cancer,Surgery
+Male,Yes,Asthma,Medication
+Female,Yes,Asthma,Therapy
+Female,No,Lung Cancer,Medication
+Female,No,Lung Cancer,Therapy
+Male,No,Pneumonia,Surgery
+Male,No,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Therapy
+,Yes,COPD,Medication
+,,COPD,Surgery
+Male,Yes,COPD,
+Male,No,Asthma,
+Male,No,Pneumonia,
+Male,No,COPD,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,COPD,Therapy
+Male,No,Lung Cancer,Medication
+Female,No,Pneumonia,Medication
+,Yes,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,Asthma,Therapy
+Male,No,COPD,Surgery
+Female,Yes,COPD,Surgery
+Female,No,COPD,Surgery
+Female,No,Lung Cancer,
+Female,Yes,Pneumonia,Medication
+Female,No,Lung Cancer,Medication
+Female,Yes,,Medication
+Female,No,Lung Cancer,Therapy
+Male,No,COPD,Therapy
+Male,No,Asthma,Therapy
+Female,No,Bronchitis,Surgery
+Female,No,Bronchitis,Therapy
+Male,,Bronchitis,Surgery
+Female,Yes,COPD,Therapy
+Male,No,Lung Cancer,Medication
+Male,Yes,,
+Male,No,Pneumonia,Medication
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Asthma,Therapy
+Female,No,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Medication
+Male,No,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Surgery
+Female,No,Asthma,Therapy
+Male,Yes,COPD,Medication
+,No,COPD,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,,Bronchitis,Therapy
+Male,Yes,Pneumonia,
+Female,Yes,COPD,Therapy
+Male,No,Asthma,Surgery
+Female,Yes,Asthma,
+Male,No,Asthma,Therapy
+Female,No,,Surgery
+Male,No,Bronchitis,Surgery
+Female,No,Bronchitis,Medication
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Medication
+Female,No,COPD,Surgery
+Female,No,COPD,
+Female,No,COPD,Therapy
+Female,No,COPD,Surgery
+Male,Yes,Bronchitis,Medication
+,Yes,,Surgery
+Female,Yes,Bronchitis,Surgery
+Female,No,Pneumonia,Surgery
+Male,,Bronchitis,Surgery
+Male,No,COPD,Surgery
+Female,No,Asthma,Medication
+Male,No,Pneumonia,Surgery
+,No,COPD,Therapy
+Female,Yes,Pneumonia,Surgery
+Female,Yes,,Therapy
+Male,No,Bronchitis,Medication
+Female,No,COPD,Surgery
+Female,No,Bronchitis,Therapy
+Male,Yes,,Medication
+Female,Yes,COPD,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,,Lung Cancer,Surgery
+Male,Yes,COPD,Medication
+Male,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Female,,Pneumonia,Therapy
+Female,No,Bronchitis,Medication
+Female,No,Bronchitis,Surgery
+,,COPD,Therapy
+Female,No,,Therapy
+Male,Yes,Asthma,
+Female,Yes,Asthma,Medication
+Male,No,COPD,Surgery
+Female,No,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Medication
+Female,No,Lung Cancer,Therapy
+Male,No,Pneumonia,Surgery
+Female,,,Therapy
+Male,Yes,,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Surgery
+Male,No,COPD,Medication
+Male,No,Asthma,Surgery
+Male,Yes,Asthma,Surgery
+Male,No,Lung Cancer,Therapy
+Female,No,COPD,Medication
+Male,Yes,COPD,Medication
+Female,No,Bronchitis,Surgery
+Male,Yes,Pneumonia,Surgery
+,No,Bronchitis,Medication
+Male,No,Pneumonia,Therapy
+Male,Yes,Asthma,Medication
+Male,No,Lung Cancer,Therapy
+,No,COPD,Surgery
+Male,No,Asthma,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,,
+Female,No,Lung Cancer,Therapy
+Male,No,Pneumonia,Therapy
+Female,Yes,Asthma,Medication
+Female,Yes,COPD,Surgery
+Male,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Surgery
+Female,No,Asthma,Therapy
+Male,No,Bronchitis,Therapy
+Male,Yes,Bronchitis,Medication
+Male,Yes,Asthma,Medication
+Female,No,Lung Cancer,Surgery
+Male,No,Asthma,Surgery
+Female,Yes,COPD,Medication
+Female,No,Bronchitis,Surgery
+Female,Yes,COPD,Surgery
+Female,Yes,Pneumonia,Medication
+Female,Yes,Bronchitis,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Asthma,Therapy
+Female,Yes,COPD,Therapy
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Asthma,Therapy
+Female,,,Medication
+Male,Yes,COPD,Therapy
+,Yes,Pneumonia,Medication
+Female,No,Asthma,Surgery
+Male,No,Pneumonia,Therapy
+Male,No,COPD,Medication
+Female,No,Asthma,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,No,Lung Cancer,
+Male,Yes,Bronchitis,Medication
+,No,COPD,Medication
+Female,,Pneumonia,
+Female,Yes,Asthma,Medication
+,No,Bronchitis,Medication
+Male,No,COPD,Surgery
+,No,,Surgery
+Female,No,COPD,Therapy
+Male,Yes,Asthma,Surgery
+Female,No,Bronchitis,Medication
+,No,COPD,
+Male,,Asthma,Surgery
+Female,No,Lung Cancer,Medication
+Male,No,COPD,Medication
+Male,Yes,Bronchitis,Therapy
+Male,Yes,COPD,
+Female,Yes,COPD,Surgery
+Male,Yes,Asthma,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,No,Pneumonia,Surgery
+Female,Yes,,Therapy
+Male,Yes,Bronchitis,Medication
+Male,No,Bronchitis,Medication
+Female,Yes,Asthma,Surgery
+Female,Yes,COPD,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,Pneumonia,Surgery
+Female,No,Asthma,Therapy
+Male,No,Lung Cancer,Medication
+Female,Yes,Bronchitis,Medication
+,No,Bronchitis,Surgery
+Male,Yes,COPD,Therapy
+Female,No,Asthma,Medication
+Male,No,Lung Cancer,Medication
+Male,No,Bronchitis,
+Male,No,Asthma,Therapy
+Female,No,,Medication
+Female,No,COPD,Surgery
+Female,No,Pneumonia,Surgery
+Male,No,Bronchitis,
+Male,No,Bronchitis,Surgery
+Female,No,,Surgery
+Female,No,Pneumonia,Therapy
+Male,,Asthma,Therapy
+Female,No,COPD,Therapy
+Female,Yes,Asthma,Surgery
+Female,No,Lung Cancer,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,,,Medication
+Male,Yes,Asthma,Therapy
+Female,No,COPD,Medication
+Female,No,Lung Cancer,Surgery
+Male,,COPD,Therapy
+Male,No,,Medication
+Male,Yes,COPD,Medication
+Male,No,Asthma,Medication
+Female,No,Pneumonia,Surgery
+Female,,Lung Cancer,Therapy
+Female,No,Asthma,Surgery
+Female,No,Bronchitis,Medication
+Male,No,COPD,Surgery
+Female,,Bronchitis,Medication
+Female,,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Therapy
+Female,No,COPD,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,Asthma,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,Pneumonia,
+,Yes,Pneumonia,Medication
+Female,Yes,Bronchitis,Surgery
+Female,No,,Surgery
+Female,No,COPD,Therapy
+Male,No,COPD,Surgery
+Male,Yes,COPD,Medication
+Male,Yes,Bronchitis,Surgery
+Female,No,Lung Cancer,Surgery
+Male,No,Asthma,Therapy
+Male,Yes,COPD,
+Male,Yes,Asthma,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,Pneumonia,Medication
+Male,No,COPD,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,Yes,,Therapy
+Female,Yes,Asthma,Therapy
+Male,No,COPD,Medication
+Male,No,Lung Cancer,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,Bronchitis,Surgery
+Female,No,,Therapy
+Male,No,Lung Cancer,Surgery
+Male,Yes,Lung Cancer,
+Female,No,Asthma,Surgery
+Female,No,COPD,Surgery
+Male,No,Asthma,Medication
+Male,Yes,COPD,Surgery
+Male,No,Bronchitis,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Surgery
+Female,No,Bronchitis,Medication
+Male,,Asthma,Surgery
+Male,Yes,COPD,Medication
+Male,No,COPD,Therapy
+Male,Yes,Asthma,Surgery
+,No,Pneumonia,Surgery
+Female,No,Asthma,Medication
+Female,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Medication
+Male,No,COPD,Medication
+Male,No,Bronchitis,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,Medication
+Female,No,Asthma,
+Female,Yes,Bronchitis,Therapy
+,Yes,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,No,Lung Cancer,Surgery
+,No,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Surgery
+Female,Yes,Pneumonia,
+Female,Yes,COPD,Surgery
+Female,No,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Therapy
+Male,No,Asthma,Therapy
+Female,No,Lung Cancer,Surgery
+Male,No,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,COPD,Medication
+Male,No,Pneumonia,Therapy
+Female,No,Bronchitis,Medication
+Female,No,Pneumonia,Surgery
+Male,Yes,,
+Female,Yes,Asthma,Surgery
+Male,No,Bronchitis,Therapy
+Male,No,COPD,Medication
+Female,No,COPD,Surgery
+Male,Yes,Asthma,Surgery
+Female,No,,Medication
+Male,,Lung Cancer,Medication
+Female,No,COPD,
+Male,Yes,Bronchitis,Medication
+Female,No,Asthma,
+Male,Yes,Asthma,Medication
+Female,,Bronchitis,
+Male,Yes,COPD,Medication
+Male,Yes,,Medication
+Male,,Bronchitis,Surgery
+Female,No,Lung Cancer,Surgery
+,No,Asthma,Surgery
+Female,No,COPD,Surgery
+Female,No,,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Medication
+Male,Yes,Asthma,
+Female,Yes,,
+Male,No,COPD,Surgery
+Male,No,COPD,Surgery
+Male,Yes,,Medication
+Male,No,COPD,Surgery
+Male,Yes,Bronchitis,Medication
+,No,Asthma,Medication
+Female,No,COPD,
+Male,No,,Surgery
+Female,No,Pneumonia,Medication
+Male,No,Pneumonia,Therapy
+Male,No,Bronchitis,Medication
+,No,,Therapy
+Female,Yes,COPD,Therapy
+Female,No,COPD,Surgery
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Lung Cancer,
+Male,No,Pneumonia,Surgery
+Male,Yes,Lung Cancer,Medication
+Female,No,Asthma,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,COPD,Therapy
+,Yes,Bronchitis,
+Female,,COPD,Medication
+Female,Yes,COPD,Therapy
+Male,,Bronchitis,Medication
+Male,Yes,COPD,Medication
+Female,Yes,COPD,
+Female,No,Asthma,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,COPD,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,No,Pneumonia,Surgery
+Male,Yes,COPD,Therapy
+Male,Yes,Asthma,Medication
+Male,Yes,Bronchitis,Medication
+Male,Yes,Asthma,Surgery
+,No,Lung Cancer,Medication
+Male,Yes,Bronchitis,
+Female,,Asthma,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Asthma,Medication
+Female,No,Bronchitis,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,Asthma,Therapy
+Female,No,Lung Cancer,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,Pneumonia,Surgery
+Male,No,Bronchitis,Medication
+Male,No,Lung Cancer,Therapy
+Male,No,Pneumonia,
+Female,No,COPD,Medication
+Female,No,Bronchitis,Therapy
+Male,No,Asthma,Medication
+Female,No,Pneumonia,Surgery
+Male,No,Pneumonia,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,Asthma,Therapy
+Male,No,Lung Cancer,Medication
+Female,No,Pneumonia,Therapy
+Female,,Pneumonia,Surgery
+Female,No,COPD,
+Female,No,COPD,Medication
+,No,Pneumonia,Therapy
+Female,Yes,COPD,Surgery
+Male,Yes,Pneumonia,Medication
+Male,,Bronchitis,Therapy
+Female,No,Lung Cancer,Medication
+Male,No,COPD,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,,COPD,Medication
+Female,Yes,Lung Cancer,
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Asthma,Surgery
+Male,No,Asthma,Surgery
+Female,No,COPD,Medication
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Therapy
+,Yes,Bronchitis,Therapy
+Female,Yes,Bronchitis,Medication
+Male,No,Bronchitis,Surgery
+Male,Yes,,Surgery
+Female,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Female,No,COPD,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,No,Lung Cancer,Therapy
+Female,No,Bronchitis,Therapy
+Male,Yes,Asthma,Surgery
+Female,No,Asthma,
+Male,Yes,Bronchitis,Therapy
+Female,No,Lung Cancer,Surgery
+Female,No,Lung Cancer,Therapy
+Female,Yes,COPD,Medication
+Female,No,,Therapy
+Female,No,COPD,Medication
+Male,No,,
+Male,No,COPD,Medication
+Female,No,Asthma,Surgery
+Female,No,COPD,Medication
+Male,Yes,Lung Cancer,Medication
+Female,No,COPD,Surgery
+Female,No,Asthma,Medication
+Female,No,Pneumonia,Medication
+Male,,Pneumonia,Therapy
+Male,No,Pneumonia,Medication
+Male,No,Bronchitis,Medication
+Male,No,Lung Cancer,Medication
+Male,,Asthma,Surgery
+Female,Yes,Pneumonia,Medication
+Female,Yes,Asthma,Surgery
+Female,Yes,Asthma,Surgery
+Male,No,Pneumonia,Medication
+Male,No,,
+Female,Yes,Asthma,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,Asthma,Medication
+Female,No,Bronchitis,Medication
+Female,No,Bronchitis,Surgery
+Female,Yes,COPD,Therapy
+,Yes,Bronchitis,Surgery
+Female,Yes,Pneumonia,Medication
+Male,,Bronchitis,Therapy
+Female,Yes,COPD,Therapy
+Female,Yes,Asthma,Medication
+Female,,Asthma,Surgery
+Male,Yes,Pneumonia,Therapy
+Female,Yes,COPD,Therapy
+Male,,COPD,Medication
+Female,Yes,COPD,Medication
+Female,No,Asthma,Therapy
+Female,No,Bronchitis,Therapy
+Male,Yes,Asthma,Medication
+Female,No,Asthma,Medication
+Female,No,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Surgery
+Female,No,Pneumonia,Medication
+Male,No,Lung Cancer,Therapy
+Female,Yes,Asthma,Therapy
+Female,No,Lung Cancer,Medication
+Male,No,Asthma,Therapy
+Female,Yes,Asthma,Therapy
+Male,No,Pneumonia,Therapy
+Female,No,COPD,Therapy
+Female,No,,Therapy
+Male,No,Lung Cancer,Surgery
+Female,No,Pneumonia,Surgery
+Male,No,Lung Cancer,Medication
+Male,No,COPD,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,No,COPD,Surgery
+Male,No,Pneumonia,Surgery
+Male,Yes,COPD,Therapy
+Female,No,Pneumonia,Medication
+Female,Yes,,Medication
+Female,,Lung Cancer,
+Female,,Asthma,Medication
+Female,Yes,Bronchitis,Surgery
+Male,,Bronchitis,Therapy
+Female,No,Bronchitis,Medication
+Male,No,COPD,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,No,Pneumonia,Medication
+Male,Yes,Pneumonia,Surgery
+Female,Yes,Asthma,Medication
+Male,No,Pneumonia,Medication
+,Yes,COPD,Medication
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Bronchitis,Therapy
+Male,,COPD,Medication
+Male,No,COPD,Surgery
+Female,No,COPD,Therapy
+,Yes,,Therapy
+Female,No,COPD,Surgery
+Male,Yes,Pneumonia,
+Female,Yes,,Therapy
+Male,No,Pneumonia,Surgery
+,No,Pneumonia,Therapy
+Female,Yes,COPD,Surgery
+Female,Yes,Bronchitis,
+Female,Yes,Asthma,Therapy
+Male,No,Lung Cancer,Medication
+Female,No,Bronchitis,Surgery
+Male,No,,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,,Therapy
+Male,No,Pneumonia,Therapy
+Female,,Asthma,Medication
+Female,No,COPD,Therapy
+Female,Yes,Asthma,Surgery
+Male,No,Asthma,Therapy
+Female,No,COPD,Medication
+Female,Yes,Asthma,Therapy
+Female,,Bronchitis,Surgery
+Male,Yes,COPD,Therapy
+Male,Yes,COPD,Medication
+,No,Lung Cancer,Therapy
+Male,Yes,Lung Cancer,
+Female,Yes,Asthma,Surgery
+Female,Yes,Pneumonia,Therapy
+Male,,Bronchitis,Surgery
+Male,Yes,Asthma,Surgery
+Female,No,Asthma,Therapy
+Male,No,Lung Cancer,Therapy
+Male,No,Pneumonia,Medication
+Female,Yes,Asthma,Medication
+Male,Yes,Bronchitis,Surgery
+Male,Yes,,Surgery
+Female,No,,Therapy
+Female,Yes,Pneumonia,Medication
+Male,Yes,,Medication
+Female,Yes,Pneumonia,Therapy
+Male,No,Bronchitis,
+Male,Yes,Bronchitis,Therapy
+Female,No,Pneumonia,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Therapy
+Female,No,,Medication
+Male,No,Lung Cancer,Therapy
+Female,,COPD,Therapy
+Female,Yes,Asthma,Therapy
+Female,No,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Medication
+Male,Yes,COPD,
+Male,Yes,COPD,Surgery
+Female,Yes,Bronchitis,Medication
+,,,Surgery
+Male,,Bronchitis,Therapy
+Female,No,Asthma,Therapy
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Bronchitis,Medication
+Female,No,Pneumonia,Therapy
+Female,No,COPD,Medication
+Female,No,Asthma,Therapy
+Female,,COPD,Medication
+Female,No,,Medication
+Female,,Bronchitis,Surgery
+Male,No,Lung Cancer,Surgery
+Male,No,Asthma,Medication
+Female,Yes,Pneumonia,Surgery
+Male,Yes,Bronchitis,Surgery
+Male,Yes,COPD,Surgery
+,Yes,Asthma,Medication
+Male,Yes,Bronchitis,Medication
+Female,Yes,COPD,Surgery
+Male,No,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,,Lung Cancer,
+Male,Yes,Pneumonia,
+Male,,Asthma,Surgery
+Female,No,Pneumonia,Surgery
+Male,Yes,COPD,Medication
+Male,No,Asthma,Surgery
+Female,Yes,Lung Cancer,Medication
+,Yes,COPD,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,No,Pneumonia,Surgery
+Male,No,,Therapy
+Male,No,Lung Cancer,Therapy
+Female,Yes,COPD,Therapy
+Male,No,COPD,Medication
+Male,Yes,Bronchitis,Surgery
+Male,No,Asthma,Medication
+Female,Yes,,Therapy
+Female,Yes,COPD,Therapy
+Male,Yes,COPD,Medication
+Male,Yes,Pneumonia,Medication
+,No,Pneumonia,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Medication
+Female,No,Asthma,Therapy
+Female,Yes,Pneumonia,Therapy
+,Yes,Lung Cancer,Surgery
+Male,No,Pneumonia,Therapy
+Male,Yes,Asthma,Therapy
+Female,Yes,Asthma,Therapy
+Male,Yes,Lung Cancer,Therapy
+Male,No,COPD,Surgery
+Female,,Asthma,Medication
+Female,No,Pneumonia,Therapy
+,Yes,Bronchitis,Medication
+Female,Yes,Bronchitis,Surgery
+Female,Yes,Bronchitis,Medication
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Asthma,
+Male,Yes,Bronchitis,Medication
+Male,No,COPD,Therapy
+Female,,Lung Cancer,Medication
+Female,No,Asthma,Therapy
+Male,No,Bronchitis,Medication
+Female,Yes,Bronchitis,Therapy
+Male,No,Asthma,Medication
+Male,No,Bronchitis,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,No,Bronchitis,Surgery
+Male,Yes,Bronchitis,Medication
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Pneumonia,Surgery
+Male,No,,Surgery
+Female,Yes,Asthma,Surgery
+Male,No,Lung Cancer,Therapy
+Female,No,Asthma,Medication
+Male,Yes,Pneumonia,Therapy
+Male,No,Asthma,Therapy
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Therapy
+Male,No,COPD,Therapy
+Female,No,Pneumonia,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,Bronchitis,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,COPD,Medication
+Male,Yes,Bronchitis,Medication
+Male,Yes,Lung Cancer,Medication
+Female,No,Bronchitis,Medication
+Male,No,Lung Cancer,
+Female,No,Pneumonia,Surgery
+Male,No,Pneumonia,Medication
+Female,No,Pneumonia,Medication
+Female,Yes,Asthma,Medication
+Male,Yes,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,No,COPD,Therapy
+Male,No,,Therapy
+Male,Yes,Pneumonia,Therapy
+Male,No,Asthma,Therapy
+Male,No,Lung Cancer,Surgery
+Male,Yes,COPD,Surgery
+Male,No,Pneumonia,Surgery
+Male,Yes,Pneumonia,Medication
+Female,No,Asthma,Therapy
+Male,No,Lung Cancer,Surgery
+Female,Yes,Asthma,Surgery
+Female,No,,Therapy
+Female,No,COPD,Surgery
+Male,No,,Medication
+Male,Yes,COPD,Surgery
+Male,No,Lung Cancer,Therapy
+Female,No,Bronchitis,Medication
+Female,,Bronchitis,Therapy
+Male,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Medication
+Male,Yes,Asthma,Surgery
+Male,No,Pneumonia,Therapy
+Male,No,Pneumonia,
+Male,Yes,Bronchitis,Therapy
+Male,No,Lung Cancer,Surgery
+Female,No,Asthma,Surgery
+Female,No,Lung Cancer,Medication
+Female,No,Bronchitis,Surgery
+Female,No,Pneumonia,Surgery
+Male,No,Pneumonia,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,COPD,Medication
+Male,Yes,Lung Cancer,Medication
+Male,Yes,COPD,Medication
+Female,No,Lung Cancer,Surgery
+Male,No,COPD,Therapy
+Female,No,COPD,Medication
+Male,No,COPD,Therapy
+Female,Yes,COPD,Medication
+Male,Yes,,Surgery
+Male,Yes,COPD,
+Male,No,Pneumonia,Surgery
+,No,Asthma,Surgery
+Male,,COPD,Medication
+Female,Yes,Bronchitis,Therapy
+Male,No,Asthma,Surgery
+Female,No,Pneumonia,Medication
+Male,Yes,Lung Cancer,Surgery
+Female,,Pneumonia,Therapy
+Male,Yes,Pneumonia,
+Male,Yes,Asthma,Medication
+Female,Yes,Asthma,Therapy
+Male,No,Bronchitis,Therapy
+Male,No,Bronchitis,Medication
+Female,Yes,Asthma,Therapy
+Male,No,Asthma,Therapy
+Female,No,Asthma,Medication
+Male,No,Lung Cancer,Surgery
+Female,No,Pneumonia,Therapy
+Female,Yes,Bronchitis,Surgery
+Female,,Bronchitis,Surgery
+Female,No,COPD,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Female,No,Asthma,Medication
+Male,,Lung Cancer,Medication
+Male,Yes,Bronchitis,Medication
+Male,Yes,Asthma,Medication
+Female,Yes,COPD,Medication
+Male,No,Bronchitis,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,Yes,COPD,Therapy
+Male,Yes,Asthma,Surgery
+Male,No,Asthma,Therapy
+Female,No,Pneumonia,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,COPD,Surgery
+Female,No,Pneumonia,Medication
+Female,No,COPD,
+Female,Yes,COPD,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Medication
+Male,No,Asthma,Surgery
+Male,No,Asthma,Therapy
+Female,Yes,Asthma,Therapy
+Male,No,Bronchitis,Medication
+Female,Yes,,Medication
+Female,Yes,,Therapy
+Female,Yes,Pneumonia,Medication
+Female,No,Bronchitis,Medication
+Female,Yes,Asthma,Therapy
+,Yes,Bronchitis,Surgery
+Male,Yes,COPD,Surgery
+Male,Yes,COPD,Therapy
+Male,No,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,No,Pneumonia,Therapy
+Female,No,Bronchitis,Medication
+,Yes,Lung Cancer,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,No,Bronchitis,Medication
+Female,No,COPD,Therapy
+Female,No,Pneumonia,Medication
+Female,No,Pneumonia,Therapy
+Male,No,Lung Cancer,Medication
+Male,No,COPD,Surgery
+Male,No,Pneumonia,Surgery
+Male,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication
+Male,Yes,Asthma,Surgery
+Female,Yes,COPD,Therapy
+Male,No,Asthma,
+Female,No,COPD,Therapy
+Female,Yes,Bronchitis,Surgery
+Female,No,Lung Cancer,Therapy
+Male,Yes,,Medication
+Male,No,Asthma,Surgery
+Female,,Bronchitis,Surgery
+Male,No,,Medication
+Male,No,Lung Cancer,Surgery
+Male,No,Pneumonia,Medication
+Male,,Asthma,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,COPD,Surgery
+Male,No,Bronchitis,Surgery
+Male,No,Lung Cancer,Medication
+Female,No,COPD,Medication
+Female,No,Asthma,Therapy
+Female,No,Bronchitis,Therapy
+,Yes,Lung Cancer,Medication
+Female,Yes,Bronchitis,Therapy
+Female,Yes,COPD,Medication
+Female,No,Asthma,Therapy
+Female,Yes,COPD,Medication
+Female,Yes,Pneumonia,Medication
+Male,Yes,COPD,Therapy
+Male,No,,Surgery
+Male,Yes,Bronchitis,Medication
+Male,No,COPD,Medication
+Female,Yes,Lung Cancer,Surgery
+Male,No,Bronchitis,Medication
+Male,Yes,Bronchitis,Medication
+Male,Yes,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Surgery
+Male,,COPD,Medication
+Female,Yes,Pneumonia,Medication
+Female,Yes,Lung Cancer,Surgery
+,No,Pneumonia,Surgery
+Male,No,Asthma,Therapy
+Female,No,COPD,Therapy
+Male,No,Pneumonia,Therapy
+Male,Yes,Asthma,Medication
+Female,No,Pneumonia,Therapy
+Female,Yes,Pneumonia,Surgery
+,No,Pneumonia,Medication
+Female,Yes,Pneumonia,Medication
+Female,No,Bronchitis,Surgery
+Female,,Pneumonia,Surgery
+Male,No,Bronchitis,Therapy
+Female,No,Bronchitis,Surgery
+Female,Yes,Asthma,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,Bronchitis,Surgery
+Male,No,Lung Cancer,
+Female,Yes,Bronchitis,Medication
+,No,Lung Cancer,Medication
+Female,Yes,Asthma,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,No,Asthma,Therapy
+Female,,Asthma,Medication
+Male,Yes,Asthma,Medication
+Female,No,Lung Cancer,Surgery
+Female,No,Lung Cancer,Surgery
+Female,Yes,Asthma,Therapy
+Male,No,Asthma,Therapy
+Male,,COPD,Surgery
+Male,Yes,Asthma,Therapy
+Female,,Pneumonia,Medication
+Female,Yes,COPD,Surgery
+Male,,COPD,Therapy
+,No,Pneumonia,Surgery
+Female,No,COPD,Surgery
+Male,No,COPD,Medication
+Female,No,Lung Cancer,Surgery
+,No,Lung Cancer,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Asthma,Surgery
+Female,No,Bronchitis,Medication
+Male,Yes,Pneumonia,Surgery
+Male,No,Lung Cancer,Medication
+Male,,Asthma,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,COPD,Therapy
+Female,,Pneumonia,Therapy
+Female,No,Lung Cancer,Surgery
+Female,No,Bronchitis,Medication
+,No,Lung Cancer,Therapy
+Male,No,Asthma,Surgery
+Male,No,Asthma,Therapy
+Male,Yes,Pneumonia,Medication
+Female,No,Lung Cancer,Surgery
+Male,No,Asthma,Medication
+Female,Yes,COPD,Medication
+Male,No,COPD,Therapy
+Male,No,Bronchitis,Surgery
+Male,Yes,Pneumonia,Surgery
+Male,No,Asthma,Surgery
+Female,Yes,Bronchitis,Therapy
+Female,No,COPD,Surgery
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Asthma,Therapy
+Male,No,Asthma,Surgery
+Female,No,Asthma,Therapy
+Female,Yes,Pneumonia,Medication
+Male,Yes,Bronchitis,Medication
+Male,No,Bronchitis,Medication
+Female,No,Pneumonia,Surgery
+Female,No,COPD,Therapy
+Female,No,Lung Cancer,Medication
+Male,No,COPD,Surgery
+Female,,Pneumonia,Therapy
+Female,No,Bronchitis,Medication
+Female,Yes,Bronchitis,Medication
+Female,,Asthma,Surgery
+Female,Yes,Asthma,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,No,Bronchitis,Medication
+Male,Yes,Asthma,Surgery
+Female,Yes,Asthma,Surgery
+Female,Yes,COPD,Medication
+Female,Yes,,Medication
+Male,No,Bronchitis,Therapy
+Male,Yes,Pneumonia,Therapy
+Male,No,COPD,Medication
+Female,Yes,Lung Cancer,Medication
+Female,,Lung Cancer,Therapy
+Male,No,Lung Cancer,Surgery
+,No,Asthma,Medication
+Female,Yes,Lung Cancer,Medication
+Male,No,Pneumonia,Surgery
+Male,Yes,Asthma,Therapy
+Male,No,Lung Cancer,Surgery
+Male,Yes,Asthma,Medication
+Female,Yes,COPD,Surgery
+Female,No,COPD,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Medication
+Female,Yes,,Medication
+,No,Bronchitis,Medication
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Asthma,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,No,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Therapy
+Female,No,Bronchitis,Medication
+Female,Yes,Asthma,Surgery
+Female,No,Lung Cancer,Medication
+Male,No,Lung Cancer,Therapy
+Male,No,Asthma,Therapy
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Medication
+,Yes,Lung Cancer,Surgery
+Male,No,COPD,
+Male,Yes,COPD,Medication
+Female,Yes,Bronchitis,Surgery
+,No,Pneumonia,Medication
+Male,Yes,Asthma,Medication
+Female,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Therapy
+Female,No,COPD,Medication
+Female,Yes,,Medication
+Female,No,Pneumonia,Medication
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Asthma,Medication
+Male,No,COPD,Medication
+Male,No,Pneumonia,Medication
+Male,Yes,Pneumonia,Therapy
+Male,No,Asthma,Surgery
+Male,No,COPD,Surgery
+Female,No,Lung Cancer,Surgery
+Female,,Pneumonia,Therapy
+Male,Yes,Pneumonia,Medication
+,Yes,Bronchitis,
+Female,Yes,,Medication
+Male,Yes,COPD,Therapy
+Male,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Bronchitis,Medication
+Female,No,Asthma,Therapy
+Female,No,Lung Cancer,Surgery
+Female,Yes,COPD,Surgery
+Male,No,Lung Cancer,Surgery
+Female,No,Lung Cancer,Therapy
+Female,,Pneumonia,Therapy
+Female,No,Lung Cancer,Therapy
+Female,Yes,Lung Cancer,Surgery
+Female,No,Bronchitis,Surgery
+Male,No,Pneumonia,Therapy
+Male,No,COPD,Medication
+Female,No,Lung Cancer,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Surgery
+Female,Yes,Bronchitis,Medication
+Male,No,Asthma,Medication
+Female,Yes,COPD,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Lung Cancer,Therapy
+,No,Bronchitis,Surgery
+,No,Bronchitis,Surgery
+Male,No,Pneumonia,Therapy
+Female,No,COPD,Surgery
+,,Asthma,Medication
+Female,Yes,COPD,Surgery
+,Yes,Bronchitis,Medication
+Male,,Lung Cancer,Surgery
+Male,No,Pneumonia,Therapy
+Female,Yes,COPD,Therapy
+Male,No,,Surgery
+Male,No,Bronchitis,Medication
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Surgery
+Male,No,Pneumonia,Therapy
+Female,Yes,Pneumonia,Therapy
+,No,COPD,Medication
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Pneumonia,Medication
+,Yes,Lung Cancer,Medication
+Female,No,Pneumonia,Surgery
+Female,Yes,Pneumonia,Medication
+Female,Yes,COPD,Therapy
+Male,No,Pneumonia,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,No,Bronchitis,Medication
+,No,Asthma,Surgery
+Male,No,COPD,Surgery
+Female,,Lung Cancer,Medication
+Female,Yes,COPD,Medication
+Male,,Bronchitis,Medication
+Male,No,Pneumonia,Surgery
+Female,No,Pneumonia,Medication
+Male,Yes,Lung Cancer,Medication
+,No,Bronchitis,Therapy
+Male,No,Asthma,Surgery
+Male,No,Asthma,Surgery
+Male,Yes,Pneumonia,Medication
+,No,Bronchitis,Medication
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Medication
+Male,No,Asthma,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,COPD,Surgery
+Female,Yes,Asthma,Therapy
+Female,Yes,Lung Cancer,Surgery
+Female,No,Pneumonia,Surgery
+Female,Yes,COPD,Surgery
+Male,No,Lung Cancer,Medication
+Male,No,Pneumonia,Medication
+Male,,Asthma,Medication
+Female,Yes,,Medication
+Female,Yes,COPD,Surgery
+Male,,Pneumonia,Therapy
+Female,No,Bronchitis,Medication
+Female,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,No,Bronchitis,Medication
+Male,No,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,No,Asthma,Medication
+Female,Yes,Bronchitis,Therapy
+Female,No,Lung Cancer,Surgery
+Male,No,Pneumonia,Surgery
+,No,Pneumonia,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,Bronchitis,Surgery
+Female,Yes,Pneumonia,Surgery
+Male,No,Bronchitis,Medication
+Male,No,Asthma,Medication
+Female,Yes,Asthma,Therapy
+Female,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Surgery
+Male,No,Pneumonia,Surgery
+Female,No,Asthma,Medication
+Male,Yes,Lung Cancer,Medication
+Male,No,Asthma,Therapy
+Female,Yes,Pneumonia,Medication
+Male,Yes,Lung Cancer,Therapy
+,No,Lung Cancer,Medication
+Male,No,COPD,Medication
+Male,Yes,Bronchitis,Medication
+Female,,Pneumonia,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,,Surgery
+Male,No,Bronchitis,Surgery
+Male,Yes,Pneumonia,Medication
+Female,,COPD,Therapy
+Male,Yes,Bronchitis,Medication
+Male,Yes,Asthma,Surgery
+Male,No,Lung Cancer,Therapy
+,Yes,COPD,Therapy
+Male,Yes,Asthma,Surgery
+Male,No,Pneumonia,Medication
+Female,No,Lung Cancer,Therapy
+Female,No,COPD,
+Female,Yes,Lung Cancer,Surgery
+Male,Yes,COPD,Therapy
+Male,Yes,COPD,Therapy
+Male,No,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Medication
+Female,No,Asthma,Surgery
+Male,Yes,Pneumonia,Medication
+Male,No,Asthma,
+Male,No,Bronchitis,
+Female,No,COPD,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Bronchitis,Medication
+Male,No,COPD,Medication
+Female,No,Pneumonia,
+Male,No,Bronchitis,Surgery
+Male,Yes,Pneumonia,Medication
+,Yes,COPD,Surgery
+Male,,COPD,Therapy
+Female,Yes,Asthma,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,No,Asthma,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,No,Asthma,Therapy
+Male,,,Surgery
+Female,Yes,Bronchitis,Therapy
+Male,No,Lung Cancer,Medication
+Female,Yes,COPD,Therapy
+Female,Yes,Bronchitis,Surgery
+Female,No,Pneumonia,Medication
+Female,Yes,Pneumonia,Surgery
+Male,,Pneumonia,Medication
+Male,No,Asthma,
+Female,No,Pneumonia,Medication
+Female,No,Pneumonia,Medication
+Female,No,Asthma,Medication
+Female,No,Bronchitis,Surgery
+Male,No,COPD,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Pneumonia,Therapy
+,No,Pneumonia,Medication
+Female,Yes,Asthma,Therapy
+Female,,Asthma,Surgery
+Female,Yes,Asthma,Therapy
+Male,No,Lung Cancer,Medication
+Female,Yes,COPD,Therapy
+Female,No,Pneumonia,Medication
+Female,No,Bronchitis,Medication
+Male,No,Pneumonia,Therapy
+Male,No,Pneumonia,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,No,Bronchitis,Therapy
+Male,No,Asthma,Medication
+Female,Yes,Bronchitis,Medication
+Male,,Pneumonia,Medication
+Male,,Bronchitis,Surgery
+Male,Yes,Pneumonia,
+Male,No,,Therapy
+Male,,Lung Cancer,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Asthma,Medication
+Male,No,Asthma,Therapy
+Female,Yes,Bronchitis,Medication
+,No,Bronchitis,Therapy
+Male,Yes,COPD,Therapy
+Male,No,Bronchitis,Medication
+Female,No,Asthma,Surgery
+Female,No,Lung Cancer,Medication
+Female,No,Asthma,Medication
+Female,,COPD,Therapy
+Male,Yes,Bronchitis,Surgery
+Female,No,Lung Cancer,Therapy
+Male,No,Asthma,Medication
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,No,Asthma,Medication
+Female,Yes,Pneumonia,Therapy
+Male,No,Lung Cancer,Medication
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Surgery
+Male,No,Bronchitis,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Asthma,Surgery
+Male,No,Lung Cancer,Therapy
+Female,No,Pneumonia,Medication
+Male,Yes,Asthma,Therapy
+Male,No,Pneumonia,Therapy
+Male,No,Lung Cancer,Therapy
+Male,,Bronchitis,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,No,COPD,Therapy
+Female,Yes,Bronchitis,Medication
+Male,Yes,Bronchitis,Medication
+Female,Yes,,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,COPD,Medication
+Male,No,Pneumonia,Surgery
+Male,No,Lung Cancer,Surgery
+Male,Yes,Asthma,Therapy
+Female,No,Asthma,Surgery
+Male,No,Pneumonia,Surgery
+Male,No,Asthma,Medication
+Male,,,Therapy
+Female,No,Bronchitis,Surgery
+Female,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Medication
+Male,Yes,Asthma,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,,Bronchitis,Medication
+,No,Asthma,Surgery
+Female,Yes,COPD,Surgery
+Female,No,,Therapy
+Male,No,COPD,Surgery
+Male,Yes,COPD,Medication
+Male,Yes,Asthma,Surgery
+Female,Yes,Lung Cancer,Therapy
+Female,No,Pneumonia,Surgery
+Male,No,Asthma,Therapy
+Female,No,Bronchitis,Surgery
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,No,Asthma,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,Yes,,Medication
+Female,No,Asthma,Surgery
+Male,Yes,Bronchitis,Surgery
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,No,Lung Cancer,Surgery
+Male,No,Lung Cancer,Medication
+Female,Yes,Pneumonia,Therapy
+Female,No,COPD,Therapy
+Female,,Pneumonia,Medication
+Male,No,Asthma,Medication
+Female,Yes,,Therapy
+Female,No,Pneumonia,Medication
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Medication
+Female,Yes,,Medication
+Female,No,Bronchitis,Medication
+Female,,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,No,Asthma,Therapy
+Female,No,Bronchitis,Surgery
+Male,No,Pneumonia,Surgery
+Male,No,COPD,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Therapy
+Female,Yes,,Medication
+Male,No,Asthma,Surgery
+Male,Yes,Pneumonia,Surgery
+Male,Yes,COPD,Medication
+Female,Yes,Asthma,
+Female,Yes,COPD,Medication
+Female,,COPD,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Bronchitis,Medication
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,No,Lung Cancer,Medication
+Female,No,Asthma,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,,Bronchitis,Surgery
+Male,No,Asthma,Surgery
+Male,No,Lung Cancer,Therapy
+,Yes,COPD,Surgery
+Male,No,COPD,Medication
+Female,No,Pneumonia,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,Bronchitis,Medication
+Female,Yes,Asthma,
+Female,Yes,Lung Cancer,Surgery
+Female,No,Pneumonia,Medication
+Female,Yes,COPD,Therapy
+Male,No,Pneumonia,Surgery
+Female,No,Asthma,Surgery
+,Yes,Asthma,Surgery
+Male,Yes,Pneumonia,
+Female,No,Pneumonia,Therapy
+Male,No,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Bronchitis,Therapy
+Male,Yes,COPD,Medication
+Female,No,COPD,Surgery
+Female,Yes,,Medication
+Female,No,Pneumonia,Surgery
+Male,Yes,Pneumonia,Medication
+Female,No,Lung Cancer,Therapy
+Male,No,Lung Cancer,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Asthma,Therapy
+Male,No,Lung Cancer,Surgery
+Male,No,Lung Cancer,Surgery
+Female,Yes,Lung Cancer,Surgery
+Male,No,COPD,Medication
+Male,,COPD,Surgery
+Male,No,COPD,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,No,Asthma,Surgery
+Male,No,Pneumonia,
+Female,No,Lung Cancer,Therapy
+Male,No,COPD,Medication
+Female,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Pneumonia,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,Yes,Pneumonia,Medication
+Male,No,,Surgery
+Male,Yes,Bronchitis,Therapy
+Female,No,Asthma,
+Male,No,Pneumonia,Medication
+Female,No,Asthma,Medication
+Male,Yes,Pneumonia,Surgery
+Male,No,COPD,Surgery
+Male,Yes,Asthma,Medication
+Male,No,,Medication
+,No,Lung Cancer,Therapy
+Female,,Lung Cancer,Surgery
+Female,No,Asthma,Therapy
+Male,No,COPD,Therapy
+Male,No,Lung Cancer,Medication
+Male,No,Lung Cancer,Therapy
+Male,Yes,COPD,Medication
+Male,No,Pneumonia,Medication
+Male,No,Asthma,
+Male,Yes,COPD,Surgery
+Female,No,COPD,Therapy
+Female,Yes,COPD,Medication
+Female,No,Pneumonia,
+Male,No,COPD,Medication
+Female,No,COPD,Medication
+,Yes,Asthma,Medication
+Female,Yes,Lung Cancer,Surgery
+Female,No,Pneumonia,
+Female,Yes,COPD,Therapy
+Female,No,Bronchitis,Medication
+Female,,Bronchitis,Medication
+Female,No,Bronchitis,Therapy
+Male,Yes,Asthma,Medication
+Male,Yes,Bronchitis,Medication
+Male,Yes,Asthma,Medication
+Male,Yes,Pneumonia,Medication
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Lung Cancer,
+Male,Yes,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Surgery
+Female,No,,Medication
+Male,Yes,Bronchitis,Therapy
+Male,No,Pneumonia,Surgery
+Female,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Surgery
+Female,No,Asthma,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Surgery
+Female,,,Therapy
+Female,,Bronchitis,Surgery
+Male,Yes,Asthma,Medication
+Male,,Pneumonia,Medication
+Male,Yes,Bronchitis,Medication
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Asthma,Therapy
+Female,Yes,Asthma,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,No,Asthma,Medication
+Female,No,,Surgery
+Male,Yes,COPD,Medication
+Female,Yes,Lung Cancer,Medication
+Male,No,COPD,Surgery
+Female,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Therapy
+Female,Yes,Asthma,Therapy
+Female,No,Lung Cancer,Therapy
+Female,No,Asthma,Medication
+Female,Yes,Lung Cancer,Therapy
+Female,No,Asthma,Medication
+Male,Yes,Pneumonia,Medication
+Male,No,Pneumonia,
+Male,Yes,Asthma,Therapy
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Bronchitis,Medication
+Female,No,Lung Cancer,Medication
+Female,Yes,Asthma,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,COPD,Medication
+Male,No,Lung Cancer,Medication
+Female,Yes,Pneumonia,Medication
+Male,No,Pneumonia,Medication
+Female,No,COPD,
+Male,No,Lung Cancer,Surgery
+,Yes,Bronchitis,Surgery
+Male,,Lung Cancer,Surgery
+Female,No,Pneumonia,Therapy
+Male,Yes,Pneumonia,Medication
+Male,Yes,Asthma,Therapy
+Female,No,Pneumonia,Medication
+Female,No,Asthma,Surgery
+Male,Yes,Pneumonia,Medication
+Female,No,Pneumonia,Therapy
+Male,Yes,Bronchitis,Therapy
+Female,No,Asthma,Medication
+Male,,Asthma,Therapy
+Male,No,Asthma,Medication
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Female,Yes,COPD,Surgery
+Female,Yes,Asthma,Surgery
+Female,No,Asthma,Medication
+Male,No,Bronchitis,Therapy
+Female,,COPD,Medication
+Female,No,Bronchitis,Medication
+Male,,Bronchitis,Surgery
+Female,Yes,Asthma,Surgery
+Female,No,Bronchitis,Therapy
+Female,Yes,COPD,Therapy
+Male,No,COPD,Medication
+Male,Yes,Asthma,Medication
+Female,No,Lung Cancer,Surgery
+Female,Yes,Pneumonia,Medication
+Female,Yes,Bronchitis,Therapy
+Female,No,Bronchitis,Medication
+Male,Yes,Asthma,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,No,COPD,Surgery
+Male,Yes,COPD,Therapy
+Female,Yes,Pneumonia,Medication
+Male,No,Bronchitis,Medication
+Male,No,Pneumonia,Surgery
+Female,No,Lung Cancer,Therapy
+Female,No,Pneumonia,Medication
+Female,Yes,Lung Cancer,Medication
+Female,,COPD,Medication
+Female,No,Asthma,Medication
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Pneumonia,Therapy
+Female,Yes,Bronchitis,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Medication
+Female,No,Asthma,Medication
+Male,Yes,Bronchitis,Medication
+Male,No,Bronchitis,Medication
+,Yes,COPD,Therapy
+Male,No,COPD,Surgery
+Female,Yes,Bronchitis,
+Female,No,,Medication
+Male,No,Asthma,Therapy
+Female,No,Bronchitis,Surgery
+Female,No,Lung Cancer,Surgery
+Female,No,Lung Cancer,Medication
+Female,No,Bronchitis,Surgery
+Male,No,Lung Cancer,Medication
+Female,No,Pneumonia,Therapy
+Male,No,Lung Cancer,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Medication
+,No,Bronchitis,Medication
+Female,No,COPD,Medication
+Female,Yes,Bronchitis,Medication
+Male,No,Lung Cancer,Medication
+Female,No,Bronchitis,Medication
+Male,Yes,Asthma,Surgery
+Male,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Surgery
+Female,Yes,Asthma,Medication
+Female,No,Asthma,Therapy
+Male,No,Asthma,Medication
+Female,No,Pneumonia,
+Male,Yes,Bronchitis,Surgery
+Male,No,Asthma,Therapy
+Female,No,Asthma,Medication
+Female,Yes,COPD,Therapy
+Female,No,Pneumonia,Medication
+Male,No,Bronchitis,Medication
+Female,No,Lung Cancer,Surgery
+Male,No,Pneumonia,Therapy
+Female,No,Pneumonia,
+Female,No,COPD,Surgery
+Male,Yes,Bronchitis,
+Male,No,Bronchitis,Therapy
+Female,No,Asthma,Surgery
+Female,Yes,Asthma,Medication
+Female,No,Pneumonia,Therapy
+Female,No,COPD,Therapy
+Female,Yes,Bronchitis,Surgery
+Male,Yes,COPD,Medication
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,Yes,COPD,Surgery
+Male,No,Asthma,Surgery
+Male,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Medication
+Female,No,,Therapy
+Male,Yes,Lung Cancer,Therapy
+Female,No,Asthma,Medication
+Male,No,COPD,Therapy
+Female,No,Bronchitis,Medication
+Male,No,Asthma,Surgery
+Female,Yes,Lung Cancer,Medication
+Male,No,Lung Cancer,Therapy
+,Yes,Pneumonia,Medication
+Female,Yes,Pneumonia,
+Male,No,Pneumonia,Surgery
+Male,Yes,Bronchitis,Therapy
+Female,,Pneumonia,Therapy
+Male,Yes,COPD,Medication
+Male,No,Bronchitis,
+Female,No,Pneumonia,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,No,Bronchitis,Surgery
+Female,No,Lung Cancer,Medication
+,Yes,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Surgery
+Male,No,COPD,Surgery
+Female,No,COPD,Surgery
+Female,Yes,COPD,Medication
+Male,No,Bronchitis,Surgery
+Male,Yes,Bronchitis,Surgery
+Male,No,Bronchitis,
+Female,Yes,,
+Male,Yes,Bronchitis,Medication
+,Yes,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Therapy
+Female,No,,Therapy
+Male,Yes,Lung Cancer,Therapy
+Male,No,Pneumonia,Therapy
+Female,Yes,COPD,Medication
+Female,Yes,Asthma,Medication
+Female,No,Bronchitis,Medication
+Male,No,Asthma,Surgery
+Female,No,Asthma,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,Asthma,Surgery
+Male,No,Asthma,
+Female,Yes,COPD,Therapy
+Male,No,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Therapy
+Male,Yes,Asthma,
+Male,Yes,Bronchitis,Therapy
+Male,No,COPD,Surgery
+Male,Yes,Asthma,Therapy
+Female,No,Lung Cancer,Therapy
+Female,No,Lung Cancer,Medication
+Female,Yes,Bronchitis,Surgery
+Female,No,Asthma,Medication
+Male,No,Bronchitis,Medication
+Female,,,Surgery
+Male,No,Lung Cancer,Medication
+Male,,Pneumonia,Therapy
+Male,Yes,Lung Cancer,Medication
+Female,Yes,COPD,
+Male,Yes,Pneumonia,Therapy
+Female,,Bronchitis,Medication
+Female,No,Lung Cancer,Therapy
+,Yes,COPD,Surgery
+,No,Pneumonia,Medication
+,Yes,COPD,Surgery
+Male,Yes,Pneumonia,Medication
+Male,Yes,Pneumonia,Therapy
+Female,No,Pneumonia,Medication
+Male,No,Bronchitis,Surgery
+Female,Yes,Pneumonia,Therapy
+Male,Yes,Pneumonia,Therapy
+Male,No,COPD,Surgery
+Male,Yes,,Surgery
+Male,No,Bronchitis,Medication
+Male,Yes,COPD,Medication
+Male,Yes,Pneumonia,Therapy
+Male,No,COPD,Surgery
+Male,No,Bronchitis,Surgery
+Male,No,COPD,Medication
+Male,No,Bronchitis,Medication
+Male,No,Lung Cancer,Therapy
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Bronchitis,Surgery
+Female,No,,Surgery
+,No,,
+,Yes,Asthma,
+Male,Yes,Asthma,Medication
+Male,No,Asthma,Medication
+Male,No,Bronchitis,Therapy
+Male,Yes,Pneumonia,Surgery
+Female,,Pneumonia,Surgery
+Female,Yes,Bronchitis,Medication
+Male,No,Pneumonia,Therapy
+Male,Yes,Pneumonia,Medication
+Male,Yes,Asthma,Therapy
+Female,Yes,COPD,Surgery
+Male,No,Lung Cancer,Medication
+Male,Yes,Bronchitis,Medication
+Female,No,Bronchitis,Medication
+Female,No,COPD,Medication
+Female,No,Lung Cancer,Surgery
+Female,Yes,Asthma,Medication
+Male,No,Asthma,Therapy
+Male,No,Lung Cancer,Medication
+Male,Yes,Pneumonia,Surgery
+Male,Yes,Bronchitis,Therapy
+Female,Yes,Pneumonia,Surgery
+Male,No,Pneumonia,Therapy
+Female,Yes,Bronchitis,Medication
+,Yes,Asthma,Surgery
+Male,Yes,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Surgery
+Male,No,Bronchitis,Surgery
+Female,Yes,Bronchitis,Surgery
+Male,Yes,Asthma,Therapy
+Female,No,Bronchitis,Surgery
+,Yes,Lung Cancer,Therapy
+,Yes,Pneumonia,Therapy
+Female,,Bronchitis,Medication
+,No,Pneumonia,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,,Therapy
+Male,No,Asthma,Medication
+Male,Yes,Lung Cancer,Surgery
+Female,No,COPD,Medication
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Bronchitis,Medication
+Male,No,COPD,Medication
+Female,No,Lung Cancer,Medication
+Male,Yes,Asthma,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,No,Pneumonia,Surgery
+Female,No,COPD,Medication
+Male,No,COPD,Medication
+Female,,Asthma,Surgery
+Male,Yes,COPD,Therapy
+Female,No,Pneumonia,Surgery
+Male,No,Lung Cancer,Surgery
+Male,No,Asthma,Therapy
+Male,No,Asthma,Therapy
+Female,No,Asthma,
+Male,No,COPD,Medication
+Male,,COPD,Surgery
+Male,Yes,Bronchitis,Medication
+Female,Yes,COPD,Surgery
+Male,No,COPD,Therapy
+Female,Yes,COPD,Medication
+Male,No,Bronchitis,Medication
+Male,Yes,Asthma,Surgery
+Male,No,Asthma,Therapy
+Female,Yes,COPD,Medication
+Male,No,Bronchitis,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,COPD,Medication
+Male,No,Bronchitis,Medication
+,Yes,Pneumonia,Therapy
+Male,Yes,COPD,Surgery
+Male,No,Pneumonia,Surgery
+Female,Yes,Asthma,Therapy
+Male,No,Asthma,Therapy
+Female,No,Pneumonia,Therapy
+Male,Yes,Bronchitis,Therapy
+Male,Yes,Asthma,
+Male,No,Pneumonia,Surgery
+Male,Yes,COPD,Surgery
+Female,No,Lung Cancer,Surgery
+Male,Yes,COPD,Surgery
+Male,Yes,Lung Cancer,Surgery
+Male,Yes,Pneumonia,Surgery
+Female,Yes,Pneumonia,Therapy
+Female,Yes,,Surgery
+Female,No,Asthma,Surgery
+Female,Yes,Asthma,Medication
+Female,Yes,Lung Cancer,Medication
+Male,Yes,,Therapy
+Female,,Pneumonia,Medication
+Female,No,Bronchitis,Surgery
+Male,Yes,Asthma,Therapy
+Male,,Bronchitis,Surgery
+Male,No,Pneumonia,Therapy
+Male,No,Lung Cancer,Surgery
+Female,No,,Medication
+Female,No,COPD,Medication
+Female,No,Lung Cancer,Therapy
+Male,Yes,Asthma,Medication
+Female,No,Bronchitis,Medication
+,Yes,COPD,Medication
+Male,No,Pneumonia,Surgery
+Female,Yes,,Therapy
+Female,Yes,Bronchitis,Medication
+Female,No,COPD,Surgery
+Male,No,Asthma,Surgery
+Male,No,Lung Cancer,Therapy
+Male,No,COPD,Therapy
+,Yes,COPD,Medication
+Male,No,Asthma,Medication
+Male,No,Asthma,Medication
+Female,Yes,Bronchitis,Medication
+Male,Yes,Bronchitis,Surgery
+Female,Yes,COPD,Medication
+Male,Yes,COPD,Medication
+Male,Yes,Pneumonia,Therapy
+Female,No,COPD,Surgery
+Male,Yes,,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Pneumonia,Therapy
+Male,Yes,COPD,Surgery
+Female,Yes,COPD,
+Male,No,COPD,Therapy
+Male,No,,Medication
+Female,No,COPD,Medication
+Female,No,Bronchitis,Surgery
+Male,No,Asthma,Medication
+Female,No,Bronchitis,Medication
+Female,Yes,Asthma,Medication
+Female,,,Surgery
+Female,No,Bronchitis,Therapy
+Female,Yes,Lung Cancer,Therapy
+,No,Pneumonia,Therapy
+Female,No,Bronchitis,Therapy
+Female,Yes,Asthma,Surgery
+Female,Yes,Asthma,Surgery
+Male,Yes,Asthma,Therapy
+Male,No,Asthma,Surgery
+,No,Bronchitis,Therapy
+Female,Yes,Pneumonia,Medication
+Female,Yes,Lung Cancer,Therapy
+Male,Yes,,Surgery
+Female,Yes,Lung Cancer,Therapy
+Male,No,Bronchitis,Medication
+Male,No,Lung Cancer,Therapy
+Female,Yes,,Therapy
+,,Pneumonia,Therapy
+Female,Yes,Bronchitis,
+Male,No,Bronchitis,Surgery
+Female,Yes,Lung Cancer,Medication
+Female,,Asthma,Surgery
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Lung Cancer,Medication
+Female,Yes,Bronchitis,Medication
+Male,Yes,COPD,Therapy
+Female,No,Bronchitis,Surgery
+Male,No,Lung Cancer,Therapy
+Male,Yes,Bronchitis,Medication
+Female,No,Pneumonia,Therapy
+Female,No,COPD,Therapy
+Female,No,Asthma,Therapy
+Male,No,Asthma,Surgery
+Male,No,COPD,Surgery
+Male,Yes,Lung Cancer,Medication
+Female,Yes,Pneumonia,Surgery
+Female,,Asthma,Therapy
+Female,No,Pneumonia,Therapy
+Female,Yes,Pneumonia,Therapy
+Female,No,Bronchitis,Therapy
+Male,No,COPD,Medication
+Female,Yes,Asthma,Surgery
+Female,Yes,Lung Cancer,Surgery
+Female,Yes,COPD,Surgery
+Female,No,COPD,Medication
+Male,Yes,Bronchitis,
+Female,Yes,Bronchitis,Medication
+,No,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Therapy
+Female,Yes,Pneumonia,Medication
+Female,No,Asthma,Medication
+Female,No,Lung Cancer,Therapy
+Female,No,COPD,Surgery
+Male,Yes,Asthma,Surgery
+,Yes,Bronchitis,Therapy
+Female,Yes,Pneumonia,Medication
+Male,Yes,Lung Cancer,
+Female,No,COPD,Therapy
+Female,Yes,COPD,Surgery
+Female,Yes,Asthma,Therapy
+Female,Yes,Bronchitis,Surgery
+Female,No,Bronchitis,Surgery
+Male,Yes,Lung Cancer,Medication
+Male,No,,Medication
+Female,Yes,COPD,Therapy
+Male,No,COPD,Therapy
+Female,No,Asthma,
+Female,No,Pneumonia,Surgery
+Female,Yes,COPD,Therapy
+Female,Yes,Lung Cancer,Medication
+Male,No,Lung Cancer,Medication
+,Yes,COPD,Medication
+Female,No,Pneumonia,Surgery
+Male,No,Bronchitis,Medication
+Female,Yes,Pneumonia,Medication

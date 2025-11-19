@@ -1,0 +1,23 @@
+# Git ignore file
+# Python
+__pycache__/
+cache/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+.env
+env
+.idea/
+# Jupyter
+.ipynb_checkpoints/
+
+# results
+outputs/
+
+# OS
+.DS_Store
