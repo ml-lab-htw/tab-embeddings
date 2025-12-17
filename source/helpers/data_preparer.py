@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 from source.config.config import DATASETS, FEATURES
 from source.helpers.feature_preparer import prepare_features
@@ -17,7 +18,6 @@ def prepare_data_for_experiment(method_key, dataset_name, data, text_embedding_d
     y_test = data.get("y_test")
 
     def _quick_preview(name, df):
-        import numpy as np
         print(f"\n{name}:")
         if isinstance(df, pd.DataFrame):
             print(f"Shape={df.shape}, Cols={list(df.columns)}")
