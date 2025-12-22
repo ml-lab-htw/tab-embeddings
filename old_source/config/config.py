@@ -4,7 +4,7 @@
 # ===============================================================
 import os
 
-from source.helpers.llm_loader import feature_extractor_e5_small_v2, feature_extractor_all_minilm_l6_v2
+from old_source.helpers.llm_loader import feature_extractor_e5_small_v2, feature_extractor_all_minilm_l6_v2
 
 """
 from models import feature_extractor_bge_base_en_v1_5, feature_extractor_e5_small_v2, feature_extractor_e5_base_v2, \

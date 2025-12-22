@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-from source.config.config import DATASETS, FEATURES
-from source.helpers.feature_preparer import prepare_features
+from old_source.config.config import DATASETS, FEATURES
+from old_source.helpers.feature_preparer import prepare_features
 
 
 def prepare_data_for_experiment(method_key, dataset_name, data, text_embedding_dict=None, verbose=True):

@@ -6,9 +6,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomTreesEmbedding
 from sklearn.decomposition import PCA
 
-from source.config.config import DATASETS, FEATURES, DS_MODELS, GLOBAL
-from source.helpers.embedding_aggregator import EmbeddingAggregator
-from source.utils.load_data import load_dataset
+from old_source.config.config import DATASETS, FEATURES, DS_MODELS, GLOBAL
+from src.embedding_aggregator import EmbeddingAggregator
+from old_source.utils.load_data import load_dataset
 
 
 dataset_name = "cybersecurity"

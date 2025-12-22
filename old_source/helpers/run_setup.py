@@ -4,9 +4,9 @@ from sklearn.metrics import confusion_matrix, roc_auc_score, recall_score, f1_sc
     precision_score, average_precision_score
 from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
 
-from source.config.config import GLOBAL
-from source.helpers.data_preparer import prepare_data_for_experiment
-from source.helpers.pipeline_builder import build_pipeline, build_param_grid
+from old_source.config.config import GLOBAL
+from old_source.helpers.data_preparer import prepare_data_for_experiment
+from old_source.helpers.pipeline_builder import build_pipeline, build_param_grid
 
 
 #

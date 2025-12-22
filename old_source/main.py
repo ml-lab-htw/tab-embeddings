@@ -6,9 +6,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
-from source.utils.csv_creator import save_to_csv
-from source.utils.load_data import load_dataset
-from source.helpers.run_setup import run_experiment
+from old_source.utils.csv_creator import save_to_csv
+from old_source.utils.load_data import load_dataset
+from old_source.helpers.run_setup import run_experiment
 
 
 if __name__ == "__main__":
@@ -41,7 +41,7 @@ if __name__ == "__main__":
             sys.exit(1)
     else:
         print("\n✅ Using default config file.")
-        from source.config.config import DATASETS, LLMS_TO_USE, METHODS_TO_RUN
+        from old_source.config.config import DATASETS, LLMS_TO_USE, METHODS_TO_RUN
 
     methods = METHODS_TO_RUN
     datasets = DATASETS

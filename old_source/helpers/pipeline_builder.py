@@ -4,15 +4,14 @@ from sklearn.compose import ColumnTransformer
 from sklearn.decomposition import PCA
 from sklearn.ensemble import RandomTreesEmbedding, HistGradientBoostingClassifier
 
-from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import SimpleImputer, IterativeImputer
 from sklearn.linear_model import LogisticRegression
 
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, MinMaxScaler, OrdinalEncoder
 
-from source.config.config import DATASETS, GLOBAL, DS_MODELS, RTE_PARAMS
-from source.helpers.embedding_aggregator import EmbeddingAggregator
+from old_source.config.config import DATASETS, GLOBAL, DS_MODELS, RTE_PARAMS
+from src.embedding_aggregator import EmbeddingAggregator
 
 
 # ======================================

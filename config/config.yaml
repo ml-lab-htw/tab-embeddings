@@ -1,0 +1,162 @@
+# todo: build this in code
+TEST_MODE: FALSE
+TEST_SAMPLES: 200
+
+GLOBAL:
+  random_state: 42
+  test_size: 0.2
+  results_dir: ./results
+  cache_dir: ./cache
+
+FEATURES:
+  cybersecurity:
+    nominal_features: [
+        'encryption_used',
+        'browser_type',
+        'protocol_type',
+        'unusual_time_access'
+    ]
+    numerical_features: [
+    ]
+    text_features: ["text"]
+  lung_disease:
+    nominal_features: [
+        "Gender",
+        "Smoking Status",
+        "Disease Type",
+        "Treatment Type"
+    ]
+    numerical_features: [
+    ]
+    text_features: ["text"]
+
+DATASETS:
+  cybersecurity:
+    path: ./data/cybersecurity
+    X: "X_cybersecurity.csv"
+    y: "y_cybersecurity.csv"
+    X_metr: "X_cybersecurity_metrics.csv"
+    summaries: "cybersecurity_summaries.txt"
+    nom_summaries: "cybersecurity_nom_summaries.txt"
+    imp_max_iter: 30
+    pca_components: 50
+    n_splits: 5
+    n_repeats: 1
+  lung_disease:
+    path: ./data/lung_disease
+    X: "X_lung_disease.csv"
+    y: "y_lung_disease.csv"
+    X_metr: "X_lung_disease_metrics.csv"
+    summaries: "lung_disease_summaries.txt"
+    nom_summaries: "lung_disease_nom_summaries.txt"
+    imp_max_iter: 30
+    pca_components: 50
+    n_splits: 5
+    n_repeats: 1
+
+MODEL_CONFIGS:
+  lr:
+    penalty: "l2"
+    solver: "saga"
+    max_iter: 10000
+
+HYPERPARAMETERS:
+  # ML Models
+  lr:
+    classifier__C: [2, 10]
+  gbdt:
+    hist_gb__min_samples_leaf: [5, 10, 15, 20]
+
+  # Embeddings
+  rte:
+    embedding__n_estimators: [10, 100]
+    embedding__max_depth: [2, 5]
+  text_emb:
+    aggregator__method: [
+      "embedding_cls",
+      "embedding_mean_with_cls_and_sep",
+      "embedding_mean_without_cls_and_sep"
+    ]
+
+DATA_PREP_CONFIG:
+  iter_imp:
+    max_iter: 30
+  simp_imp:
+    strategy: "most_frequent"
+  OHE:
+    handle_unknown: "ignore"
+    drop: "if_binary"
+
+# -------------------------- #
+# ---------- LLMs ---------- #
+# -------------------------- #
+FEATURE_EXTRACTORS:
+  E5_SMALL_V2: "intfloat/e5-small-v2"
+  E5_BASE_V2: "intfloat/e5-base-v2"
+  E5_LARGE_V2: "intfloat/e5-large-v2"
+  BGE_SMALL_EN_V1_5: "BAAI/bge-small-en-v1.5"
+  GIST_SMALL_EMBEDDING_V0: "avsolatorio/GIST-small-Embedding-v0"
+  BGE_BASE_EN_V1_5: "BAAI/bge-base-en-v1.5"
+  GIST_EMBEDDING_V0: "avsolatorio/GIST-Embedding-v0"
+  BGE_LARGE_EN_V1_5: "BAAI/bge-large-en-v1.5"
+  GIST_LARGE_EMBEDDING_V0: "avsolatorio/GIST-large-Embedding-v0"
+  GTE_SMALL: "thenlper/gte-small"
+  GTE_BASE: "thenlper/gte-base"
+  GTE_BASE_EN_V1_5: "Alibaba-NLP/gte-base-en-v1.5"
+  GTE_LARGE: "thenlper/gte-large"
+  STELLA_EN_400M_V5: "dunzhang/stella_en_400M_v5"
+  ALL_MINILM_L6_V2: "sentence-transformers/all-MiniLM-L6-v2"
+  EMBER_V1: "llmrails/ember-v1"
+
+
+# -------------------------- #
+# ------ Experiments ------- #
+# -------------------------- #
+EXPERIMENTS:
+  - lr
+  - lr_rte
+  - lr_te
+  - lr_te_pca
+  - lr_conc1_te
+  - lr_conc2_te
+  - lr_conc3_te
+  - lr_conc1_te_pca
+  - lr_conc2_te_pca
+  - lr_conc3_te_pca
+  - lr_rte_conc
+  - gbdt
+  - gbdt_rte
+  - gbdt_te
+  - gbdt_te_pca
+  - gbdt_conc1_te
+  - gbdt_conc2_te
+  - gbdt_conc3_te
+  - gbdt_conc1_te_pca
+  - gbdt_conc2_te_pca
+  - gbdt_conc3_te_pca
+  - gbdt_rte_conc
+
+
+TEST_EXPERIMENTS:
+  - lr
+  - lr_rte
+  - lr_te
+  - lr_te_pca
+  - lr_conc1_te
+  - lr_conc2_te
+  - lr_conc3_te
+  - lr_conc1_te_pca
+  - lr_conc2_te_pca
+  - lr_conc3_te_pca
+  - lr_rte_conc
+  - gbdt
+  - gbdt_rte
+  - gbdt_te
+  - gbdt_te_pca
+  - gbdt_conc1_te
+  - gbdt_conc2_te
+  - gbdt_conc3_te
+  - gbdt_conc1_te_pca
+  - gbdt_conc2_te_pca
+  - gbdt_conc3_te_pca
+  - gbdt_rte_conc
