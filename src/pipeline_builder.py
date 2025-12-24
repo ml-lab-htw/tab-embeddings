@@ -5,6 +5,7 @@ from sklearn.ensemble import RandomTreesEmbedding
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
+from src.embedding_aggregator import EmbeddingAggregator
 from src.exp_context import ExpContext
 from src.helpers import build_tabular_transformer, select_classifier, build_feature_union
 
@@ -28,16 +29,23 @@ class BasicPipeline(PipelineStrategy):
                 ("classifier", select_classifier(ctx, ctx.cfg))
             ])
 
-        return Pipeline([
-            ("transformer", build_tabular_transformer(ctx)),
+        elif ctx.flags.is_lr:
+            return Pipeline([
+            ("transformer", build_tabular_transformer(ctx=ctx, include_text=False, scale=True)),
             ("classifier", select_classifier(ctx, ctx.cfg)),
         ])
+
+        else:
+            raise NotImplementedError(
+                # todo: print the concrete flag
+                f"Pipeline not implemented for {ctx.flags}"
+            )
 
 
 class RTEPipeline(PipelineStrategy):
     def build(self, ctx: ExpContext) -> Pipeline:
         return Pipeline([
-            ("transformer", build_tabular_transformer(ctx=ctx)),
+            ("transformer", build_tabular_transformer(ctx=ctx, include_text=False, scale=False)),
             ("embedding", RandomTreesEmbedding(
                 random_state=ctx.cfg.globals["random_state"]
             )),
@@ -50,20 +58,16 @@ class TextPipeline(PipelineStrategy):
         steps = [
             ("aggregator", EmbeddingAggregator(
                 feature_extractor=ctx.feature_extractor
-            )),
+            ))
         ]
-
         if ctx.flags.has_pca:
-            steps.extend([
-                ("numerical_scaler", StandardScaler()),
-                ("pca", PCA(n_components=ctx.pca_components)),
-            ])
+            steps.append(("numerical_scaler", StandardScaler()))
+            steps.append(("pca", PCA(n_components=ctx.pca_components)))
         else:
             steps.append(("numerical_scaler", MinMaxScaler()))
 
         steps.append(("classifier", select_classifier(ctx, ctx.cfg)))
         return Pipeline(steps)
-
 
 
 class ConcatTextPipeline(PipelineStrategy):

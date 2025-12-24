@@ -1,37 +1,52 @@
+from sklearn.decomposition import PCA
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, StandardScaler, OrdinalEncoder
+from sklearn.experimental import enable_iterative_imputer
+
 from sklearn.impute import SimpleImputer, IterativeImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomTreesEmbedding
-from sklearn.decomposition import PCA
 
-from old_source.config.config import DATASETS, FEATURES, DS_MODELS, GLOBAL
+from config.config_manager import ConfigManager
 from src.embedding_aggregator import EmbeddingAggregator
-from old_source.utils.load_data import load_dataset
 
 
+"""
 dataset_name = "cybersecurity"
 dataset_key = DATASETS[dataset_name]
 cfg = DATASETS[dataset_name]
 
 nominal_features = FEATURES[dataset_name]["nominal_features"]
-text_features = ["text"]
+
 
 dataset = load_dataset(cfg, use_cache=False)
 X_train, X_test = dataset["X_train"], dataset["X_test"]
 y_train, y_test = dataset["y_train"], dataset["y_test"]
+"""
 
-numerical_features = [c for c in X_train.columns if c not in nominal_features]
+text_features = ["text"]
+
+cfg = ConfigManager.load_yaml("./config/config.yaml")
+dataset_name = "cybersecurity"
+
+dataset_cfg = cfg.datasets[dataset_name]
+feature_cfg = cfg.features[dataset_name]
+
+nominal_features = feature_cfg["nominal_features"]
+numerical_features = ["num_1", "num_2"]
+text_features = feature_cfg.get("text_features", [])
+
 non_text_columns = nominal_features + numerical_features
 all_columns = text_features + non_text_columns
 
-imp_max_iter = dataset_key.get("imp_max_iter")
-class_max_iter = DS_MODELS["lr"].get("max_iter")
-feature_extractor = dataset_key.get("feature_extractor", "dummy_extractor")
-pca_transformer = PCA(n_components=dataset_key.get("pca_components"))
-#categorical_indices = [i for i, c in all_columns if c in nominal_features]
-random_state = GLOBAL["random_state"]
+
+imp_max_iter = 30
+class_max_iter = 10000
+feature_extractor = None
+pca_transformer = PCA(n_components=50)
+# categorical_indices = [i for i, c in all_columns if c in nominal_features]
+random_state = 42
 
 EXPECTED_PIPELINES = {}
 
@@ -77,7 +92,8 @@ EXPECTED_PIPELINES["lr_rte_conc"] = (
                     ("nominal_encoder", OneHotEncoder(handle_unknown="ignore", drop="if_binary"))
                 ]), nominal_features),
                 ("numerical", Pipeline([
-                    ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter))
+                    ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
+                    ("numerical_scaler", MinMaxScaler())
                 ]), numerical_features),
             ], remainder="passthrough")),
             ("embeddings", Pipeline([
@@ -93,7 +109,7 @@ EXPECTED_PIPELINES["lr_rte_conc"] = (
                 ("embedding", RandomTreesEmbedding(random_state=random_state))
             ]))
         ])),
-        ("classifier", LogisticRegression(penalty="l2", solver="saga", max_iter=class_max_iter))
+        ("classifier", LogisticRegression(penalty="l2", solver="saga", max_iter=class_max_iter, random_state=42))
     ]))
 
 # === LR Text === yes

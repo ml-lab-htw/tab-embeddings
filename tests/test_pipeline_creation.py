@@ -1,106 +1,61 @@
+from pprint import pprint
+
 import pytest
 
-from sklearn.pipeline import Pipeline
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import HistGradientBoostingClassifier
-from sklearn.compose import ColumnTransformer
-
+from src.exp_context import ExpContext
 from src.pipeline_factory import PipelineFactory
-from tests.utils.pipeline_assertions import assert_pipeline_steps, assert_column_transformer
+from config.config_manager import ConfigManager
+from standards.pipelines import EXPECTED_PIPELINES
+from tests.utils import compare_pipelines
 
 
-@pytest.mark.parametrize("method_key", [
-    "lr",
-    "lr_rte",
-    "lr_rte_conc",
-    "lr_te",
-    "lr_te_pca",
-    "lr_conc1_te",
-    "lr_conc2_te",
-    "lr_conc3_te",
-    "lr_conc1_te_pca",
-    "lr_conc2_te_pca",
-    "lr_conc3_te_pca",
-    "gbdt",
-    "gbdt_rte",
-    "gbdt_rte_conc",
-    "gbdt_te",
-    "gbdt_te_pca",
-    "gbdt_conc1_te",
-    "gbdt_conc2_te",
-    "gbdt_conc3_te",
-    "gbdt_conc1_te_pca",
-    "gbdt_conc2_te_pca",
-    "gbdt_conc3_te_pca",
-])
+def test_all_pipelines():
+    cfg = ConfigManager.load_yaml("./config/config.yaml")
+    dataset_name = "cybersecurity"
 
-def test_pipeline_is_created(ctx_factory, method_key):
-    ctx = ctx_factory(method_key)
-    pipeline = PipelineFactory.get_strategy(ctx.flags).build(ctx)
+    dataset_cfg = cfg.datasets[dataset_name]
+    feature_cfg = cfg.features[dataset_name]
 
-    assert isinstance(pipeline, Pipeline)
+    nominal_features = feature_cfg["nominal_features"]
+    text_features = feature_cfg.get("text_features", [])
 
-def test_lr_pipeline_structure(ctx_factory):
-    ctx = ctx_factory("lr")
-    pipe = PipelineFactory.get_strategy(ctx.flags).build(ctx)
+    succeeded = 0
+    total = len(EXPECTED_PIPELINES)
 
-    assert_pipeline_steps(
-        pipe,
-        ["transformer", "classifier"]
-    )
+    print("\n=== PIPELINE STRUCTURE TEST ===\n")
 
-def test_lr_rte_pipeline_structure(ctx_factory):
-    ctx = ctx_factory("lr_rte")
-    pipe = PipelineFactory.get_strategy(ctx.flags).build(ctx)
+    for method_key, expected_pipeline in EXPECTED_PIPELINES.items():
+        print(f"🔹 Method: {method_key}")
 
-    assert_pipeline_steps(
-        pipe,
-        ["transformer", "embedding", "classifier"]
-    )
+        try:
+            ctx = ExpContext(
+                method_key=method_key,
+                dataset_name=dataset_name,
+                cfg=cfg,
+            )
 
-def test_lr_rte_concat_pipeline(ctx_factory):
-    ctx = ctx_factory("lr_rte_conc")
-    pipe = PipelineFactory.get_strategy(ctx.flags).build(ctx)
+            ctx.nominal_features = nominal_features
+            ctx.text_features = text_features
 
-    assert_pipeline_steps(
-        pipe,
-        ["feature_combiner", "classifier"]
-    )
+            ctx.numerical_features = ["num_1", "num_2"]
 
-def test_lr_column_transformer(ctx_factory):
-    ctx = ctx_factory("lr")
-    pipe = PipelineFactory.get_strategy(ctx.flags).build(ctx)
+            strategy = PipelineFactory.get_strategy(ctx)
 
-    transformer = dict(pipe.steps)["transformer"]
-    assert isinstance(transformer, ColumnTransformer)
+            pipeline = strategy.build(ctx)
 
-    assert_column_transformer(
-        transformer,
-        ["numerical", "nominal"]
-    )
+            if compare_pipelines(pipeline, expected_pipeline):
+                print("✅ Pipeline is correct.")
+                succeeded += 1
+            else:
+                print("❌ Pipeline mismatch!")
+                print("\nGenerated pipeline:")
+                pprint(pipeline)
+                print("\nExpected pipeline:")
+                pprint(expected_pipeline)
 
-def test_lr_text_concat_transformer(ctx_factory):
-    ctx = ctx_factory("lr_conc1_te")
-    pipe = PipelineFactory.get_strategy(ctx.flags).build(ctx)
+        except Exception as e:
+            print(f"❌ Failed to build pipeline for {method_key}: {e}")
 
-    transformer = dict(pipe.steps)["transformer"]
+        print("\n" + "-" * 80 + "\n")
 
-    assert_column_transformer(
-        transformer,
-        ["numerical", "nominal", "text"]
-    )
-
-def test_lr_classifier_config(ctx_factory, cfg):
-    ctx = ctx_factory("lr")
-    pipe = PipelineFactory.get_strategy(ctx.flags).build(ctx)
-
-    clf = dict(pipe.steps)["classifier"]
-    assert isinstance(clf, LogisticRegression)
-    assert clf.max_iter == cfg.model_cfg["lr"]["max_iter"]
-
-def test_gbdt_classifier(ctx_factory):
-    ctx = ctx_factory("gbdt")
-    pipe = PipelineFactory.get_strategy(ctx.flags).build(ctx)
-
-    clf = dict(pipe.steps)["classifier"]
-    assert isinstance(clf, HistGradientBoostingClassifier)
+    assert succeeded == total, f"{succeeded}/{total} pipelines passed"

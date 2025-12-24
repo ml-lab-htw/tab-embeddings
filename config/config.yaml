@@ -7,6 +7,9 @@ GLOBAL:
   test_size: 0.2
   results_dir: ./results
   cache_dir: ./cache
+  # for iterative_imputer
+  imp_max_iter: 30
+
 
 FEATURES:
   cybersecurity:
@@ -38,7 +41,7 @@ DATASETS:
     X_metr: "X_cybersecurity_metrics.csv"
     summaries: "cybersecurity_summaries.txt"
     nom_summaries: "cybersecurity_nom_summaries.txt"
-    imp_max_iter: 30
+    #imp_max_iter: 30
     pca_components: 50
     n_splits: 5
     n_repeats: 1
@@ -49,7 +52,7 @@ DATASETS:
     X_metr: "X_lung_disease_metrics.csv"
     summaries: "lung_disease_summaries.txt"
     nom_summaries: "lung_disease_nom_summaries.txt"
-    imp_max_iter: 30
+    #imp_max_iter: 30
     pca_components: 50
     n_splits: 5
     n_repeats: 1
@@ -140,23 +143,23 @@ EXPERIMENTS:
 TEST_EXPERIMENTS:
   - lr
   - lr_rte
-  - lr_te
-  - lr_te_pca
-  - lr_conc1_te
-  - lr_conc2_te
-  - lr_conc3_te
-  - lr_conc1_te_pca
-  - lr_conc2_te_pca
-  - lr_conc3_te_pca
+  #- lr_te
+  #- lr_te_pca
+  #- lr_conc1_te
+  #- lr_conc2_te
+  #- lr_conc3_te
+  #- lr_conc1_te_pca
+  #- lr_conc2_te_pca
+  #- lr_conc3_te_pca
   - lr_rte_conc
   - gbdt
   - gbdt_rte
-  - gbdt_te
-  - gbdt_te_pca
-  - gbdt_conc1_te
-  - gbdt_conc2_te
-  - gbdt_conc3_te
-  - gbdt_conc1_te_pca
-  - gbdt_conc2_te_pca
-  - gbdt_conc3_te_pca
+  #- gbdt_te
+  #- gbdt_te_pca
+  #- gbdt_conc1_te
+  #- gbdt_conc2_te
+  #- gbdt_conc3_te
+  #- gbdt_conc1_te_pca
+  #- gbdt_conc2_te_pca
+  #- gbdt_conc3_te_pca
   - gbdt_rte_conc

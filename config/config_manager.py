@@ -61,7 +61,7 @@ class ConfigManager:
         return self._require_section("HYPERPARAMETERS")
 
     @property
-    def prep_cfg(self) -> Dict[str, Any]:
+    def data_prep(self) -> Dict[str, Any]:
         return self._require_section("DATA_PREP_CONFIG")
 
     @property
