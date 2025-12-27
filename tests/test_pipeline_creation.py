@@ -32,6 +32,7 @@ def test_all_pipelines():
                 method_key=method_key,
                 dataset_name=dataset_name,
                 cfg=cfg,
+                embedding_key="DUMMY" if "_te" in method_key else None,
             )
 
             ctx.nominal_features = nominal_features
@@ -46,6 +47,10 @@ def test_all_pipelines():
             if compare_pipelines(pipeline, expected_pipeline):
                 print("✅ Pipeline is correct.")
                 succeeded += 1
+                #print("\nGenerated pipeline:")
+                #pprint(pipeline)
+                #print("\nExpected pipeline:")
+                #pprint(expected_pipeline)
             else:
                 print("❌ Pipeline mismatch!")
                 print("\nGenerated pipeline:")

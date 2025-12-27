@@ -1,12 +1,19 @@
 from config.config_manager import ConfigManager
+from src.llm_related.llm_registry import FeatureExtractorRegistry
 
-
+# todo (for GBDT Classifier): nom_feat = none is _te and not conc
 # todo: init the paths to the files depending on the method key here? And build a delegate method in data_prep?
 class ExpContext:
-    def __init__(self, method_key: str, dataset_name: str, cfg: ConfigManager):
+    def __init__(self,
+                 method_key: str,
+                 dataset_name: str,
+                 cfg: ConfigManager,
+                 embedding_key: str | None = None,
+                 ):
         self.method_key = method_key
         self.dataset_name = dataset_name
         self.cfg = cfg
+        self.embedding_key = embedding_key
 
         # --------------------------------------------------
         # Flags derived from method_key
@@ -18,6 +25,7 @@ class ExpContext:
         self.flags.has_text = "_te" in method_key
         self.flags.has_rte = "_rte" in method_key
         self.flags.is_concat = "_conc" in method_key
+        self.flags.has_pca = "_pca" in method_key
 
         self.flags.conc1 = "_conc1" in method_key
         self.flags.conc2 = "_conc2" in method_key
@@ -41,6 +49,18 @@ class ExpContext:
         # --------------------------------------------------
         self.features: list[str] = []
         self.label: list[int] = [] # todo: might be different if we have different tasks
+
+        # --------------------------------------------------
+        # Text Embeddings
+        # --------------------------------------------------
+        self.feature_extractor = None
+        if self.flags.has_text:
+            if not embedding_key:
+                raise ValueError(
+                    f"Experiment '{method_key}' requires text embeddings"
+                    f"but no embedding_key was provided."
+                )
+            self.feature_extractor = FeatureExtractorRegistry.create(embedding_key)
 
     def update_numerical_features(self, X):
         self.numerical_features = [

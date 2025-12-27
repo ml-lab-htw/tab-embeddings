@@ -71,5 +71,5 @@ class ConfigManager:
         return self._require_section("EXPERIMENTS")
 
     @property
-    def llms(self, test_mode=False) -> Dict[str, Any]:
-        return self._require_section("LLMS")
+    def llm_keys(self) -> Dict[str, Any]:
+        return self._require_section("LLM_KEYS")

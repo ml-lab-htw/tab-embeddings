@@ -5,9 +5,10 @@ from sklearn.ensemble import RandomTreesEmbedding
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
-from src.embedding_aggregator import EmbeddingAggregator
+from src.llm_related.embedding_aggregator import EmbeddingAggregator
 from src.exp_context import ExpContext
-from src.helpers import build_tabular_transformer, select_classifier, build_feature_union
+from src.helpers.pipeline_helpers import build_tabular_transformer, select_classifier, build_feature_union, \
+    build_text_pipeline_steps, build_raw_branch
 
 
 class PipelineStrategy(ABC):
@@ -55,27 +56,30 @@ class RTEPipeline(PipelineStrategy):
 
 class TextPipeline(PipelineStrategy):
     def build(self, ctx: ExpContext) -> Pipeline:
-        steps = [
-            ("aggregator", EmbeddingAggregator(
-                feature_extractor=ctx.feature_extractor
-            ))
-        ]
-        if ctx.flags.has_pca:
-            steps.append(("numerical_scaler", StandardScaler()))
-            steps.append(("pca", PCA(n_components=ctx.pca_components)))
-        else:
-            steps.append(("numerical_scaler", MinMaxScaler()))
-
+        steps = build_text_pipeline_steps(ctx=ctx)
         steps.append(("classifier", select_classifier(ctx, ctx.cfg)))
         return Pipeline(steps)
 
 
 class ConcatTextPipeline(PipelineStrategy):
     def build(self, ctx: ExpContext) -> Pipeline:
-        return Pipeline([
-            ("transformer", build_tabular_transformer(ctx, include_text=True)),
+        if ctx.flags.is_gbdt:
+            return Pipeline([
+                ("transformer", build_raw_branch(ctx=ctx)),
+                ("classifier", select_classifier(ctx, ctx.cfg))
+            ])
+
+        elif ctx.flags.is_lr:
+            return Pipeline([
+            ("transformer", build_tabular_transformer(ctx=ctx, include_text=True, scale=True)),
             ("classifier", select_classifier(ctx, ctx.cfg)),
         ])
+
+        else:
+            raise NotImplementedError(
+                # todo: print the concrete flag
+                f"Pipeline not implemented for {ctx.flags}"
+            )
 
 
 class ConcatRTEPipeline(PipelineStrategy):

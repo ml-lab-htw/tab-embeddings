@@ -1,6 +1,5 @@
 from sklearn.compose import ColumnTransformer
 from sklearn.decomposition import PCA
-
 from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import SimpleImputer, IterativeImputer
 from sklearn.linear_model import LogisticRegression
@@ -9,7 +8,7 @@ from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, StandardScaler
 
 from config.config_manager import ConfigManager
-from src.embedding_aggregator import EmbeddingAggregator
+from src.llm_related.embedding_aggregator import EmbeddingAggregator
 from src.exp_context import ExpContext
 
 
@@ -27,8 +26,9 @@ def build_nominal_pipeline(ctx: ExpContext) -> Pipeline:
 
 
 def build_numerical_pipeline(ctx: ExpContext, scale: bool) -> Pipeline:
+    max_iter=ctx.cfg.globals["imp_max_iter"]
     steps = [
-        ("numerical_imputer", IterativeImputer(max_iter=ctx.cfg.globals["imp_max_iter"])),
+        ("numerical_imputer", IterativeImputer(max_iter=max_iter)),
         #("numerical_scaler", StandardScaler()),
     ]
 
@@ -38,22 +38,20 @@ def build_numerical_pipeline(ctx: ExpContext, scale: bool) -> Pipeline:
     return Pipeline(steps)
 
 
-def build_text_pipeline(ctx: ExpContext, with_pca: bool) -> Pipeline:
+def build_text_pipeline_steps(ctx: ExpContext) -> list:
+    dataset = ctx.dataset_name
+    pca_components = ctx.cfg.datasets[dataset]["pca_components"]
     steps = [
         ("aggregator", EmbeddingAggregator(
             feature_extractor=ctx.feature_extractor
-        )),
+        ))
     ]
-
-    if with_pca:
-        steps.append([
-            ("numerical_scaler", StandardScaler()),
-            ("pca", PCA(n_components=ctx.pca_components)),
-        ])
-    else:
+    if ctx.flags.has_pca:
+        steps.append(("numerical_scaler", StandardScaler()))
+        steps.append(("pca", PCA(n_components=pca_components)))
+    elif ctx.flags.is_lr:
         steps.append(("numerical_scaler", MinMaxScaler()))
-
-    return Pipeline(steps)
+    return steps
 
 
 def build_tabular_transformer(ctx: ExpContext, *, include_text: bool, scale: bool) -> ColumnTransformer:
@@ -76,7 +74,7 @@ def build_tabular_transformer(ctx: ExpContext, *, include_text: bool, scale: boo
     if include_text and ctx.text_features:
         transformers.append((
             "text",
-            build_text_pipeline(ctx, with_pca=ctx.flags.has_pca),
+            Pipeline(steps=build_text_pipeline_steps(ctx)),
             ctx.text_features
         ))
 
@@ -89,7 +87,6 @@ def build_tabular_transformer(ctx: ExpContext, *, include_text: bool, scale: boo
 def build_feature_union(ctx: ExpContext) -> FeatureUnion:
     # include_text is set to False, because build_feature_union
     # has been only created for RTE experiments
-    include_text = False
     scale_before_rte = False
     return FeatureUnion([
         ("raw", build_raw_branch(ctx)),
@@ -114,9 +111,16 @@ def build_raw_branch(ctx: ExpContext) -> ColumnTransformer | str:
     downstream classifier.
     """
     if ctx.flags.is_gbdt:
-        return "passthrough"
+        if ctx.flags.has_rte:
+            return "passthrough"
+        elif ctx.flags.has_text:
+            text_steps = build_text_pipeline_steps(ctx)
+            # todo: move this logic to build_tabular_transformer?
+            return ColumnTransformer(
+                transformers=[('numerical', 'passthrough',['num_1', 'num_2']),
+                              ('text', Pipeline(text_steps), ['text'])])
 
-    if ctx.flags.is_lr:
+    elif ctx.flags.is_lr:
         return build_tabular_transformer(
             ctx=ctx,
             include_text=False,

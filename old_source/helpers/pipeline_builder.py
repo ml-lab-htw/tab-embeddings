@@ -11,7 +11,7 @@ from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, MinMaxScaler, OrdinalEncoder
 
 from old_source.config.config import DATASETS, GLOBAL, DS_MODELS, RTE_PARAMS
-from src.embedding_aggregator import EmbeddingAggregator
+from src.llm_related.embedding_aggregator import EmbeddingAggregator
 
 
 # ======================================

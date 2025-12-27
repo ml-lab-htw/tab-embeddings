@@ -1,14 +1,51 @@
-import importlib.util
-import os
-import sys
+from config.config_manager import ConfigManager
+from src.exp_context import ExpContext
+from src.pipeline_factory import PipelineFactory
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if BASE_DIR not in sys.path:
-    sys.path.insert(0, BASE_DIR)
+if __name__ == "__main__":
+    print("-" * 100)
+    print("Running all experiments...")
+    print("-" * 100)
 
-from old_source.utils.csv_creator import save_to_csv
-from old_source.utils.load_data import load_dataset
-from old_source.helpers.run_setup import run_experiment
+    custom_config = False
+
+    # === Ask user for custom config path ===
+    user_input = input(
+        "If you have your own config file, paste its full path.\n"
+        "If you want to proceed with the default config file, just press ENTER:\n> "
+    ).strip()
+
+
+
+
+
+
+
+    cfg = ConfigManager()
+    experiments = cfg.experiments
+    embedding_keys = cfg._require_section("TEXT_EMBEDDINGS")
+
+    for method_key in experiments:
+        flags = Flags.from_method_key(method_key)
+
+        if flags.has_text:
+            for emb_key in embedding_keys:
+                ctx = ExpContext(
+                    method_key=method_key,
+                    dataset_name=dataset_name,
+                    cfg=cfg,
+                    embedding_key=emb_key,
+                )
+                pipeline = PipelineFactory.get_strategy(ctx).build(ctx)
+                run_experiment(ctx, pipeline)
+        else:
+            ctx = ExpContext(
+                method_key=method_key,
+                dataset_name=dataset_name,
+                cfg=cfg,
+            )
+            pipeline = PipelineFactory.get_strategy(ctx).build(ctx)
+            run_experiment(ctx, pipeline)
 
 
 if __name__ == "__main__":

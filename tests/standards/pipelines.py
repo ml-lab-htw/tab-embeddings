@@ -1,15 +1,14 @@
 from sklearn.decomposition import PCA
 from sklearn.pipeline import Pipeline, FeatureUnion
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, StandardScaler, OrdinalEncoder
-from sklearn.experimental import enable_iterative_imputer
+from sklearn.preprocessing import OneHotEncoder, MinMaxScaler, StandardScaler
 
 from sklearn.impute import SimpleImputer, IterativeImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomTreesEmbedding
 
 from config.config_manager import ConfigManager
-from src.embedding_aggregator import EmbeddingAggregator
+from src.llm_related.embedding_aggregator import EmbeddingAggregator
 
 
 """
@@ -100,7 +99,8 @@ EXPECTED_PIPELINES["lr_rte_conc"] = (
                 ("transformer", ColumnTransformer([
                     ("nominal", Pipeline([
                         ("nominal_imputer", SimpleImputer(strategy="most_frequent")),
-                        ("nominal_encoder", OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-1)),
+                        ("nominal_encoder", OneHotEncoder(handle_unknown="ignore", drop="if_binary"))
+                        #("nominal_encoder", OrdinalEncoder(handle_unknown="use_encoded_value", unknown_value=-1)),
                     ]), nominal_features),
                     ("numerical", Pipeline(steps=[
                         ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
@@ -132,14 +132,14 @@ EXPECTED_PIPELINES["lr_te_pca"] = Pipeline([
 # === LR Text Conc1 === yes
 EXPECTED_PIPELINES["lr_conc1_te"] = Pipeline([
     ("transformer", ColumnTransformer([
-        ("numerical", Pipeline([
-            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
-            ("numerical_scaler", MinMaxScaler())
-        ]), numerical_features),
         ("nominal", Pipeline([
             ("nominal_imputer", SimpleImputer(strategy="most_frequent")),
             ("nominal_encoder", OneHotEncoder(handle_unknown="ignore", drop="if_binary"))
         ]), nominal_features),
+        ("numerical", Pipeline([
+            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
+            ("numerical_scaler", MinMaxScaler())
+        ]), numerical_features),
         ("text", Pipeline([
             ("aggregator", EmbeddingAggregator(
                 feature_extractor=feature_extractor)),
@@ -152,14 +152,14 @@ EXPECTED_PIPELINES["lr_conc1_te"] = Pipeline([
 # === LR Text Conc2 === yes
 EXPECTED_PIPELINES["lr_conc2_te"] = Pipeline([
     ("transformer", ColumnTransformer([
-        ("numerical", Pipeline([
-            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
-            ("numerical_scaler", MinMaxScaler())
-        ]), numerical_features),
         ("nominal", Pipeline([
             ("nominal_imputer", SimpleImputer(strategy="most_frequent")),
             ("nominal_encoder", OneHotEncoder(handle_unknown="ignore", drop="if_binary"))
         ]), nominal_features),
+        ("numerical", Pipeline([
+            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
+            ("numerical_scaler", MinMaxScaler())
+        ]), numerical_features),
         ("text", Pipeline([
             ("aggregator", EmbeddingAggregator(
                 feature_extractor=feature_extractor)),
@@ -172,14 +172,14 @@ EXPECTED_PIPELINES["lr_conc2_te"] = Pipeline([
 # === LR Text Conc3 === yes
 EXPECTED_PIPELINES["lr_conc3_te"] = Pipeline([
     ("transformer", ColumnTransformer([
-        ("numerical", Pipeline([
-            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
-            ("numerical_scaler", MinMaxScaler())
-        ]), numerical_features),
         ("nominal", Pipeline([
             ("nominal_imputer", SimpleImputer(strategy="most_frequent")),
             ("nominal_encoder", OneHotEncoder(handle_unknown="ignore", drop="if_binary"))
         ]), nominal_features),
+        ("numerical", Pipeline([
+            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
+            ("numerical_scaler", MinMaxScaler())
+        ]), numerical_features),
         ("text", Pipeline([
             ("aggregator", EmbeddingAggregator(
                 feature_extractor=feature_extractor)),
@@ -192,14 +192,14 @@ EXPECTED_PIPELINES["lr_conc3_te"] = Pipeline([
 # === LR Text PCA Conc ===
 EXPECTED_PIPELINES["lr_conc1_pca_te"] = Pipeline([
     ("transformer", ColumnTransformer([
-        ("numerical", Pipeline([
-            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
-            ("numerical_scaler", MinMaxScaler())
-        ]), numerical_features),
         ("nominal", Pipeline([
             ("nominal_imputer", SimpleImputer(strategy="most_frequent")),
             ("nominal_encoder", OneHotEncoder(handle_unknown="ignore", drop="if_binary"))
         ]), nominal_features),
+        ("numerical", Pipeline([
+            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
+            ("numerical_scaler", MinMaxScaler())
+        ]), numerical_features),
         ("text", Pipeline([
             ("aggregator", EmbeddingAggregator(
                 feature_extractor=feature_extractor)),
@@ -213,14 +213,14 @@ EXPECTED_PIPELINES["lr_conc1_pca_te"] = Pipeline([
 # === LR Text PCA Conc2 ===
 EXPECTED_PIPELINES["lr_conc2_pca_te"] = Pipeline([
     ("transformer", ColumnTransformer([
-        ("numerical", Pipeline([
-            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
-            ("numerical_scaler", MinMaxScaler())
-        ]), numerical_features),
         ("nominal", Pipeline([
             ("nominal_imputer", SimpleImputer(strategy="most_frequent")),
             ("nominal_encoder", OneHotEncoder(handle_unknown="ignore", drop="if_binary"))
         ]), nominal_features),
+        ("numerical", Pipeline([
+            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
+            ("numerical_scaler", MinMaxScaler())
+        ]), numerical_features),
         ("text", Pipeline([
             ("aggregator", EmbeddingAggregator(
                 feature_extractor=feature_extractor)),
@@ -234,14 +234,14 @@ EXPECTED_PIPELINES["lr_conc2_pca_te"] = Pipeline([
 # === LR Text PCA Conc3 ===
 EXPECTED_PIPELINES["lr_conc3_pca_te"] = Pipeline([
     ("transformer", ColumnTransformer([
-        ("numerical", Pipeline([
-            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
-            ("numerical_scaler", MinMaxScaler())
-        ]), numerical_features),
         ("nominal", Pipeline([
             ("nominal_imputer", SimpleImputer(strategy="most_frequent")),
             ("nominal_encoder", OneHotEncoder(handle_unknown="ignore", drop="if_binary"))
         ]), nominal_features),
+        ("numerical", Pipeline([
+            ("numerical_imputer", IterativeImputer(max_iter=imp_max_iter)),
+            ("numerical_scaler", MinMaxScaler())
+        ]), numerical_features),
         ("text", Pipeline([
             ("aggregator", EmbeddingAggregator(
                 feature_extractor=feature_extractor)),
@@ -316,7 +316,8 @@ EXPECTED_PIPELINES["gbdt_te_pca"] = Pipeline([
 
 # === GBDT Text Conc === yes
 pipeline_text_steps = [("aggregator", EmbeddingAggregator(feature_extractor=feature_extractor)),
-                       ("numerical_scaler", MinMaxScaler())]
+                       #("numerical_scaler", MinMaxScaler()) todo: not needed for gbdt?
+                       ]
 
 EXPECTED_PIPELINES["gbdt_conc1_te"] = Pipeline([
             ("transformer", ColumnTransformer([
@@ -326,8 +327,6 @@ EXPECTED_PIPELINES["gbdt_conc1_te"] = Pipeline([
             ("classifier", HistGradientBoostingClassifier(categorical_features=nominal_features, random_state=42))
         ])
 # === GBDT Text Conc === yes
-pipeline_text_steps = [("aggregator", EmbeddingAggregator(feature_extractor=feature_extractor)),
-                       ("numerical_scaler", MinMaxScaler())]
 
 EXPECTED_PIPELINES["gbdt_conc2_te"] = Pipeline([
             ("transformer", ColumnTransformer([
@@ -337,8 +336,6 @@ EXPECTED_PIPELINES["gbdt_conc2_te"] = Pipeline([
             ("classifier", HistGradientBoostingClassifier(categorical_features=nominal_features, random_state=42))
         ])
 # === GBDT Text Conc === yes
-pipeline_text_steps = [("aggregator", EmbeddingAggregator(feature_extractor=feature_extractor)),
-                       ("numerical_scaler", MinMaxScaler())]
 
 EXPECTED_PIPELINES["gbdt_conc3_te"] = Pipeline([
             ("transformer", ColumnTransformer([
@@ -364,11 +361,6 @@ EXPECTED_PIPELINES["gbdt_conc1_pca_te"] = Pipeline([
 ])
 
 # === GBDT Text + PCA Conc ===
-pipeline_text_steps_pca = [
-    ("aggregator", EmbeddingAggregator(feature_extractor=feature_extractor)),
-    ("numerical_scaler", StandardScaler()),
-    ("pca", pca_transformer)
-]
 EXPECTED_PIPELINES["gbdt_conc2_pca_te"] = Pipeline([
     ("transformer", ColumnTransformer([
         ("numerical", "passthrough", numerical_features),
@@ -378,11 +370,6 @@ EXPECTED_PIPELINES["gbdt_conc2_pca_te"] = Pipeline([
 ])
 
 # === GBDT Text + PCA Conc ===
-pipeline_text_steps_pca = [
-    ("aggregator", EmbeddingAggregator(feature_extractor=feature_extractor)),
-    ("numerical_scaler", StandardScaler()),
-    ("pca", pca_transformer)
-]
 EXPECTED_PIPELINES["gbdt_conc3_pca_te"] = Pipeline([
     ("transformer", ColumnTransformer([
         ("numerical", "passthrough", numerical_features),
