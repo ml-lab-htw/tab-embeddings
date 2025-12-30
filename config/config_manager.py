@@ -7,6 +7,7 @@ import yaml
 class ConfigManager:
     def __init__(self, config: Dict[str, Any]):
         self._config = config
+        self._test_mode = config["TEST_MODE"]
 
     @classmethod
     def load_yaml(cls, path: str | Path) -> "ConfigManager":
@@ -37,8 +38,10 @@ class ConfigManager:
         return bool(self._require_section("TEST_MODE"))
 
     @property
-    def test_samples(self) -> int:
-        return int(self._require_section("TEST_SAMPLES"))
+    def test_samples(self) -> int | None:
+        if self._test_mode:
+            return int(self._require_section("TEST_SAMPLES"))
+        return None
 
     @property
     def globals(self) -> Dict[str, Any]:
@@ -65,11 +68,13 @@ class ConfigManager:
         return self._require_section("DATA_PREP_CONFIG")
 
     @property
-    def experiments(self, test_mode=False) -> Dict[str, Any]:
-        if test_mode: # todo: we have a self._test_mode
-            return self._require_section("EXPERIMENTS_TEST")
+    def experiments(self) -> Dict[str, Any]:
+        if self._test_mode: # todo: we have a self._test_mode
+            return self._require_section("TEST_EXPERIMENTS")
         return self._require_section("EXPERIMENTS")
 
     @property
     def llm_keys(self) -> Dict[str, Any]:
+        if self._test_mode:
+            return self._require_section("TEST_LLM_KEYS")
         return self._require_section("LLM_KEYS")

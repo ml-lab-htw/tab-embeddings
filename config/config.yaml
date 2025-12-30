@@ -1,5 +1,4 @@
-# todo: build this in code
-TEST_MODE: FALSE
+TEST_MODE: True
 TEST_SAMPLES: 200
 
 GLOBAL:
@@ -93,6 +92,9 @@ DATA_PREP_CONFIG:
 # -------------------------- #
 # ---------- LLMs ---------- #
 # -------------------------- #
+TEST_LLM_KEYS:
+  E5_SMALL_V2: "intfloat/e5-small-v2"
+
 LLM_KEYS:
   ALL_MINILM_L6_V2: "sentence-transformers/all-MiniLM-L6-v2"
   E5_SMALL_V2: "intfloat/e5-small-v2"
@@ -143,7 +145,7 @@ EXPERIMENTS:
 TEST_EXPERIMENTS:
   - lr
   - lr_rte
-  #- lr_te
+  - lr_te
   #- lr_te_pca
   #- lr_conc1_te
   #- lr_conc2_te
@@ -154,7 +156,7 @@ TEST_EXPERIMENTS:
   - lr_rte_conc
   - gbdt
   - gbdt_rte
-  #- gbdt_te
+  - gbdt_te
   #- gbdt_te_pca
   #- gbdt_conc1_te
   #- gbdt_conc2_te

@@ -1,9 +1,81 @@
+import os
+from pathlib import Path
+from typing import Dict, Any
+
 import numpy as np
 import pandas as pd
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
 from src.exp_context import ExpContext
-from tests.standards.pipelines import dataset
+
+
+class DataPreparer:
+    def __init__(self, ctx: ExpContext):
+        self.ctx = ctx
+        self.resolver = DataResolver(ctx)
+        self.X = None
+        self.y = None
+
+    def _validate_lengths(self, X, y, summaries = None):
+        if len(X) != len(y):
+            raise ValueError(
+                f"X and y length mismatch: {len(X)} vs {len(y)}"
+            )
+        if summaries is not None and len(summaries) != len(X):
+            raise ValueError(
+                f"Summaries length mismatch: {len(summaries)} vs {len(X)}"
+            )
+
+    def prepare(self):
+        paths = self.resolver.resolve()
+
+        X = DataLoader.load_features(
+            path=paths["X"],
+            nrows=self._nrows()
+        )
+
+        y = DataLoader.load_labels(
+            path=paths["y"],
+            nrows=self._nrows()
+        )
+        summaries = None
+        if self.ctx.flags.has_text:
+            summaries = DataLoader.load_summaries(paths["summaries"])
+
+        X, y, summaries = self._drop_unlabeled(X, y, summaries)
+
+        self._validate_lengths(X, y, summaries)
+
+        if summaries is not None:
+            X = self._concatenate(X, summaries)
+
+        self.ctx.update_numerical_features(X)
+        self.ctx.update_nominal_indices(list(X.columns))
+
+        return self._split(X, y)
+
+    def _concatenate(self, X, summaries):
+        X = X.copy()
+        X["text"] = summaries
+        return X
+
+    def _drop_unlabeled(self, X, y, summaries=None):
+        mask = ~pd.isna(y)
+        X = X.loc[mask].reset_index(drop=True)
+        y = y[mask]
+        if summaries is not None:
+            summaries = [s for i, s in enumerate(summaries) if mask.iloc[i]]
+        return X, y, summaries
+
+    def _split(self, X, y):
+        return train_test_split(
+            X,
+            y,
+            test_size=self.ctx.cfg.globals["test_size"],
+            stratify=y,
+            random_state=self.ctx.cfg.globals["random_state"]
+        )
 
 
 class DataLoader:
@@ -12,77 +84,90 @@ class DataLoader:
     loads features (X.csv) as dataframe
     loads labels (y.csv) as np.array
     """
-    def __init__(self, ctx: ExpContext):
-        self._ctx = ctx
+    @staticmethod
+    def load_summaries(path):
+        summaries_list = []
+        if not os.path.exists(path):
+            raise FileNotFoundError(f"File {path} has not been was found.")
+        with open(path, "r") as file:
+            summaries_list = [line.strip() for line in file.readlines()]
+        return summaries_list
 
-    def load_summaries(self):
-        # todo: adjust extracting path
-        dataset = self._ctx.dataset_name
-        dataset_cfg = self._ctx.cfg.datasets.get(dataset)
-        # todo: where does that check happen, which summaries are needed here? ExpContext or here?
-        summaries = []
-
-        return summaries
-
-    def load_features(self):
-        test_mode = self._ctx.cfg.test_mode
-        test_samples = self._ctx.cfg.test_samples if test_mode else None
-
-        delimiter = self._ctx.cfg.delimiter # todo
-
-        X = pd.read_csv(file_path, delimiter=delimiter, nrows=test_samples)
-        print(f"Loaded tabular features from {file_path} with shape {X.shape}")
-
+    @staticmethod
+    def load_features(path, nrows, delimiter=","):
+        X = pd.read_csv(path, delimiter=delimiter, nrows=nrows)
+        print(f"Loaded tabular features from {path} with shape {X.shape}")
         return X
 
-    def load_labels(self):
+    @staticmethod
+    def load_labels(path, nrows=None, delimiter=","):
         """
         Load y.csv labels as np.array
-        Check for empty values
-        If there are empty values, save indices and remove them
         Encode categories if necessary
         """
-        test_mode = self._ctx.cfg.test_mode
-        test_samples = self._ctx.cfg.test_samples if test_mode else None
+        data = pd.read_csv(path, delimiter=delimiter, nrows=nrows)
+        if data.empty:
+            raise ValueError(f"Labels file is empty: {path}")
 
-        data = pd.read_csv(file_path, delimiter=delimiter, nrows=test_samples)
-
+        if data.shape[1] != 1:
+            raise ValueError(
+                f"Labels file must contain exactly one column, "
+                f"found {data.shape[1]} columns in {path}"
+            )
         y = data.values.ravel()
         y = pd.Series(y)
-
         if not np.issubdtype(y.dtype, np.number):
-            print(f"Label encoding values: {y.unique()}")
-            # todo: add exception
-            le = LabelEncoder()
-            y = le.fit_transform(y)
+            y = LabelEncoder().fit_transform(y)
         else:
             y = y.to_numpy()
-
-        print(f"Loaded labels from {file_path} with shape {y.shape}")
+        print(f"Loaded labels from {path} with shape {len(y)}")
         return y
 
-    def ensure_same_length(self):
-        """
-        ensure that the features and labels have same length
-        """
-        pass
 
-    def concatenate_data(self):
-        """
-        If experiment requires tabular and text features to be
-        concatenated, add text features as a new column to the table.
-        """
-        pass
+class DataResolver:
+    def __init__(self, ctx: ExpContext):
+        self.ctx = ctx
+        self.dataset_cfg = ctx.cfg.datasets[ctx.dataset_name]
 
-    def train_test_split(self):
-        """
+        self.base_path = Path(self.dataset_cfg["path"])
 
+    def resolve(self) -> Dict[str, Any]:
         """
-        pass
+        Returns a dict with paths needed for the experiment.
+        Keys may include:
+        - X_path
+        - y_path
+        - summaries_path
+        """
+        resolved = {
+            "X": self._resolve_X(),
+            "y": self._resolve_y(),
+        }
 
-    # todo: or just reinit data?
-    def return_data(self):
+        if self.ctx.flags.has_text:
+            resolved["summaries"] = self._resolve_summaries()
+
+        return resolved
+
+    def _resolve_X(self) -> Path:
+        return self.base_path / self.dataset_cfg["X"]
+
+    def _resolve_y(self) -> Path:
+        return self.base_path / self.dataset_cfg["y"]
+
+    def _resolve_summaries(self) -> Path | list[Path]:
         """
-        returns suitable data in a suitable format.
+        Handles:
+        - pure text experiments
+        - concatenated experiments
+        - different concat modes (conc1/2/3)
         """
-        pass
+        if self.ctx.flags.has_text or self.ctx.flags.conc1 or self.ctx.flags.conc2:
+            return self.base_path / self.dataset_cfg["summaries"]
+
+        if self.ctx.flags.conc3:
+            return self.base_path / self.dataset_cfg["nom_summaries"]
+
+        raise ValueError(
+            f"Unknown concatenation mode for method '{self.ctx.method_key}'"
+        )

@@ -1,5 +1,8 @@
 from typing import Any, Dict, Callable
 
+from src.helpers.feature_extractor_creators import create_gen_feature_extractor
+
+
 #from src.helpers.feature_extractor_creators import create_gen_feature_extractor, create_gte_feature_extractor
 
 
@@ -20,11 +23,11 @@ class FeatureExtractorRegistry:
         return cls._REGISTRY[key]()
 
 
-"""FeatureExtractorRegistry.register(
+FeatureExtractorRegistry.register(
     "E5_SMALL_V2",
     lambda: create_gen_feature_extractor("intfloat/e5-small-v2")
 )
-
+"""
 FeatureExtractorRegistry.register(
     "E5_BASE_V2",
     lambda: create_gen_feature_extractor("intfloat/e5-base-v2")

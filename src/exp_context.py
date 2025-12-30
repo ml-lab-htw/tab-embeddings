@@ -1,5 +1,20 @@
 from config.config_manager import ConfigManager
 from src.llm_related.llm_registry import FeatureExtractorRegistry
+from dataclasses import dataclass
+from typing import Any
+
+@dataclass(frozen=True)
+class ExperimentFlags:
+    is_lr: bool
+    is_gbdt: bool
+    has_text: bool
+    has_rte: bool
+    is_concat: bool
+    has_pca: bool
+    conc1: bool
+    conc2: bool
+    conc3: bool
+
 
 # todo (for GBDT Classifier): nom_feat = none is _te and not conc
 # todo: init the paths to the files depending on the method key here? And build a delegate method in data_prep?
@@ -9,6 +24,9 @@ class ExpContext:
                  dataset_name: str,
                  cfg: ConfigManager,
                  embedding_key: str | None = None,
+                 *,
+                 validate: bool = True,
+                 feature_extractor: Any | None = None,
                  ):
         self.method_key = method_key
         self.dataset_name = dataset_name
@@ -18,18 +36,17 @@ class ExpContext:
         # --------------------------------------------------
         # Flags derived from method_key
         # --------------------------------------------------
-        self.flags = type("Flags", (), {})()
-        self.flags.is_lr = method_key.startswith("lr")
-        self.flags.is_gbdt = method_key.startswith("gbdt")
-
-        self.flags.has_text = "_te" in method_key
-        self.flags.has_rte = "_rte" in method_key
-        self.flags.is_concat = "_conc" in method_key
-        self.flags.has_pca = "_pca" in method_key
-
-        self.flags.conc1 = "_conc1" in method_key
-        self.flags.conc2 = "_conc2" in method_key
-        self.flags.conc3 = "_conc3" in method_key
+        self.flags = ExperimentFlags(
+            is_lr=method_key.startswith("lr"),
+            is_gbdt=method_key.startswith("gbdt"),
+            has_text="_te" in method_key,
+            has_rte="_rte" in method_key,
+            is_concat="_conc" in method_key,
+            has_pca="_pca" in method_key,
+            conc1="_conc1" in method_key,
+            conc2="_conc2" in method_key,
+            conc3="_conc3" in method_key,
+        )
 
         # --------------------------------------------------
         # Feature config (static)
@@ -53,14 +70,23 @@ class ExpContext:
         # --------------------------------------------------
         # Text Embeddings
         # --------------------------------------------------
-        self.feature_extractor = None
+        if validate:
+            self._validate()
+
+        self.feature_extractor = feature_extractor
+
+    def _validate(self):
         if self.flags.has_text:
-            if not embedding_key:
+            if not self.embedding_key:
                 raise ValueError(
-                    f"Experiment '{method_key}' requires text embeddings"
+                    f"Experiment '{self.method_key}' requires text embeddings "
                     f"but no embedding_key was provided."
                 )
-            self.feature_extractor = FeatureExtractorRegistry.create(embedding_key)
+            if self.feature_extractor is None:
+                raise ValueError(
+                    f"Experiment '{self.method_key}' requires a feature_extractor "
+                    f"but none was provided."
+                )
 
     def update_numerical_features(self, X):
         self.numerical_features = [
@@ -73,6 +99,7 @@ class ExpContext:
             i for i, c in enumerate(all_columns) if c in self.nominal_features
         ]
 
+    '''
     def assign_correct_files(self):
         if self.flags.has_text:
             if self.flags.is_concat:
@@ -94,3 +121,4 @@ class ExpContext:
         Before assigning correct files, check if file exists.
         """
         pass
+    '''

@@ -1,31 +1,100 @@
 import time
+from datetime import datetime
 
 from sklearn.metrics import confusion_matrix, roc_auc_score, recall_score, f1_score, balanced_accuracy_score, \
     precision_score, average_precision_score
 from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
 
-#
+from config.config_manager import ConfigManager
+from pathlib import Path
+
+from src.exp_context import ExpContext
+from src.llm_related.llm_registry import FeatureExtractorRegistry
+
+
+class ExperimentRunner:
+    def __init__(self, config_path: str):
+        self.cfg = ConfigManager.load_yaml(config_path)
+        self.run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        self.results_dir = Path(self.cfg.globals["results_dir"]) / f"results_{self.run_id}"
+        self.results_dir.mkdir(parents=True, exist_ok=True)
+
+        self._feature_extractors: dict[str, object] = {}
+
+    def _get_feature_extractor(self, llm_key: str):
+        if llm_key not in self._feature_extractors:
+            self._feature_extractors[llm_key] = FeatureExtractorRegistry.create(llm_key)
+        return self._feature_extractors[llm_key]
+
+    def run(self):
+        print(f"Starting run {self.run_id}")
+        for dataset_name in self.cfg.datasets:
+            self.run_dataset(dataset_name)
+
+    def run_dataset(self, dataset_name: str):
+        print(f"\nDataset: {dataset_name}")
+        for method_key in self.cfg.experiments:
+            self.run_method(dataset_name, method_key)
+
+    def run_method(self, dataset_name: str, method_key: str):
+        probe_ctx = ExpContext(
+            method_key=method_key,
+            dataset_name=dataset_name,
+            cfg=self.cfg,
+            validate=False
+        )
+        if probe_ctx.flags.has_text:
+            for llm_key in self.cfg.llm_keys:
+                self.run_experiment(dataset_name, method_key, llm_key)
+        else:
+            self.run_experiment(dataset_name, method_key, None)
+
+    def run_experiment(
+            self,
+            dataset_name: str,
+            method_key: str,
+            llm_key: str | None,
+    ):
+        feature_extractor = None
+        if llm_key:
+            feature_extractor = self._get_feature_extractor(llm_key)
+        ctx = ExpContext(
+            method_key=method_key,
+            dataset_name=dataset_name,
+            cfg=self.cfg,
+            embedding_key=llm_key,
+            feature_extractor=feature_extractor
+        )
+        exp_id = self._experiment_id(dataset_name, method_key, llm_key)
+        print(f"  Running: {exp_id}")
+
+    def _experiment_id(self, dataset, method, llm):
+        if llm:
+            return f"{dataset}_{method}_{llm}"
+        return f"{dataset}_{method}"
+
+    def info(self):
+        print("Datasets:", list(self.cfg.datasets.keys()))
+        print("Experiments:", self.cfg.experiments)
+        print("LLMs:", self.cfg.llm_keys)
+
+"""
 def run_experiment(method_key, dataset_name, data, feature_extractor=None, text_embedding_dict=None, rte_dict=None,
                    custom_config=False, verbose=True):
-    """
+    '''
     Orchestrates the experiment: prepare data, build pipeline, train + evaluate.
-    """
+    '''
+    
     # --- Step 1: prepare data---
-    X_train, X_test, y_train, y_test, text_cols, nominal_cols, numerical_cols, cfg = \
-        prepare_data_for_experiment(method_key, dataset_name, data, text_embedding_dict, verbose)
     print("Run exp. debug:")
     print(f"Nom columns: {nominal_cols}")
     print(f"Num columns: {numerical_cols}")
     print(f"Text columns: {text_cols}")
 
     # --- Step 2: build pipeline & grid ---
-    pipeline = build_pipeline(method_key=method_key,
-                              dataset_name=dataset_name,
-                              feature_extractor=feature_extractor,
-                              text_features=text_cols,
-                              nominal_features=nominal_cols,
-                              numerical_features=numerical_cols)
-    param_grid = build_param_grid(method_key)
+    pipeline = None
+    param_grid = None
 
     # --- Step 3: train ---
     search = GridSearchCV(
@@ -65,7 +134,7 @@ def run_experiment(method_key, dataset_name, data, feature_extractor=None, text_
         "test_metrics": test_metrics,
         "train_metrics": train_metrics,
         # "duration_sec": duration,
-    }
+    }"""
 
 
 def calc_metrics(y, y_pred, y_pred_proba):
