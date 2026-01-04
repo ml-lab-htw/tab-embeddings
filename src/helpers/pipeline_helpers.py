@@ -98,7 +98,8 @@ def build_feature_union(ctx: ExpContext) -> FeatureUnion:
                 ("numerical",
                  build_numerical_pipeline(ctx=ctx, scale=scale_before_rte),
                  ctx.numerical_features),
-            ], remainder="passthrough")),
+            ]#, remainder="passthrough"
+            )),
             ("embedding", RandomTreesEmbedding(
                 random_state=ctx.cfg.globals["random_state"]
             )),
@@ -117,7 +118,7 @@ def build_raw_branch(ctx: ExpContext) -> ColumnTransformer | str:
             text_steps = build_text_pipeline_steps(ctx)
             # todo: move this logic to build_tabular_transformer?
             return ColumnTransformer(
-                transformers=[('numerical', 'passthrough',['num_1', 'num_2']),
+                transformers=[('numerical', 'passthrough',ctx.numerical_features),
                               ('text', Pipeline(text_steps), ['text'])])
 
     elif ctx.flags.is_lr:
@@ -138,19 +139,21 @@ def select_classifier(ctx: ExpContext, cfg: ConfigManager):
     if ctx.flags.is_lr:
         lr_cfg = cfg.model_cfg["lr"]
         return LogisticRegression(
-            penalty=lr_cfg["penalty"],
+            l1_ratio=lr_cfg["l1_ratio"],
             solver=lr_cfg["solver"],
             max_iter=lr_cfg["max_iter"],
             random_state=random_state,
         )
 
     if ctx.flags.is_gbdt:
+        if ctx.requires_categorical_indices:
+            categorical_features = ctx.nominal_indices
+        else:
+            categorical_features = ctx.nominal_features
+
         return HistGradientBoostingClassifier(
             random_state=random_state,
-            # todo: not always/if no just set empty list in ctx?
-            # todo: features or indices?
-            # todo: cfg vs ctx? clear difference
-            categorical_features=ctx.nominal_features,
+            categorical_features=categorical_features,
         )
 
     raise NotImplementedError(

@@ -1,7 +1,7 @@
 from config.config_manager import ConfigManager
-from src.llm_related.llm_registry import FeatureExtractorRegistry
 from dataclasses import dataclass
 from typing import Any
+
 
 @dataclass(frozen=True)
 class ExperimentFlags:
@@ -16,7 +16,6 @@ class ExperimentFlags:
     conc3: bool
 
 
-# todo (for GBDT Classifier): nom_feat = none is _te and not conc
 # todo: init the paths to the files depending on the method key here? And build a delegate method in data_prep?
 class ExpContext:
     def __init__(self,
@@ -52,7 +51,8 @@ class ExpContext:
         # Feature config (static)
         # --------------------------------------------------
         feat_cfg = cfg.features[dataset_name]
-        self.nominal_features = feat_cfg.get("nominal_features", [])
+        # self.nominal_features = feat_cfg.get("nominal_features", [])
+        self.nominal_features = self._nominal_features(feat_cfg=feat_cfg)
         self.text_features = feat_cfg.get("text_features", [])
 
         # --------------------------------------------------
@@ -70,10 +70,11 @@ class ExpContext:
         # --------------------------------------------------
         # Text Embeddings
         # --------------------------------------------------
-        if validate:
-            self._validate()
 
         self.feature_extractor = feature_extractor
+
+        if validate:
+            self._validate()
 
     def _validate(self):
         if self.flags.has_text:
@@ -87,17 +88,54 @@ class ExpContext:
                     f"Experiment '{self.method_key}' requires a feature_extractor "
                     f"but none was provided."
                 )
+        if self.flags.has_text and "text" not in self.text_features:
+            raise ValueError(
+                f"Experiment '{self.method_key}' requires text features, "
+                f"but 'text' is not listed in text_features "
+                f"for dataset '{self.dataset_name}'."
+            )
 
     def update_numerical_features(self, X):
+        #if self.nominal_features:
         self.numerical_features = [
             c for c in X.columns
-            if c not in self.nominal_features and c not in self.text_features
+            if c not in self.nominal_features
+            and c not in self.text_features
         ]
 
     def update_nominal_indices(self, all_columns: list[str]):
+        if not self.nominal_features:
+            self.nominal_indices = []
+            return
+
         self.nominal_indices = [
-            i for i, c in enumerate(all_columns) if c in self.nominal_features
-        ]
+                i for i, c in enumerate(all_columns)
+                if c in self.nominal_features
+            ]
+
+    def _nominal_features(self, feat_cfg):
+        if (
+            self.flags.is_gbdt
+            and (self.flags.has_text or self.flags.has_rte)
+            and not self.flags.is_concat
+        ):
+            return []
+        return feat_cfg.get("nominal_features", []) or []
+
+    @property
+    def requires_categorical_indices(self) -> bool:
+        return (
+            self.flags.is_gbdt and
+            self.flags.is_concat and
+            (self.flags.has_text or self.flags.has_rte)
+        )
+
+    @property
+    def experiment_id(self) -> str:
+        """Unique identifier for this experiment."""
+        if self.embedding_key:
+            return f"{self.dataset_name}_{self.method_key}_{self.embedding_key}"
+        return f"{self.dataset_name}_{self.method_key}"
 
     '''
     def assign_correct_files(self):

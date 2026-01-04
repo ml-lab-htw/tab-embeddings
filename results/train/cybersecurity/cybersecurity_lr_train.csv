@@ -1,0 +1,2 @@
+date_time,dataset,method,concatenation,pca,ml_method,emb_method,BestParams,train_AUC,train_AP,train_Sensitivity,train_Specificity,train_Precision,train_F1,train_Balanced Accuracy
+2026-01-04 11:48:40,cybersecurity,lr,,,LogReg,none,{},0.8059071729957805,0.8267167972516422,0.7530864197530864,0.7215189873417721,0.7349397590361446,0.7373358348968104,0.7373027035474293
