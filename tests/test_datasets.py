@@ -1,6 +1,6 @@
 import pandas as pd
 
-from source.helpers.feature_preparer import prepare_features
+from old_source.helpers.feature_preparer import prepare_features
 
 
 # --- Dummy test data ---
