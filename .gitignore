@@ -18,6 +18,7 @@ env
 
 # results
 outputs/
+results/
 
 # OS
 .DS_Store

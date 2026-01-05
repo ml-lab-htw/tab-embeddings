@@ -30,8 +30,8 @@ class ExperimentRunner:
         # todo: self.ctx ???
         self.run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-        self.results_dir = Path(self.cfg.globals["results_dir"]) / f"results_{self.run_id}"
-        self.results_dir.mkdir(parents=True, exist_ok=True)
+        #self.results_dir = Path(self.cfg.globals["results_dir"]) / f"results_{self.run_id}"
+        #self.results_dir.mkdir(parents=True, exist_ok=True)
 
         self._feature_extractors: dict[str, object] = {}
 
