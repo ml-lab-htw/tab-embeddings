@@ -8,6 +8,8 @@ GLOBAL:
   cache_dir: ./cache
   # for iterative_imputer
   imp_max_iter: 30
+  grid_search_scoring: "neg_log_loss"
+  grid_search_n_jobs: -1
 
 
 FEATURES:
@@ -33,17 +35,17 @@ FEATURES:
     text_features: ["text"]
 
 DATASETS:
-  cybersecurity:
-    path: ./data/cybersecurity
-    X: "X_cybersecurity.csv"
-    y: "y_cybersecurity.csv"
-    X_metr: "X_cybersecurity_metrics.csv"
-    summaries: "cybersecurity_summaries.txt"
-    nom_summaries: "cybersecurity_nom_summaries.txt"
-    #imp_max_iter: 30
-    pca_components: 50
-    n_splits: 5
-    n_repeats: 1
+  #cybersecurity:
+  #  path: ./data/cybersecurity
+  #  X: "X_cybersecurity.csv"
+  #  y: "y_cybersecurity.csv"
+  #  X_metr: "X_cybersecurity_metrics.csv"
+  #  summaries: "cybersecurity_summaries.txt"
+  #  nom_summaries: "cybersecurity_nom_summaries.txt"
+  #  #imp_max_iter: 30
+  #  pca_components: 50
+  #  n_splits: 5
+  #  n_repeats: 1
   lung_disease:
     path: ./data/lung_disease
     X: "X_lung_disease.csv"
@@ -58,7 +60,7 @@ DATASETS:
 
 MODEL_CONFIGS:
   lr:
-    penalty: "l2"
+    l1_ratio: 0 # old: penalty: "l2"
     solver: "saga"
     max_iter: 10000
 
@@ -143,9 +145,9 @@ EXPERIMENTS:
 
 
 TEST_EXPERIMENTS:
-  - lr
+  #- lr
   - lr_rte
-  - lr_te
+  #- lr_te
   #- lr_te_pca
   #- lr_conc1_te
   #- lr_conc2_te
@@ -153,10 +155,10 @@ TEST_EXPERIMENTS:
   #- lr_conc1_te_pca
   #- lr_conc2_te_pca
   #- lr_conc3_te_pca
-  - lr_rte_conc
-  - gbdt
-  - gbdt_rte
-  - gbdt_te
+  #- lr_rte_conc1
+  #- gbdt
+  #- gbdt_rte
+  #- gbdt_te
   #- gbdt_te_pca
   #- gbdt_conc1_te
   #- gbdt_conc2_te
@@ -164,4 +166,4 @@ TEST_EXPERIMENTS:
   #- gbdt_conc1_te_pca
   #- gbdt_conc2_te_pca
   #- gbdt_conc3_te_pca
-  - gbdt_rte_conc
+  #- gbdt_rte_conc1

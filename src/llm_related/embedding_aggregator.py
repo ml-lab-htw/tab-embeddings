@@ -11,6 +11,32 @@ class EmbeddingAggregator(BaseEstimator, TransformerMixin):
         #self.data_ = None
 
     # Embeddings based on [CLS] token
+    """
+    def _embedding_cls(self, text_features):
+        token_embeddings = self.feature_extractor(text_features)
+        if not token_embeddings:
+            raise ValueError("Feature extractor returned no embeddings.")
+        embeddings = [emb[0] for emb in token_embeddings]
+        return np.array(embeddings)
+
+    # Mean embeddings excluding [CLS] and [SEP] tokens
+    def _embedding_mean_without_cls_and_sep(self, text_features):
+        token_embeddings = self.feature_extractor(text_features)
+        if not token_embeddings:
+            raise ValueError("Feature extractor returned no embeddings.")
+        embeddings = [np.mean(emb[1:-1], axis=0) for emb in token_embeddings]
+
+        return np.array(embeddings)
+
+    # Mean embeddings including [CLS] and [SEP] tokens
+    def _embedding_mean_with_cls_and_sep(self, text_features):
+        token_embeddings = self.feature_extractor(text_features)
+        if not token_embeddings:
+            raise ValueError("Feature extractor returned no embeddings.")
+        embeddings = [np.mean(emb[:], axis=0) for emb in token_embeddings]
+        return np.array(embeddings)
+    """
+
     def _embedding_cls(self, text_features):
         # print(f"Type of text_features: {type(text_features)}")
         # print(f"First element of text_features: {text_features[0]}")
@@ -18,27 +44,27 @@ class EmbeddingAggregator(BaseEstimator, TransformerMixin):
         embeddings = []
         for summary in text_features:
             embedding = self.feature_extractor(summary)[0][0]
-            #print(f"Embedding cls as it is: {embedding}")
+            # print(f"Embedding cls as it is: {embedding}")
             embeddings.append(embedding)
         print(len(embeddings))
         return np.array(embeddings)
 
-    # Mean embeddings excluding [CLS] and [SEP] tokens
+    # Create mean embedding excluding [CLS] and [SEP] tokens
     def _embedding_mean_without_cls_and_sep(self, text_features):
         embeddings = []
         for summary in text_features:
             embedding = self.feature_extractor(summary)[0][1:-1]
-            #print(f"Embedding no_cls_no_sep shape: {np.array(embedding).shape}")
+            # print(f"Embedding no_cls_no_sep shape: {np.array(embedding).shape}")
             embeddings.append(np.mean(embedding, axis=0))
         print(len(embeddings))
         return np.array(embeddings)
 
-    # Mean embeddings including [CLS] and [SEP] tokens
+    # Create mean embedding including [CLS] and [SEP] tokens
     def _embedding_mean_with_cls_and_sep(self, text_features):
         embeddings = []
         for summary in text_features:
             embedding = self.feature_extractor(summary)[0][:]
-            #print(f"Embedding cls_and_sep shape: {np.array(embedding).shape}")
+            # print(f"Embedding cls_and_sep shape: {np.array(embedding).shape}")
             embeddings.append(np.mean(embedding, axis=0))
             # print("Embedding cls_and_sep dimension" + np.mean(embedding, axis=0))
         print(len(embeddings))
@@ -61,7 +87,7 @@ class EmbeddingAggregator(BaseEstimator, TransformerMixin):
             return np.array(self.feature_extractor.encode(X_text))
 
         else:
-            print("Using token-level model (e.g., BERT-style)")
+            #print("Using token-level model (e.g., BERT-style)")
             if self.method == "embedding_cls":
                 return self._embedding_cls(X_text)
 

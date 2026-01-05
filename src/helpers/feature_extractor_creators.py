@@ -1,3 +1,4 @@
+import numpy as np
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModel, pipeline
 import torch
@@ -8,7 +9,7 @@ def create_gen_feature_extractor(model_name):
     Creates a feature extractor pipeline for a given model.
     Compatible with: CL, Bert, Electra, SimSce, BGE, some GTE(thenlper), tbc
     """
-    print(f"Starting to create a feature extractor{model_name}.")
+    print(f"Creating feature extractor: {model_name}.")
     device = 0 if torch.cuda.is_available() else -1
     device_name = "GPU" if device == 0 else "CPU"
     print(f"Selected device: {device_name}")
@@ -17,13 +18,29 @@ def create_gen_feature_extractor(model_name):
     if "gtr-t5-base" in model_name or "sentence-t5-base" in model_name.lower() or "modernbert-embed" in model_name.lower():
         model = SentenceTransformer(model_name, trust_remote_code=True)
         model = model.to(f"cuda:{device}" if device == 0 else "cpu")
+
+        def extractor(texts: list[str]):
+            return model.encode(texts, convert_to_numpy=True)
+
         print("Loaded as SentenceTransformer model.")
-        return model
+        return extractor
 
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     model = AutoModel.from_pretrained(model_name, trust_remote_code=True).to("cuda:0" if device == 0 else "cpu")
+
+    hf_pipeline = pipeline(
+        "feature-extraction",
+        model=model,
+        tokenizer=tokenizer,
+        device=device)
     print("Finished creating a feature extractor.")
-    return pipeline("feature-extraction", model=model, tokenizer=tokenizer, device=device)
+
+    def extractor(texts: list[str]):
+        outputs = hf_pipeline(texts)
+        return [np.array(o) for o in outputs]
+
+    # return extractor
+    return hf_pipeline
 
 
 def create_gte_feature_extractor(model_name):
