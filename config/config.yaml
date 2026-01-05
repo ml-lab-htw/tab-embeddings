@@ -35,28 +35,28 @@ FEATURES:
     text_features: ["text"]
 
 DATASETS:
-  #cybersecurity:
-  #  path: ./data/cybersecurity
-  #  X: "X_cybersecurity.csv"
-  #  y: "y_cybersecurity.csv"
-  #  X_metr: "X_cybersecurity_metrics.csv"
-  #  summaries: "cybersecurity_summaries.txt"
-  #  nom_summaries: "cybersecurity_nom_summaries.txt"
-  #  #imp_max_iter: 30
-  #  pca_components: 50
-  #  n_splits: 5
-  #  n_repeats: 1
-  lung_disease:
-    path: ./data/lung_disease
-    X: "X_lung_disease.csv"
-    y: "y_lung_disease.csv"
-    X_metr: "X_lung_disease_metrics.csv"
-    summaries: "lung_disease_summaries.txt"
-    nom_summaries: "lung_disease_nom_summaries.txt"
+  cybersecurity:
+    path: ./data/cybersecurity
+    X: "X_cybersecurity.csv"
+    y: "y_cybersecurity.csv"
+    X_metr: "X_cybersecurity_metrics.csv"
+    summaries: "cybersecurity_summaries.txt"
+    nom_summaries: "cybersecurity_nom_summaries.txt"
     #imp_max_iter: 30
     pca_components: 50
     n_splits: 5
     n_repeats: 1
+  #lung_disease:
+  #  path: ./data/lung_disease
+  #  X: "X_lung_disease.csv"
+  #  y: "y_lung_disease.csv"
+  #  X_metr: "X_lung_disease_metrics.csv"
+  #  summaries: "lung_disease_summaries.txt"
+  #  nom_summaries: "lung_disease_nom_summaries.txt"
+  #  #imp_max_iter: 30
+  #  pca_components: 50
+  #  n_splits: 5
+  #  n_repeats: 1
 
 MODEL_CONFIGS:
   lr:
@@ -145,8 +145,8 @@ EXPERIMENTS:
 
 
 TEST_EXPERIMENTS:
-  #- lr
-  - lr_rte
+  - lr
+  #- lr_rte
   #- lr_te
   #- lr_te_pca
   #- lr_conc1_te
