@@ -11,21 +11,6 @@ from config.config_manager import ConfigManager
 from src.llm_related.embedding_aggregator import EmbeddingAggregator
 
 
-"""
-dataset_name = "cybersecurity"
-dataset_key = DATASETS[dataset_name]
-cfg = DATASETS[dataset_name]
-
-nominal_features = FEATURES[dataset_name]["nominal_features"]
-
-
-dataset = load_dataset(cfg, use_cache=False)
-X_train, X_test = dataset["X_train"], dataset["X_test"]
-y_train, y_test = dataset["y_train"], dataset["y_test"]
-"""
-
-text_features = ["text"]
-
 cfg = ConfigManager.load_yaml("./config/config.yaml")
 dataset_name = "cybersecurity"
 
@@ -44,7 +29,6 @@ imp_max_iter = 30
 class_max_iter = 10000
 feature_extractor = None
 pca_transformer = PCA(n_components=50)
-# categorical_indices = [i for i, c in all_columns if c in nominal_features]
 random_state = 42
 
 EXPECTED_PIPELINES = {}

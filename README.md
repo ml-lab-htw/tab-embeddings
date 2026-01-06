@@ -22,6 +22,9 @@ You can create your own configuration file by following the structure of config/
 
 If you do not want to run all experiments or all LLMs at once, you can comment them out in the configuration file.
 
+If you want to only test the code, you should set TEST_MODE to True in the config file. Then, TEST_LLM_KEYS and TEST_EXPERIMENTS will be used. 
+You should then also set an amount of samples to be used for testing, f.e. TEST_SAMPLES: 200
+
 Additional LLMs or machine learning methods can be added. Instructions for this will be provided in the future.
 
 When running the project with your own datasets, make sure the data is available in the required formats for the experiments you want to run.

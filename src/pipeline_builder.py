@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 
+from sklearn.compose import ColumnTransformer
 from sklearn.decomposition import PCA
-from sklearn.ensemble import RandomTreesEmbedding
+from sklearn.ensemble import RandomTreesEmbedding, HistGradientBoostingClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
@@ -48,7 +49,8 @@ class RTEPipeline(PipelineStrategy):
         return Pipeline([
             ("transformer", build_tabular_transformer(ctx=ctx, include_text=False, scale=False)),
             ("embedding", RandomTreesEmbedding(
-                random_state=ctx.cfg.globals["random_state"]
+                random_state=ctx.cfg.globals["random_state"],
+                sparse_output=False
             )),
             ("classifier", select_classifier(ctx, ctx.cfg)),
         ])
@@ -64,6 +66,7 @@ class TextPipeline(PipelineStrategy):
 class ConcatTextPipeline(PipelineStrategy):
     def build(self, ctx: ExpContext) -> Pipeline:
         if ctx.flags.is_gbdt:
+            # todo: there is a problem here
             return Pipeline([
                 ("transformer", build_raw_branch(ctx=ctx)),
                 ("classifier", select_classifier(ctx, ctx.cfg))
@@ -78,7 +81,7 @@ class ConcatTextPipeline(PipelineStrategy):
         else:
             raise NotImplementedError(
                 # todo: print the concrete flag
-                f"Pipeline not implemented for {ctx.flags}"
+                f"Pipeline not yet implemented for this ml model."
             )
 
 
@@ -88,3 +91,59 @@ class ConcatRTEPipeline(PipelineStrategy):
             ("feature_combiner", build_feature_union(ctx)),
             ("classifier", select_classifier(ctx, ctx.cfg)),
         ])
+
+
+from sklearn.base import BaseEstimator, TransformerMixin
+
+
+class PipelineDebugger(BaseEstimator, TransformerMixin):
+    def __init__(self, name="DebugStep"):
+        self.name = name
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        # If X is a sparse matrix (common in text), convert temporarily to check
+        if hasattr(X, "toarray"):
+            sample = X.toarray()[5]
+        else:
+            sample = X[5]
+
+        print(f"\n--- DEBUG: {self.name} ---")
+        print(f"Shape of data reaching classifier: {X.shape}")
+        print(f"First row (first 15 columns): {sample[:15]}")
+        print(f"Indices [1, 2, 4, 5] values: {[sample[i] for i in [1, 2, 4, 5]]}")
+        print("-" * 30)
+        return X
+
+
+from sklearn.base import BaseEstimator, TransformerMixin
+import pandas as pd
+import numpy as np
+
+
+class FormatDebugger(BaseEstimator, TransformerMixin):
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        print("\n" + "=" * 50)
+        print("SCIENTIFIC DATA FORMAT CHECK")
+        print("=" * 50)
+        print(f"Container Type: {type(X)}")
+
+        if isinstance(X, pd.DataFrame):
+            print("Format: Pandas DataFrame")
+            print(f"Dtypes of first 5 columns:\n{X.dtypes.head()}")
+        elif isinstance(X, np.ndarray):
+            print("Format: NumPy Array")
+            print(f"Array Dtype: {X.dtype}")
+            if X.dtype == object:
+                print("!!! WARNING: Object Array detected (Strings mixed with Floats) !!!")
+
+        # Check specific categorical index (e.g., Index 1)
+        sample_val = X.iloc[0, 1] if hasattr(X, 'iloc') else X[0, 1]
+        print(f"Value at Index 1: {sample_val} (Type: {type(sample_val)})")
+        print("=" * 50 + "\n")
+        return X

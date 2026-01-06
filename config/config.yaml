@@ -20,8 +20,8 @@ FEATURES:
         'protocol_type',
         'unusual_time_access'
     ]
-    numerical_features: [
-    ]
+    #numerical_features: [
+    #]
     text_features: ["text"]
   lung_disease:
     nominal_features: [
@@ -30,8 +30,8 @@ FEATURES:
         "Disease Type",
         "Treatment Type"
     ]
-    numerical_features: [
-    ]
+    #numerical_features: [
+    #]
     text_features: ["text"]
 
 DATASETS:
@@ -141,12 +141,11 @@ EXPERIMENTS:
   - gbdt_conc1_te_pca
   - gbdt_conc2_te_pca
   - gbdt_conc3_te_pca
-  - gbdt_rte_conc
-
+  - gbdt_rte_conc1
 
 TEST_EXPERIMENTS:
   #- lr
-  - lr_rte
+  #- lr_rte
   #- lr_te
   #- lr_te_pca
   #- lr_conc1_te
@@ -160,7 +159,7 @@ TEST_EXPERIMENTS:
   #- gbdt_rte
   #- gbdt_te
   #- gbdt_te_pca
-  #- gbdt_conc1_te
+  - gbdt_conc1_te
   #- gbdt_conc2_te
   #- gbdt_conc3_te
   #- gbdt_conc1_te_pca

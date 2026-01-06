@@ -3,9 +3,15 @@ from datetime import datetime
 import logging
 from pprint import pprint
 
+import numpy as np
+import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.metrics import confusion_matrix, roc_auc_score, recall_score, f1_score, balanced_accuracy_score, \
     precision_score, average_precision_score
-from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
+from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold, train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import LabelEncoder
 
 from config.config_manager import ConfigManager
 from pathlib import Path
@@ -13,6 +19,8 @@ from pathlib import Path
 from src.data_prep import DataPreparer
 from src.exp_context import ExpContext
 from src.helpers.csv_creator import save_to_csv
+from src.helpers.feature_extractor_creators import create_gen_feature_extractor
+from src.llm_related.embedding_aggregator import EmbeddingAggregator
 from src.llm_related.llm_registry import FeatureExtractorRegistry
 from src.param_grid_factory import ParamGridFactory
 from src.pipeline_factory import PipelineFactory
@@ -123,7 +131,7 @@ class ExperimentRunner:
             param_grid=param_grid,
             scoring=self.cfg.globals["grid_search_scoring"],
             cv=cv,
-            n_jobs=self.cfg.globals.get("grid_search_n_jobs", -1),
+            #n_jobs=self.cfg.globals.get("grid_search_n_jobs", -1),
             verbose=1,
         )
 
@@ -169,63 +177,6 @@ class ExperimentRunner:
         logger.debug("Experiments:", self.cfg.experiments)
         logger.debug("LLMs:", self.cfg.llm_keys)
 
-"""
-def run_experiment(method_key, dataset_name, data, feature_extractor=None, text_embedding_dict=None, rte_dict=None,
-                   custom_config=False, verbose=True):
-    '''
-    Orchestrates the experiment: prepare data, build pipeline, train + evaluate.
-    '''
-    
-    # --- Step 1: prepare data---
-    print("Run exp. debug:")
-    print(f"Nom columns: {nominal_cols}")
-    print(f"Num columns: {numerical_cols}")
-    print(f"Text columns: {text_cols}")
-
-    # --- Step 2: build pipeline & grid ---
-    pipeline = None
-    param_grid = None
-
-    # --- Step 3: train ---
-    search = GridSearchCV(
-        estimator=pipeline,
-        param_grid=param_grid,
-        scoring="neg_log_loss",
-        cv=RepeatedStratifiedKFold(
-            n_splits=cfg.get("splits"),
-            n_repeats=cfg.get("n_repeats"),
-            random_state=GLOBAL["random_state"],
-        ),
-    )
-
-    start = time.time()
-    search.fit(X_train, y_train)
-    duration = time.time() - start
-
-    # --- Step 4: test + evaluate ---
-    y_test_pred = search.predict(X_test)
-    y_test_proba = search.predict_proba(X_test)[:, 1]
-
-    test_metrics = calc_metrics(y=y_test, y_pred=y_test_pred, y_pred_proba=y_test_proba)
-
-    y_train_pred = search.predict(X_train)
-    y_train_proba = search.predict_proba(X_train)[:, 1]
-
-    train_metrics = calc_metrics(y=y_train, y_pred=y_train_pred, y_pred_proba=y_train_proba)
-
-    if verbose:
-        print(f"\n [FINISHED] {dataset_name} – {method_key}")
-        print(f"\n Duration: {duration:.2f}s")
-
-    return {
-        "dataset": dataset_name,
-        "method": method_key,
-        "best_params": search.best_params_,
-        "test_metrics": test_metrics,
-        "train_metrics": train_metrics,
-        # "duration_sec": duration,
-    }"""
-
 
 def calc_metrics(y, y_pred, y_pred_proba):
     tn, fp, fn, tp = confusion_matrix(y, y_pred).ravel()
@@ -242,3 +193,67 @@ def calc_metrics(y, y_pred, y_pred_proba):
     }
 
     return metrics
+
+def data():
+    data = pd.read_csv("data/lung_disease/X_lung_disease.csv", delimiter=',')
+    data = data.head(200)
+    X = data
+
+    data = pd.read_csv("data/lung_disease/y_lung_disease.csv", delimiter=',')
+    data = data.head(200)
+    y = data.values.ravel()
+
+    y = pd.Series(y)
+
+    if not np.issubdtype(y.dtype, np.number):
+        le = LabelEncoder()
+        y = le.fit_transform(y)
+    else:
+        y = y.to_numpy()
+
+    with open("data/lung_disease/lung_disease_summaries.txt", "r") as file:
+        summaries_list = [line.strip() for line in file.readlines()]
+    summaries = summaries_list[:200]
+
+    X['text'] = summaries
+    return X, y
+
+def pip():
+    """pip = Pipeline([('transformer',
+        ColumnTransformer(transformers=[('numerical', 'passthrough',
+                                       ['Age', 'Gender', 'Smoking Status',
+                                        'Lung Capacity', 'Disease Type',
+                                        'Treatment Type', 'Hospital Visits']),
+                                      ('text',
+                                       Pipeline(steps=[('embedding_aggregator',
+                                                        EmbeddingAggregator(
+                                                            feature_extractor= "feature_extractor"))]),
+                                      ['text'])])),
+        ('classifier',
+        HistGradientBoostingClassifier(categorical_features=[1, 2, 4, 5],
+                                    random_state=42))])"""
+    pip = Pipeline([
+            ("transformer", ColumnTransformer([
+                ("numerical", "passthrough", ['Age', 'Gender', 'Smoking Status',
+                                        'Lung Capacity', 'Disease Type',
+                                        'Treatment Type', 'Hospital Visits']),
+                ("text", Pipeline([
+                ("embedding_aggregator", EmbeddingAggregator(
+                    feature_extractor=create_gen_feature_extractor("intfloat/e5-small-v2"))),
+            ]), ['text'])
+            ])),
+            ("classifier", HistGradientBoostingClassifier(categorical_features=[1, 2, 4, 5],
+                                    random_state=42))])
+    return pip
+
+def grid():
+    grid = {
+            'classifier__min_samples_leaf': [5, 10, 15, 20],
+            'transformer__text__embedding_aggregator__method': ['embedding_cls',
+                                                     'embedding_mean_with_cls_and_sep',
+                                                     'embedding_mean_without_cls_and_sep']
+    }
+
+    return grid
+
+

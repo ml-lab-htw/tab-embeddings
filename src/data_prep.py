@@ -80,6 +80,7 @@ class DataPreparer:
 
         self.ctx.update_numerical_features(X)
         self.ctx.update_nominal_indices(list(X.columns))
+        self.ctx.update_non_text_columns(X_tabular=X)
 
         return self._split(X, y)
 

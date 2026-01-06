@@ -1,6 +1,18 @@
+import logging
+
+import pandas as pd
+
 from config.config_manager import ConfigManager
 from dataclasses import dataclass
 from typing import Any
+
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    force=True
+)
+logger = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -51,8 +63,8 @@ class ExpContext:
         # Feature config (static)
         # --------------------------------------------------
         feat_cfg = cfg.features[dataset_name]
-        # self.nominal_features = feat_cfg.get("nominal_features", [])
-        self.nominal_features = self._nominal_features(feat_cfg=feat_cfg)
+        self.nominal_features = feat_cfg.get("nominal_features", [])
+        # self.nominal_features = self._nominal_features(feat_cfg=feat_cfg)
         self.text_features = feat_cfg.get("text_features", [])
 
         # --------------------------------------------------
@@ -60,6 +72,7 @@ class ExpContext:
         # --------------------------------------------------
         self.numerical_features: list[str] = []
         self.nominal_indices: list[int] = []
+        self.non_text_columns: list[str] = []
 
         # --------------------------------------------------
         # Data config (runtime)
@@ -113,14 +126,37 @@ class ExpContext:
                 if c in self.nominal_features
             ]
 
-    def _nominal_features(self, feat_cfg):
-        if (
-            self.flags.is_gbdt
-            and (self.flags.has_text or self.flags.has_rte)
-            and not self.flags.is_concat
-        ):
-            return []
-        return feat_cfg.get("nominal_features", []) or []
+    def update_non_text_columns(self, X_tabular: pd.DataFrame):
+        self.non_text_columns = [
+            col for col in X_tabular.columns
+            if col not in self.text_features
+        ]
+
+    @property
+    def categorical_features_for_classifier(self):
+        """
+        Implemented to pass the cat features to HIstGRadientBoostingClassifier
+        in a correct format, depending on the method key.
+        """
+        if not self.flags.is_gbdt:
+            return None
+
+        if self.flags.has_text and not self.flags.is_concat:
+            # gbdt_te, gbdt_te_pca
+            return None
+
+        if self.flags.has_rte and not self.flags.is_concat:
+            # gbdt_rte
+            return None
+
+        if self.flags.is_concat:
+            # concatenated → numeric matrix → indices
+            logging.debug(f"CTX returnes nominal indices for gbdt concat: {self.nominal_indices}")
+            return self.nominal_indices
+
+        # plain gbdt
+        logging.debug(f"CTX returnes nominal features for plain gbdt: {self.nominal_indices}")
+        return self.nominal_features
 
     @property
     def requires_categorical_indices(self) -> bool:
@@ -136,27 +172,3 @@ class ExpContext:
         if self.embedding_key:
             return f"{self.dataset_name}_{self.method_key}_{self.embedding_key}"
         return f"{self.dataset_name}_{self.method_key}"
-
-    '''
-    def assign_correct_files(self):
-        if self.flags.has_text:
-            if self.flags.is_concat:
-                if self.flags.conc1:
-                    pass
-                elif self.flags.conc2:
-                    pass
-                elif self.flags.conc3:
-                    pass
-            else:
-                # just summaries
-                pass
-        else:
-            # just X.csv
-            pass
-
-    def check_if_file_exists(self):
-        """
-        Before assigning correct files, check if file exists.
-        """
-        pass
-    '''

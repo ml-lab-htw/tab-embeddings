@@ -15,7 +15,7 @@ GBDT_GRID = {
 }
 
 TEXT_GRID = {
-    "aggregator__method": [
+    "embedding_aggregator__method": [
         "embedding_cls",
         "embedding_mean_with_cls_and_sep",
         "embedding_mean_without_cls_and_sep",
@@ -64,6 +64,7 @@ class ConcatTextGrid(ParamGridStrategy):
             **base,
             **prefix_grid(TEXT_GRID, "transformer__text__"),
         }
+
 
 class ConcatRTEGrid(ParamGridStrategy):
     def build(self, ctx):
