@@ -68,7 +68,17 @@ class ConcatTextPipeline(PipelineStrategy):
         if ctx.flags.is_gbdt:
             # todo: there is a problem here
             return Pipeline([
-                ("transformer", build_raw_branch(ctx=ctx)),
+                #("transformer", build_raw_branch(ctx=ctx)),
+
+                ("transformer", ColumnTransformer([
+                ("numerical", "passthrough", ctx.non_text_columns),
+                ("text", Pipeline([
+                    ("embedding_aggregator", EmbeddingAggregator(
+                        feature_extractor=ctx.feature_extractor,
+                        is_sentence_transformer=False)),
+                    ("numerical_scaler", MinMaxScaler())
+                ]), ctx.text_features)
+            ])),
                 ("classifier", select_classifier(ctx, ctx.cfg))
             ])
 

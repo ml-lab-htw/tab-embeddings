@@ -123,15 +123,22 @@ def build_raw_branch(ctx: ExpContext) -> ColumnTransformer | str:
     """
     if ctx.flags.is_gbdt:
         if ctx.flags.has_rte:
-            return "passthrough" # produces no errors
+            return "passthrough"
         elif ctx.flags.has_text:
-            # todo: there is a problem here
             logging.debug(f"Non text columns: {ctx.non_text_columns}")
-            # todo: or here
+            # todo: there is a problem here!
             text_steps = build_text_pipeline_steps(ctx)
             return ColumnTransformer([
                 ('numerical', 'passthrough', ctx.non_text_columns),
                 ('text', Pipeline(text_steps), ctx.text_features)])
+                #('text', Pipeline(
+                #    [
+                #        ("embedding_aggregator", EmbeddingAggregator(
+                #            feature_extractor=ctx.feature_extractor,
+                #            is_sentence_transformer=False)),
+                #        ("numerical_scaler", MinMaxScaler())
+                #    ]
+                #), ctx.text_features)])
 
     elif ctx.flags.is_lr:
         return build_tabular_transformer(
