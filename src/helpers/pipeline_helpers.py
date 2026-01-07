@@ -38,7 +38,6 @@ def build_numerical_pipeline(ctx: ExpContext, scale: bool) -> Pipeline:
     max_iter=ctx.cfg.globals["imp_max_iter"]
     steps = [
         ("numerical_imputer", IterativeImputer(max_iter=max_iter)),
-        #("numerical_scaler", StandardScaler()),
     ]
 
     if scale:
@@ -58,7 +57,7 @@ def build_text_pipeline_steps(ctx: ExpContext) -> list:
     if ctx.flags.has_pca:
         steps.append(("numerical_scaler", StandardScaler()))
         steps.append(("pca", PCA(n_components=pca_components)))
-    elif ctx.flags.is_lr:
+    else:
         steps.append(("numerical_scaler", MinMaxScaler()))
     return steps
 
@@ -126,19 +125,12 @@ def build_raw_branch(ctx: ExpContext) -> ColumnTransformer | str:
             return "passthrough"
         elif ctx.flags.has_text:
             logging.debug(f"Non text columns: {ctx.non_text_columns}")
-            # todo: there is a problem here!
-            text_steps = build_text_pipeline_steps(ctx)
+            text_steps = build_text_pipeline_steps(ctx) # todo: problem here!
             return ColumnTransformer([
                 ('numerical', 'passthrough', ctx.non_text_columns),
-                ('text', Pipeline(text_steps), ctx.text_features)])
-                #('text', Pipeline(
-                #    [
-                #        ("embedding_aggregator", EmbeddingAggregator(
-                #            feature_extractor=ctx.feature_extractor,
-                #            is_sentence_transformer=False)),
-                #        ("numerical_scaler", MinMaxScaler())
-                #    ]
-                #), ctx.text_features)])
+                ('text', Pipeline(
+                    text_steps
+                ), ctx.text_features)])
 
     elif ctx.flags.is_lr:
         return build_tabular_transformer(

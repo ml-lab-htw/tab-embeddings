@@ -3,24 +3,15 @@ from datetime import datetime
 import logging
 from pprint import pprint
 
-import numpy as np
-import pandas as pd
-from sklearn.compose import ColumnTransformer
-from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.metrics import confusion_matrix, roc_auc_score, recall_score, f1_score, balanced_accuracy_score, \
     precision_score, average_precision_score
-from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold, train_test_split
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
 
 from config.config_manager import ConfigManager
-from pathlib import Path
 
 from src.data_prep import DataPreparer
 from src.exp_context import ExpContext
 from src.helpers.csv_creator import save_to_csv
-from src.helpers.feature_extractor_creators import create_gen_feature_extractor
-from src.llm_related.embedding_aggregator import EmbeddingAggregator
 from src.llm_related.llm_registry import FeatureExtractorRegistry
 from src.param_grid_factory import ParamGridFactory
 from src.pipeline_factory import PipelineFactory
@@ -35,7 +26,6 @@ logger = logging.getLogger(__name__)
 class ExperimentRunner:
     def __init__(self, config_path: str):
         self.cfg = ConfigManager.load_yaml(config_path)
-        # todo: self.ctx ???
         self.run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
         #self.results_dir = Path(self.cfg.globals["results_dir"]) / f"results_{self.run_id}"
@@ -76,7 +66,6 @@ class ExperimentRunner:
         )
         if probe_ctx.flags.has_text:
             for llm_key in self.cfg.llm_keys:
-                logger.debug(f"  LLM key: {llm_key}")
                 self.run_experiment(dataset_name, method_key, llm_key)
         else:
             self.run_experiment(dataset_name, method_key, None)
@@ -90,7 +79,6 @@ class ExperimentRunner:
         feature_extractor = None
         if llm_key:
             feature_extractor = self._get_feature_extractor(llm_key)
-        print("-"*50)
         logger.debug(f"  LLM key: {llm_key}, feature_extractor: {feature_extractor}")
         ctx = ExpContext(
             method_key=method_key,
@@ -131,7 +119,7 @@ class ExperimentRunner:
             param_grid=param_grid,
             scoring=self.cfg.globals["grid_search_scoring"],
             cv=cv,
-            #n_jobs=self.cfg.globals.get("grid_search_n_jobs", -1),
+            n_jobs=self.cfg.globals.get("grid_search_n_jobs", -1),
             verbose=1,
         )
 
@@ -143,6 +131,7 @@ class ExperimentRunner:
         search.fit(X_train, y_train)
         duration = time.time() - start
 
+        # ---- test metrics ----
         y_test_pred = search.predict(X_test)
         y_test_pred_proba = search.predict_proba(X_test)[:, 1]
 
@@ -150,7 +139,7 @@ class ExperimentRunner:
 
         test_metrics = calc_metrics(y=y_test, y_pred=y_test_pred, y_pred_proba=y_test_pred_proba)
 
-        # train metrics
+        # ---- train metrics ----
         y_train_pred = search.predict(X_train)
         y_train_pred_proba = search.predict_proba(X_train)[:, 1]
         train_metrics = calc_metrics(y=y_train, y_pred=y_train_pred, y_pred_proba=y_train_pred_proba)
@@ -162,7 +151,6 @@ class ExperimentRunner:
         )
 
         # ---- save results ----
-        # todo save_to_csv()
         results_dict = {
             "train_metrics": train_metrics,
             "test_metrics": test_metrics,
@@ -193,67 +181,3 @@ def calc_metrics(y, y_pred, y_pred_proba):
     }
 
     return metrics
-
-def data():
-    data = pd.read_csv("data/lung_disease/X_lung_disease.csv", delimiter=',')
-    data = data.head(200)
-    X = data
-
-    data = pd.read_csv("data/lung_disease/y_lung_disease.csv", delimiter=',')
-    data = data.head(200)
-    y = data.values.ravel()
-
-    y = pd.Series(y)
-
-    if not np.issubdtype(y.dtype, np.number):
-        le = LabelEncoder()
-        y = le.fit_transform(y)
-    else:
-        y = y.to_numpy()
-
-    with open("data/lung_disease/lung_disease_summaries.txt", "r") as file:
-        summaries_list = [line.strip() for line in file.readlines()]
-    summaries = summaries_list[:200]
-
-    X['text'] = summaries
-    return X, y
-
-def pip():
-    """pip = Pipeline([('transformer',
-        ColumnTransformer(transformers=[('numerical', 'passthrough',
-                                       ['Age', 'Gender', 'Smoking Status',
-                                        'Lung Capacity', 'Disease Type',
-                                        'Treatment Type', 'Hospital Visits']),
-                                      ('text',
-                                       Pipeline(steps=[('embedding_aggregator',
-                                                        EmbeddingAggregator(
-                                                            feature_extractor= "feature_extractor"))]),
-                                      ['text'])])),
-        ('classifier',
-        HistGradientBoostingClassifier(categorical_features=[1, 2, 4, 5],
-                                    random_state=42))])"""
-    pip = Pipeline([
-            ("transformer", ColumnTransformer([
-                ("numerical", "passthrough", ['Age', 'Gender', 'Smoking Status',
-                                        'Lung Capacity', 'Disease Type',
-                                        'Treatment Type', 'Hospital Visits']),
-                ("text", Pipeline([
-                ("embedding_aggregator", EmbeddingAggregator(
-                    feature_extractor=create_gen_feature_extractor("intfloat/e5-small-v2"))),
-            ]), ['text'])
-            ])),
-            ("classifier", HistGradientBoostingClassifier(categorical_features=[1, 2, 4, 5],
-                                    random_state=42))])
-    return pip
-
-def grid():
-    grid = {
-            'classifier__min_samples_leaf': [5, 10, 15, 20],
-            'transformer__text__embedding_aggregator__method': ['embedding_cls',
-                                                     'embedding_mean_with_cls_and_sep',
-                                                     'embedding_mean_without_cls_and_sep']
-    }
-
-    return grid
-
-

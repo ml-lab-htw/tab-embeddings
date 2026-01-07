@@ -17,6 +17,10 @@ logger = logging.getLogger(__name__)
 
 @dataclass(frozen=True)
 class ExperimentFlags:
+    """
+    Add a new flag here, if you add a new ml model, f.e.:
+    is_svm = bool
+    """
     is_lr: bool
     is_gbdt: bool
     has_text: bool
@@ -50,6 +54,8 @@ class ExpContext:
         self.flags = ExperimentFlags(
             is_lr=method_key.startswith("lr"),
             is_gbdt=method_key.startswith("gbdt"),
+            # Add a new flag here, if you add a new ml model, f.e.:
+            # is_svm = method_key.startswith("svm"),
             has_text="_te" in method_key,
             has_rte="_rte" in method_key,
             is_concat="_conc" in method_key,
@@ -64,7 +70,6 @@ class ExpContext:
         # --------------------------------------------------
         feat_cfg = cfg.features[dataset_name]
         self.nominal_features = feat_cfg.get("nominal_features", [])
-        # self.nominal_features = self._nominal_features(feat_cfg=feat_cfg)
         self.text_features = feat_cfg.get("text_features", [])
 
         # --------------------------------------------------
@@ -73,12 +78,6 @@ class ExpContext:
         self.numerical_features: list[str] = []
         self.nominal_indices: list[int] = []
         self.non_text_columns: list[str] = []
-
-        # --------------------------------------------------
-        # Data config (runtime)
-        # --------------------------------------------------
-        self.features: list[str] = []
-        self.label: list[int] = [] # todo: might be different if we have different tasks
 
         # --------------------------------------------------
         # Text Embeddings
@@ -109,7 +108,6 @@ class ExpContext:
             )
 
     def update_numerical_features(self, X):
-        #if self.nominal_features:
         self.numerical_features = [
             c for c in X.columns
             if c not in self.nominal_features
