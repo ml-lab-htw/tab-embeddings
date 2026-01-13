@@ -17,8 +17,64 @@ The current experiments include:
 2. Clone the repository: git clone https://github.com/ml-lab-htw/tab-embeddings.git
 3. Install the required dependencies: pip install -r requirements.txt
 
+## Data preprocessing
+This project can be applied to custom datasets in addition to the provided examples. To do so, you must register the 
+dataset and perform the required preprocessing steps as outlined below.
+1. Add the dataset
+Create a new directory under data/ and name it after your dataset (e.g., cybersecurity, bank_churn):<br>
+data/<br>
+└── bank_churn/ <br>
+----├── X_bank_churn.csv<br>
+----└── y_bank_churn.csv<br>
+2. Register the dataset in the configuration file
+Update config/config.yaml by adding entries under both DATASETS and FEATURES. Follow the structure of existing datasets.
+
+DATASETS<br>
+  bank_churn:<br>
+    path: ./data/bank_churn<br>
+    X: "X_bank_churn.csv"<br>
+    y: "y_bank_churn.csv"<br>
+    X_metr: "X_bank_churn_metrics.csv"<br>
+    X_nom: "X_bank_churn_nom.csv"<br>
+    summaries: "bank_churn_summaries.txt"<br>
+    nom_summaries: "bank_churn_nom_summaries.txt"<br>
+    pca_components: 50<br>
+    n_splits: 5<br>
+    n_repeats: 1<br>
+
+FEATURES:<br>
+  bank_churn:<br>
+    nominal_features: [<br>
+        'nom_feat_1',<br>
+        'nom_feat_2',<br>
+        # ... <br>
+        'nom_feat_n'<br>
+    ]<br>
+    text_features: ["text"]<br>
+
+3. Generate derived data files<br>
+For each dataset, the following derived files must be created:
+
+* X_<dataset>_metrics.csv – numerical features only
+* X_<dataset>_nom.csv – nominal (categorical) features only
+* <dataset>_summaries.txt – summaries from the full dataset
+* <dataset>_nom_summaries.txt – summaries from nominal features only
+
+These files are required for downstream experiments.
+
+4. Run pre-processing commands<br>
+4.1 Navigate to the project directory: cd tab-embeddings<br>
+4.2 Activate the virtual environment: <br>
+source venv/bin/activate (macOS/Linux) <br>
+venv/scripts/activate (Windows)<br>
+4.3 Split numerical and nominal features: python -m src.main --config config/config.yaml split --dataset <dataset><br>
+4.4 Generate summaries from the full dataset: python -m src.main --config config/config.yaml summaries --dataset <dataset> --scope full<br>
+4.5 Generate summaries from nominal features only: python -m src.main --config config/config.yaml summaries --dataset <dataset> --scope nominal<br>
+
+Once these steps are completed, the data set is fully prepared and can be used in the experiment pipeline.
+
 ## Usage
-You can create your own configuration file by following the structure of config/config.py, which is included in this project.
+You can create your own configuration file by strictly following the structure of config/config.py, which is included in this project.
 
 If you do not want to run all experiments or all LLMs at once, you can comment them out in the configuration file.
 

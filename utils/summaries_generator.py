@@ -1,6 +1,6 @@
 from enum import Enum
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, Optional, Iterable
 import pandas as pd
 
 
@@ -21,10 +21,12 @@ class TabularSummaryGenerator:
         self,
         *,
         categorical_values: Optional[Dict[str, Dict]] = None,
+        categorical_columns: Optional[Iterable[str]] = None,
         classify_numeric: bool = False,
         subject_name: str = "sample",
     ) -> None:
         self.categorical_values = categorical_values or {}
+        self.categorical_columns = set(categorical_columns or [])
         self.classify_numeric = classify_numeric
         self.subject_name = subject_name
 
@@ -43,7 +45,13 @@ class TabularSummaryGenerator:
         stats = self._compute_numeric_stats(df, numeric_cols) if self.classify_numeric else {}
 
         summaries = [
-            self._summarize_row(idx + 1, row, df.columns, numeric_cols, stats)
+            self._summarize_row(
+                prefix=None,
+                row_number=idx + 1,
+                row=row,
+                all_columns=df.columns.tolist(),
+                numeric_cols=numeric_cols,
+                stats=stats)
             for idx, row in df.iterrows()
         ]
 
@@ -118,6 +126,9 @@ class TabularSummaryGenerator:
     ) -> str:
         if column in self.categorical_values:
             return self._render_categorical(column, value)
+
+        if column in self.categorical_columns:
+            return str(value)
 
         if self.classify_numeric and column in numeric_cols:
             return self._classify_number(value, stats[column])
