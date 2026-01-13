@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 
+from sklearn.compose import ColumnTransformer
 from sklearn.decomposition import PCA
-from sklearn.ensemble import RandomTreesEmbedding
+from sklearn.ensemble import RandomTreesEmbedding, HistGradientBoostingClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
@@ -48,7 +49,8 @@ class RTEPipeline(PipelineStrategy):
         return Pipeline([
             ("transformer", build_tabular_transformer(ctx=ctx, include_text=False, scale=False)),
             ("embedding", RandomTreesEmbedding(
-                random_state=ctx.cfg.globals["random_state"]
+                random_state=ctx.cfg.globals["random_state"],
+                sparse_output=False
             )),
             ("classifier", select_classifier(ctx, ctx.cfg)),
         ])
@@ -77,8 +79,7 @@ class ConcatTextPipeline(PipelineStrategy):
 
         else:
             raise NotImplementedError(
-                # todo: print the concrete flag
-                f"Pipeline not implemented for {ctx.flags}"
+                f"Pipeline not yet implemented for this ml model."
             )
 
 

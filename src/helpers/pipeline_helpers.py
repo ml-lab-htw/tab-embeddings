@@ -1,3 +1,5 @@
+import logging
+
 from sklearn.compose import ColumnTransformer
 from sklearn.decomposition import PCA
 from sklearn.experimental import enable_iterative_imputer
@@ -11,6 +13,13 @@ from config.config_manager import ConfigManager
 from src.llm_related.embedding_aggregator import EmbeddingAggregator
 from src.exp_context import ExpContext
 
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    force=True
+)
+logger = logging.getLogger(__name__)
 
 def build_nominal_pipeline(ctx: ExpContext) -> Pipeline:
     encoder = OneHotEncoder(
@@ -29,7 +38,6 @@ def build_numerical_pipeline(ctx: ExpContext, scale: bool) -> Pipeline:
     max_iter=ctx.cfg.globals["imp_max_iter"]
     steps = [
         ("numerical_imputer", IterativeImputer(max_iter=max_iter)),
-        #("numerical_scaler", StandardScaler()),
     ]
 
     if scale:
@@ -42,14 +50,14 @@ def build_text_pipeline_steps(ctx: ExpContext) -> list:
     dataset = ctx.dataset_name
     pca_components = ctx.cfg.datasets[dataset]["pca_components"]
     steps = [
-        ("aggregator", EmbeddingAggregator(
+        ("embedding_aggregator", EmbeddingAggregator(
             feature_extractor=ctx.feature_extractor
         ))
     ]
     if ctx.flags.has_pca:
         steps.append(("numerical_scaler", StandardScaler()))
         steps.append(("pca", PCA(n_components=pca_components)))
-    elif ctx.flags.is_lr:
+    else:
         steps.append(("numerical_scaler", MinMaxScaler()))
     return steps
 
@@ -101,6 +109,7 @@ def build_feature_union(ctx: ExpContext) -> FeatureUnion:
             ]#, remainder="passthrough"
             )),
             ("embedding", RandomTreesEmbedding(
+                sparse_output=False,
                 random_state=ctx.cfg.globals["random_state"]
             )),
         ]))
@@ -115,11 +124,13 @@ def build_raw_branch(ctx: ExpContext) -> ColumnTransformer | str:
         if ctx.flags.has_rte:
             return "passthrough"
         elif ctx.flags.has_text:
-            text_steps = build_text_pipeline_steps(ctx)
-            # todo: move this logic to build_tabular_transformer?
-            return ColumnTransformer(
-                transformers=[('numerical', 'passthrough',ctx.numerical_features),
-                              ('text', Pipeline(text_steps), ['text'])])
+            logging.debug(f"Non text columns: {ctx.non_text_columns}")
+            text_steps = build_text_pipeline_steps(ctx) # todo: problem here!
+            return ColumnTransformer([
+                ('numerical', 'passthrough', ctx.non_text_columns),
+                ('text', Pipeline(
+                    text_steps
+                ), ctx.text_features)])
 
     elif ctx.flags.is_lr:
         return build_tabular_transformer(
@@ -146,14 +157,10 @@ def select_classifier(ctx: ExpContext, cfg: ConfigManager):
         )
 
     if ctx.flags.is_gbdt:
-        if ctx.requires_categorical_indices:
-            categorical_features = ctx.nominal_indices
-        else:
-            categorical_features = ctx.nominal_features
-
+        logger.debug(f"Select classifier -> cat features: {ctx.categorical_features_for_classifier}")
         return HistGradientBoostingClassifier(
             random_state=random_state,
-            categorical_features=categorical_features,
+            categorical_features=ctx.categorical_features_for_classifier,
         )
 
     raise NotImplementedError(

@@ -35,7 +35,6 @@ class DataPreparer:
         return None
 
     def _validate_lengths(self, y, X = None, summaries = None):
-        # todo: should summaries be mentioned here if before X=summaries?
         logger.debug(
             f"Validating lengths: X={len(X) if X is not None else 'None'}, y={len(y)}, summaries={len(summaries) if summaries else 'None'}")
 
@@ -80,6 +79,7 @@ class DataPreparer:
 
         self.ctx.update_numerical_features(X)
         self.ctx.update_nominal_indices(list(X.columns))
+        self.ctx.update_non_text_columns(X_tabular=X)
 
         return self._split(X, y)
 

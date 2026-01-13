@@ -8,7 +8,6 @@ from sklearn.metrics import confusion_matrix, roc_auc_score, recall_score, f1_sc
 from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
 
 from config.config_manager import ConfigManager
-from pathlib import Path
 
 from src.data_prep import DataPreparer
 from src.exp_context import ExpContext
@@ -27,7 +26,6 @@ logger = logging.getLogger(__name__)
 class ExperimentRunner:
     def __init__(self, config_path: str):
         self.cfg = ConfigManager.load_yaml(config_path)
-        # todo: self.ctx ???
         self.run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
         #self.results_dir = Path(self.cfg.globals["results_dir"]) / f"results_{self.run_id}"
@@ -68,7 +66,6 @@ class ExperimentRunner:
         )
         if probe_ctx.flags.has_text:
             for llm_key in self.cfg.llm_keys:
-                logger.debug(f"  LLM key: {llm_key}")
                 self.run_experiment(dataset_name, method_key, llm_key)
         else:
             self.run_experiment(dataset_name, method_key, None)
@@ -82,7 +79,6 @@ class ExperimentRunner:
         feature_extractor = None
         if llm_key:
             feature_extractor = self._get_feature_extractor(llm_key)
-        print("-"*50)
         logger.debug(f"  LLM key: {llm_key}, feature_extractor: {feature_extractor}")
         ctx = ExpContext(
             method_key=method_key,
@@ -135,6 +131,7 @@ class ExperimentRunner:
         search.fit(X_train, y_train)
         duration = time.time() - start
 
+        # ---- test metrics ----
         y_test_pred = search.predict(X_test)
         y_test_pred_proba = search.predict_proba(X_test)[:, 1]
 
@@ -142,7 +139,7 @@ class ExperimentRunner:
 
         test_metrics = calc_metrics(y=y_test, y_pred=y_test_pred, y_pred_proba=y_test_pred_proba)
 
-        # train metrics
+        # ---- train metrics ----
         y_train_pred = search.predict(X_train)
         y_train_pred_proba = search.predict_proba(X_train)[:, 1]
         train_metrics = calc_metrics(y=y_train, y_pred=y_train_pred, y_pred_proba=y_train_pred_proba)
@@ -154,7 +151,6 @@ class ExperimentRunner:
         )
 
         # ---- save results ----
-        # todo save_to_csv()
         results_dict = {
             "train_metrics": train_metrics,
             "test_metrics": test_metrics,
@@ -168,63 +164,6 @@ class ExperimentRunner:
         logger.debug("Datasets:", list(self.cfg.datasets.keys()))
         logger.debug("Experiments:", self.cfg.experiments)
         logger.debug("LLMs:", self.cfg.llm_keys)
-
-"""
-def run_experiment(method_key, dataset_name, data, feature_extractor=None, text_embedding_dict=None, rte_dict=None,
-                   custom_config=False, verbose=True):
-    '''
-    Orchestrates the experiment: prepare data, build pipeline, train + evaluate.
-    '''
-    
-    # --- Step 1: prepare data---
-    print("Run exp. debug:")
-    print(f"Nom columns: {nominal_cols}")
-    print(f"Num columns: {numerical_cols}")
-    print(f"Text columns: {text_cols}")
-
-    # --- Step 2: build pipeline & grid ---
-    pipeline = None
-    param_grid = None
-
-    # --- Step 3: train ---
-    search = GridSearchCV(
-        estimator=pipeline,
-        param_grid=param_grid,
-        scoring="neg_log_loss",
-        cv=RepeatedStratifiedKFold(
-            n_splits=cfg.get("splits"),
-            n_repeats=cfg.get("n_repeats"),
-            random_state=GLOBAL["random_state"],
-        ),
-    )
-
-    start = time.time()
-    search.fit(X_train, y_train)
-    duration = time.time() - start
-
-    # --- Step 4: test + evaluate ---
-    y_test_pred = search.predict(X_test)
-    y_test_proba = search.predict_proba(X_test)[:, 1]
-
-    test_metrics = calc_metrics(y=y_test, y_pred=y_test_pred, y_pred_proba=y_test_proba)
-
-    y_train_pred = search.predict(X_train)
-    y_train_proba = search.predict_proba(X_train)[:, 1]
-
-    train_metrics = calc_metrics(y=y_train, y_pred=y_train_pred, y_pred_proba=y_train_proba)
-
-    if verbose:
-        print(f"\n [FINISHED] {dataset_name} – {method_key}")
-        print(f"\n Duration: {duration:.2f}s")
-
-    return {
-        "dataset": dataset_name,
-        "method": method_key,
-        "best_params": search.best_params_,
-        "test_metrics": test_metrics,
-        "train_metrics": train_metrics,
-        # "duration_sec": duration,
-    }"""
 
 
 def calc_metrics(y, y_pred, y_pred_proba):

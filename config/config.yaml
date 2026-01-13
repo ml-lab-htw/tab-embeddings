@@ -20,8 +20,6 @@ FEATURES:
         'protocol_type',
         'unusual_time_access'
     ]
-    numerical_features: [
-    ]
     text_features: ["text"]
   lung_disease:
     nominal_features: [
@@ -29,8 +27,6 @@ FEATURES:
         "Smoking Status",
         "Disease Type",
         "Treatment Type"
-    ]
-    numerical_features: [
     ]
     text_features: ["text"]
 
@@ -40,27 +36,27 @@ DATASETS:
     X: "X_cybersecurity.csv"
     y: "y_cybersecurity.csv"
     X_metr: "X_cybersecurity_metrics.csv"
+    X_nom: "X_cybersecurity_nom.csv"
     summaries: "cybersecurity_summaries.txt"
     nom_summaries: "cybersecurity_nom_summaries.txt"
-    #imp_max_iter: 30
     pca_components: 50
     n_splits: 5
     n_repeats: 1
-  #lung_disease:
-  #  path: ./data/lung_disease
-  #  X: "X_lung_disease.csv"
-  #  y: "y_lung_disease.csv"
-  #  X_metr: "X_lung_disease_metrics.csv"
-  #  summaries: "lung_disease_summaries.txt"
-  #  nom_summaries: "lung_disease_nom_summaries.txt"
-  #  #imp_max_iter: 30
-  #  pca_components: 50
-  #  n_splits: 5
-  #  n_repeats: 1
+  lung_disease:
+    path: ./data/lung_disease
+    X: "X_lung_disease.csv"
+    y: "y_lung_disease.csv"
+    X_metr: "X_lung_disease_metrics.csv"
+    X_nom: "X_lung_disease_nom.csv"
+    summaries: "lung_disease_summaries.txt"
+    nom_summaries: "lung_disease_nom_summaries.txt"
+    pca_components: 50
+    n_splits: 5
+    n_repeats: 1
 
 MODEL_CONFIGS:
   lr:
-    l1_ratio: 0 # old: penalty: "l2"
+    l1_ratio: 0 # earlier -> penalty: "l2"
     solver: "saga"
     max_iter: 10000
 
@@ -141,29 +137,28 @@ EXPERIMENTS:
   - gbdt_conc1_te_pca
   - gbdt_conc2_te_pca
   - gbdt_conc3_te_pca
-  - gbdt_rte_conc
-
+  - gbdt_rte_conc1
 
 TEST_EXPERIMENTS:
   - lr
-  #- lr_rte
-  #- lr_te
-  #- lr_te_pca
-  #- lr_conc1_te
-  #- lr_conc2_te
-  #- lr_conc3_te
-  #- lr_conc1_te_pca
-  #- lr_conc2_te_pca
-  #- lr_conc3_te_pca
-  #- lr_rte_conc1
-  #- gbdt
-  #- gbdt_rte
-  #- gbdt_te
-  #- gbdt_te_pca
-  #- gbdt_conc1_te
-  #- gbdt_conc2_te
-  #- gbdt_conc3_te
-  #- gbdt_conc1_te_pca
-  #- gbdt_conc2_te_pca
-  #- gbdt_conc3_te_pca
-  #- gbdt_rte_conc1
+  - lr_rte
+  - lr_te
+  - lr_te_pca
+  - lr_conc1_te
+  - lr_conc2_te
+  - lr_conc3_te
+  - lr_conc1_te_pca
+  - lr_conc2_te_pca
+  - lr_conc3_te_pca
+  - lr_rte_conc1
+  - gbdt
+  - gbdt_rte
+  - gbdt_te
+  - gbdt_te_pca
+  - gbdt_conc1_te
+  - gbdt_conc2_te
+  - gbdt_conc3_te
+  - gbdt_conc1_te_pca
+  - gbdt_conc2_te_pca
+  - gbdt_conc3_te_pca
+  - gbdt_rte_conc1

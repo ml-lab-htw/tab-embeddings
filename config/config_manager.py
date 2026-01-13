@@ -29,7 +29,6 @@ class ConfigManager:
         """
         if key not in self._config:
             raise KeyError(f"Missing required config section: {key}"
-                           # todo: here also provide paths
                            f"Make sure the section {key} exists in the config file as well as implemented in config_manager.")
         return self._config[key]
 
@@ -69,7 +68,7 @@ class ConfigManager:
 
     @property
     def experiments(self) -> Dict[str, Any]:
-        if self._test_mode: # todo: we have a self._test_mode
+        if self._test_mode:
             return self._require_section("TEST_EXPERIMENTS")
         return self._require_section("EXPERIMENTS")
 

@@ -80,6 +80,7 @@ class EmbeddingAggregator(BaseEstimator, TransformerMixin):
             X_text = X_text.iloc[:, 0].tolist()
 
         if not all(isinstance(x, str) for x in X_text):
+            print(f"X_text: {X_text}")
             raise ValueError("All inputs must be strings.")
 
         if self.is_sentence_transformer:
