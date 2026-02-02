@@ -63,9 +63,9 @@ MODEL_CONFIGS:
 HYPERPARAMETERS:
   # ML Models
   lr:
-    classifier__C: [2, 10]
+    classifier__C: [2, 10, 50]
   gbdt:
-    hist_gb__min_samples_leaf: [5, 10, 15, 20]
+    classifier__min_samples_leaf: [5, 10, 15, 20]
 
   # Embeddings
   rte:

@@ -39,8 +39,7 @@ class BasicPipeline(PipelineStrategy):
 
         else:
             raise NotImplementedError(
-                # todo: print the concrete flag
-                f"Pipeline not implemented for {ctx.flags}"
+                f"Pipeline not implemented this downstream model. Check build() method in pipeline_builder.py."
             )
 
 

@@ -125,7 +125,7 @@ def build_raw_branch(ctx: ExpContext) -> ColumnTransformer | str:
             return "passthrough"
         elif ctx.flags.has_text:
             logging.debug(f"Non text columns: {ctx.non_text_columns}")
-            text_steps = build_text_pipeline_steps(ctx) # todo: problem here!
+            text_steps = build_text_pipeline_steps(ctx)
             return ColumnTransformer([
                 ('numerical', 'passthrough', ctx.non_text_columns),
                 ('text', Pipeline(

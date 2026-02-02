@@ -7,7 +7,7 @@ def prefix_grid(grid: dict[str, list], prefix: str) -> dict[str, list]:
     return {f"{prefix}{k}": v for k, v in grid.items()}
 
 LR_GRID = {
-    "classifier__C": [2, 10],
+    "classifier__C": [2, 10, 50],
 }
 
 GBDT_GRID = {

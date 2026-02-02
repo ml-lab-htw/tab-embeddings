@@ -1,3 +1,4 @@
+from datetime import datetime
 import logging
 
 import pandas as pd
@@ -32,7 +33,6 @@ class ExperimentFlags:
     conc3: bool
 
 
-# todo: init the paths to the files depending on the method key here? And build a delegate method in data_prep?
 class ExpContext:
     def __init__(self,
                  method_key: str,
@@ -42,6 +42,7 @@ class ExpContext:
                  *,
                  validate: bool = True,
                  feature_extractor: Any | None = None,
+                 run_timestamp: str | None = None
                  ):
         self.method_key = method_key
         self.dataset_name = dataset_name
@@ -82,8 +83,12 @@ class ExpContext:
         # --------------------------------------------------
         # Text Embeddings
         # --------------------------------------------------
-
         self.feature_extractor = feature_extractor
+
+        # --------------------------------------------------
+        # Run-level timestamp (for results folder)
+        # -----------------------------------------------
+        self.run_timestamp = run_timestamp
 
         if validate:
             self._validate()
@@ -155,14 +160,6 @@ class ExpContext:
         # plain gbdt
         logging.debug(f"CTX returnes nominal features for plain gbdt: {self.nominal_indices}")
         return self.nominal_features
-
-    @property
-    def requires_categorical_indices(self) -> bool:
-        return (
-            self.flags.is_gbdt and
-            self.flags.is_concat and
-            (self.flags.has_text or self.flags.has_rte)
-        )
 
     @property
     def experiment_id(self) -> str:

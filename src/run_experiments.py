@@ -23,14 +23,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+RUN_TIMESTAMP = datetime.now().strftime("%Y%m%d_%H%M%S")
+
 class ExperimentRunner:
     def __init__(self, config_path: str):
         self.cfg = ConfigManager.load_yaml(config_path)
         self.run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-
-        #self.results_dir = Path(self.cfg.globals["results_dir"]) / f"results_{self.run_id}"
-        #self.results_dir.mkdir(parents=True, exist_ok=True)
-
         self._feature_extractors: dict[str, object] = {}
 
     def _get_feature_extractor(self, llm_key: str):
@@ -62,7 +60,8 @@ class ExperimentRunner:
             method_key=method_key,
             dataset_name=dataset_name,
             cfg=self.cfg,
-            validate=False
+            validate=False,
+            run_timestamp=RUN_TIMESTAMP
         )
         if probe_ctx.flags.has_text:
             for llm_key in self.cfg.llm_keys:
@@ -85,7 +84,8 @@ class ExperimentRunner:
             dataset_name=dataset_name,
             cfg=self.cfg,
             embedding_key=llm_key,
-            feature_extractor=feature_extractor
+            feature_extractor=feature_extractor,
+            run_timestamp=RUN_TIMESTAMP
         )
         exp_id = ctx.experiment_id
         logger.debug(f"  Running: {exp_id}")
@@ -154,6 +154,7 @@ class ExperimentRunner:
         results_dict = {
             "train_metrics": train_metrics,
             "test_metrics": test_metrics,
+            "best_params": search.best_params_
         }
         save_to_csv(
             data_dict=results_dict,
@@ -177,7 +178,7 @@ def calc_metrics(y, y_pred, y_pred_proba):
         "Specificity": specificity,
         "Precision": precision_score(y, y_pred, zero_division=0),
         "F1": f1_score(y, y_pred, average='macro'),
-        "Balanced Accuracy": balanced_accuracy_score(y, y_pred)
+        "BA": balanced_accuracy_score(y, y_pred)
     }
 
     return metrics
