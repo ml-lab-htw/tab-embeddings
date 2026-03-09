@@ -72,7 +72,7 @@ HYPERPARAMETERS:
     embedding__n_estimators: [10, 100]
     embedding__max_depth: [2, 5]
   text_emb:
-    aggregator__method: [
+    embedding_aggregator__method: [
       "embedding_cls",
       "embedding_mean_with_cls_and_sep",
       "embedding_mean_without_cls_and_sep"
