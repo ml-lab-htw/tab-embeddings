@@ -1,6 +1,6 @@
 EXPECTED_GRIDS = {}
 
-lr_classifier = {"classifier__C": [2, 10]}
+lr_classifier = {"classifier__C": [2, 10, 50]}
 gbdt_classifier = {"classifier__min_samples_leaf": [5, 10, 15, 20]}
 
 # === LR baseline ===

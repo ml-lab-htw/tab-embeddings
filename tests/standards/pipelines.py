@@ -299,9 +299,7 @@ EXPECTED_PIPELINES["gbdt_te_pca"] = Pipeline([
 ])
 
 # === GBDT Text Conc === yes
-pipeline_text_steps = [("aggregator", EmbeddingAggregator(feature_extractor=feature_extractor)),
-                       #("numerical_scaler", MinMaxScaler()) todo: not needed for gbdt?
-                       ]
+pipeline_text_steps = [("aggregator", EmbeddingAggregator(feature_extractor=feature_extractor))]
 
 EXPECTED_PIPELINES["gbdt_conc1_te"] = Pipeline([
             ("transformer", ColumnTransformer([

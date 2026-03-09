@@ -63,16 +63,16 @@ MODEL_CONFIGS:
 HYPERPARAMETERS:
   # ML Models
   lr:
-    classifier__C: [2, 10]
+    classifier__C: [2, 10, 50]
   gbdt:
-    hist_gb__min_samples_leaf: [5, 10, 15, 20]
+    classifier__min_samples_leaf: [5, 10, 15, 20]
 
   # Embeddings
   rte:
     embedding__n_estimators: [10, 100]
     embedding__max_depth: [2, 5]
   text_emb:
-    aggregator__method: [
+    embedding_aggregator__method: [
       "embedding_cls",
       "embedding_mean_with_cls_and_sep",
       "embedding_mean_without_cls_and_sep"

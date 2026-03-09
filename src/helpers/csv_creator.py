@@ -25,8 +25,11 @@ def save_to_csv(data_dict: dict, ctx: ExpContext) -> None:
 
     method_id = ctx.experiment_id
     # --- Prepare output directories ---
-    base_results_dir = Path(ctx.cfg.globals["results_dir"])
-    # todo: create results_datetime folder!
+    base_results_dir = Path(f"{ctx.cfg.globals['results_dir']}_{ctx.run_timestamp}")
+
+    #if base_results_dir.exists():
+    #    raise FileExistsError(f"Results directory already exists: {base_results_dir}. Try running again.")
+
     train_dir = base_results_dir / "train" / ctx.dataset_name
     test_dir = base_results_dir / "test" / ctx.dataset_name
 

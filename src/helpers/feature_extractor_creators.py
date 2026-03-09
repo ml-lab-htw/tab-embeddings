@@ -1,5 +1,3 @@
-import numpy as np
-from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModel, pipeline
 import torch
 
@@ -14,17 +12,6 @@ def create_gen_feature_extractor(model_name):
     device_name = "GPU" if device == 0 else "CPU"
     print(f"Selected device: {device_name}")
 
-    # If the model is compatible with SentenceTransformer (e.g., GTR models)
-    if "gtr-t5-base" in model_name or "sentence-t5-base" in model_name.lower() or "modernbert-embed" in model_name.lower():
-        model = SentenceTransformer(model_name, trust_remote_code=True)
-        model = model.to(f"cuda:{device}" if device == 0 else "cpu")
-
-        def extractor(texts: list[str]):
-            return model.encode(texts, convert_to_numpy=True)
-
-        print("Loaded as SentenceTransformer model.")
-        return extractor
-
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     model = AutoModel.from_pretrained(model_name, trust_remote_code=True).to("cuda:0" if device == 0 else "cpu")
 
@@ -35,11 +22,6 @@ def create_gen_feature_extractor(model_name):
         device=device)
     print("Finished creating a feature extractor.")
 
-    def extractor(texts: list[str]):
-        outputs = hf_pipeline(texts)
-        return [np.array(o) for o in outputs]
-
-    # return extractor
     return hf_pipeline
 
 
